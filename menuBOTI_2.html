@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styleBOTI_2.css">
+    <link rel="icon" href="icons/cat1.ico">
+    <title>DIGITAL Team</title>
+</head>
+
+<header>
+    <div class="menu container">
+        <div class="logo_grupo">
+            <img id="img_logo" src="icons/cat1.png" alt="Logo Gatito" title="prrr prrr...">
+            <a href="index.html" class="logo">DIGITAL Team</a>
+        </div>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="icons/menu_hamburguesa.png" class="menu_icono">
+        </label>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="menuBOTI.html" id="diseno">Clásico</a></li>
+                <li><a href="index.html" id="pag_inicio">Inicio</a></li>
+                <li><a href="menu637_2.html" id="pag_637">690</a></li>
+                <li><a href="menuCUD_2.html" id="pag_CUD">CUD</a></li>
+                <li><a href="#" id="pagina_actual">BOTI</a></li>
+                <li><a href="menuMAIL_2.html" id="pag_MAIL">MAIL</a></li>
+                <li><a href="menuCPNFVC_2.html" id="pag_CPNFVC">CP-NF-VC</a></li>
+                <li><a href="menuINFO_2.html" id="pag_INFO">INFO</a></li>
+                <li><a href="Editable_2.html" id="pag_Edit">EDITAR</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="accesos_container">
+        <h1 class="titulo">Respuestas BOTI</h1>
+        <nav>
+            <ul class="accesos_nav">
+                <li><a class="accesos" href="#">Saludos</a></li>
+                <li><a class="accesos" href="#consultas_externas">Consultas externas</a></li>
+                <li><a class="accesos" href="#consultas_637">Consultas 690</a></li>
+                <li><a class="accesos" href="#trabajadora_social">Trabajador/a social</a></li>
+                <li><a class="accesos" href="#certificado_medico_oficial">Certificado Médico Oficial (CMO)</a></li>
+                <li><a class="accesos" href="#tarjetas">Info Tarjetas</a></li>
+                <li><a class="accesos" href="#consultas_cp">Consultas CP</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<!-- Botón Editable -->
+    <div class="username-container">
+        <input type="text" id="usernameInput" placeholder="Enter your username">
+        <button onclick="setUsername()">Set Username</button>
+    </div>
+    <!-- Fin Botón Editable -->
+
+    <!-- Fondo Animado (inicio) -->
+    <div class="container1">
+        <div class="particulas">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+ 
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+        </div>
+    </div>
+    <!-- Fondo Animado (fin) -->
+
+    <main>
+        <h4 id="Saludos">SALUDOS</h4>
+
+    <!-- Saludos personalizados (inicio) -->
+        <button type="button" class="block presentacion presentacionAgusAzu" onclick="copyToClipboard101()" id="presentacion01" value="Buenos días, mi nombre es Agustina; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#a358db">AGUS</span></b><br>Buenos días, mi nombre es Agustina;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard102()" id="presentacion02" value="Buenos días, mi nombre es Luna; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#ffa378">LUNA</span></b><br>Buenos días, mi nombre es Luna;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard103()" id="presentacion03" value="Buenos días, mi nombre es Florencia; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#78f1ff">FLOR</span></b><br>Buenos días, mi nombre es Florencia;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard104()" id="presentacion04" value="Buenos días, mi nombre es Candela; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#aef071">Cande</span></b><br>Buenos días, mi nombre es Candela;<br>
+¿En qué puedo ayudarte?</button>
+<br>
+        <button type="button" class="block presentacion presentacionAgusAzu" onclick="copyToClipboard105()" id="presentacion05" value="Buenos días, mi nombre es Azul; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#2b60ff">AZU</span></b><br>Buenos días, mi nombre es Azul;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard106()" id="presentacion06" value="Buenos días, mi nombre es Sabrina; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#fcfc65">SABRI</span></b><br>Buenos días, mi nombre es Sabrina;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard107()" id="presentacion07" value="Buenos días, mi nombre es Nadia; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#ef63ff">CHINA</span></b><br>Buenos días, mi nombre es Nadia;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard108()" id="presentacion08" value="Buenos días, mi nombre es Matías; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Mañana) </span><span style="color:#ff5271">MATI</span></b><br>Buenos días, mi nombre es Matías;<br>
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion presentacionAgusAzu" onclick="copyToClipboard201()" id="presentacion11" value="Buenas tardes, mi nombre es Agustina; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#a358db">AGUS</span></b><br>Buenas tardes, mi nombre es Agustina; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard202()" id="presentacion12" value="Buenas tardes, mi nombre es Luna; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#ffa378">LUNA</span></b><br>Buenas tardes, mi nombre es Luna; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard203()" id="presentacion13"value="Buenas tardes, mi nombre es Florencia; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#78f1ff">FLOR</span></b><br>Buenas tardes, mi nombre es Florencia; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard204()" id="presentacion14"value="Buenas tardes, mi nombre es Candela; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#aef071">Cande</span></b><br>Buenas tardes, mi nombre es Candela; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion presentacionAgusAzu" onclick="copyToClipboard205()" id="presentacion15" value="Buenas tardes, mi nombre es Azul; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#2b60ff">AZU</span></b><br>Buenas tardes, mi nombre es Azul; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard206()" id="presentacion16" value="Buenas tardes, mi nombre es Sabrina; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#fcfc65">SABRI</span></b><br>Buenas tardes, mi nombre es Sabrina; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard207()" id="presentacion17" value="Buenas tardes, mi nombre es Nadia; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#ef63ff">CHINA</span></b><br>Buenas tardes, mi nombre es Nadia; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion" onclick="copyToClipboard208()" id="presentacion18" value="Buenas tardes, mi nombre es Matías; 
+¿En qué puedo ayudarte?"><b><span style="color:#14e0ab">Presentación (Tarde) </span><span style="color:#ff5271">MATI</span></b><br>Buenas tardes, mi nombre es Matías; 
+¿En qué puedo ayudarte?</button>
+
+        <button type="button" class="block presentacion button" onclick="copyToClipboard('Buenas, mi nombre es Matías; ¿En qué puedo ayudarte?')" id="copyButtonSaludo">
+            <h3 style="color:#14e0ab">Presentación</h3>
+            <p>Buenas, mi nombre es <span id="namePlaceholder">XXXXX</span>;<br>¿En qué puedo ayudarte?</p>
+        </button>
+		<!-- Botón de copiar -->
+<button type="button" class="block presentacion" onclick="copyToClipboard('Buenas, mi nombre es Matías; ¿En qué puedo ayudarte?')" id="botondesaludo">
+            <h3 style="color:#14e0ab">Presentación</h3>
+            <p>Buenas, mi nombre es <span id="namePlaceholder">XXXXX</span>;<br>¿En qué puedo ayudarte?</p>
+        </button>
+    <!-- Saludos personalizados (fin) -->
+
+    <!-- Aguarde un momento (inicio) -->
+        <button type="button" class="block" onclick="copyToClipboard3()" id="aguarde" value="Aguarde un momento en línea por favor."><b><span style="color:#14e0ab">Cuando buscamos info en los sistemas</span></b><br>Aguarde un momento en línea por favor.</button>
+    <!-- Aguarde un momento (fin) -->
+
+    <!-- Finaliza la consulta (inicio) -->
+        <button type="button" class="block" onclick="copyToClipboard4()" id="fin_consulta" value="¿Puedo ayudarle con alguna otra consulta?"><b><span style="color:#14e0ab">Cuando terminamos de responder la consulta</span></b><br>¿Puedo ayudarle con alguna otra consulta?</button>
+    <!-- Finaliza la consulta (fin) -->
+
+    <!-- Saludo de despedida (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard5()" id="despedida" value="Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊"><b><span style="color:#14e0ab">Saludo de despedida</span></b><br>Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊</button>
+    <!-- Saludo de despedida (fin) -->
+
+    <!-- Saludo de despedida 2 (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard6()" id="despedida1" value="Que tenga un lindo día. Saludos 😊"><b><span style="color:#14e0ab">Saludo de despedida</span></b><br>Que tenga un lindo día. Saludos 😊</button>
+    <!-- Saludo de despedida 2 (fin) -->
+
+        <h6 id="consultas_externas">.</h6> <!-- Marca de salto de página-->
+
+        <h4 class="animado">CONSULTAS POR FUERA DE NUESTRAS COMPETENCIAS</h4>
+
+    <!-- Fuera de nuestra área (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard7()" id="fuera_competencias" value="Lamentablemente desde nuestra área no contamos con la información suficiente para responder a su consulta. Esta línea de atención corresponde a las consultas sobre las *Sedes de Atención Social (ex servicios sociales zonales) de la Dirección General de Abordaje Comunitario.*
+Si necesita información sobre las Sedes de Atención Social, podrá encontrarla en el siguiente link: https://buenosaires.gob.ar/desarrollohumanoyhabitat/atencionsocial/sedes
+
+_*Nuestro horario de atención en las SAS es de 9:30 a 15:30 hs. y en la sede Central de 9:00 a 15:00 hs._">Lamentablemente desde nuestra área no contamos con la información suficiente para responder a su consulta. Esta línea de atención corresponde a las consultas sobre las *Sedes de Atención Social (ex servicios sociales zonales) de la Dirección General de Abordaje Comunitario.*<br>
+Si necesita información sobre las Sedes de Atención Social, podrá encontrarla en el siguiente link: <br>https://buenosaires.gob.ar/desarrollohumanoyhabitat/atencionsocial/sedes<br><br>
+
+_*Nuestro horario de atención en las SAS es de 9:30 a 15:30 hs. y en la sede Central de 9:00 a 15:00 hs._</button>
+    <!-- Fuera de nuestra área (fin) -->
+
+        <h6 id="consultas_637">.</h6> <!-- Marca de salto de página-->
+
+        <h4 class="animado">CONSULTAS SUBSIDIO HABITACIONAL 690</h4>
+
+    <!-- Consulta por fecha de cobro 637 (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard8()" id="fecha_cobro" value="Las fechas de cobro son a partir del día 15 de cada mes y 5 días hábiles en adelante."><b><span style="color:#14e0ab">Fecha de cobro</span></b><br>Las fechas de cobro son a partir del día 15 de cada mes y 5 días hábiles en adelante.</button>
+    <!-- Consulta por fecha de cobro 637 (fin) -->
+
+    <!-- Recibo 637 aprobado (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard9()" id="no_mail_aprobado" value="Corroboramos en el sistema y su recibo correspondiente al mes de xx ha sido cargado con éxito.
+
+Lo que sucede es que se han presentado fallas en el sistema y no se han enviado los correos de aprobación, estamos trabajando para solucionarlo. De todas formas, quédese tranquilo/a que el recibo ha sido cargado con éxito.
+"><b><span style="color:#14e0ab">No les llega el correo de aprobación pero está finalizado y se encuentra en pagos</span> <span style="color:#6ee67f">(IMPORTANTE: Completar el mes)</span></b></b><br>Corroboramos en el sistema y su recibo correspondiente al mes de <b><span style="color:#6ee67f">xx</span></b> ha sido cargado con éxito.<br><br>Lo que sucede es que se han presentado fallas en el sistema y no se han enviado los correos de aprobación, estamos trabajando para solucionarlo. De todas formas, quédese tranquilo/a que el recibo ha sido cargado con éxito.</button>
+    <!-- Recibo 637 aprobado (fin) -->
+
+    <!-- Recibo dupliado (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard32()" id="no_pagos" value="Corroboramos en el sistema y el programa ha indicado que deberá dirigirse a la Sede Central, ubicada en la calle Pavón 1779.
+		La atención es por turno, le dejamos el link para que pueda gestionarlo:
+*- Si es ordinario:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165
+*- Si es amparo:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166
+"><b><span style="color:#14e0ab">Cuando están en bajas o no estan en pagos</span></b><br>Corroboramos en el sistema y el programa ha indicado que deberá dirigirse a la Sede Central, ubicada en la calle Pavón 1779.
+<br>La atención es por turno, le dejamos el link para que pueda gestionarlo:
+<br>*- Si es ordinario:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165
+<br>*- Si es amparo:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166
+</button>
+    <!-- Recibo dupliado (fin) -->
+
+    <!-- Recibo dupliado (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard10()" id="duplicados" value="Le pedimos por favor que no duplique más sus trámites. 
+Una vez que usted realiza la rendición del recibo por este medio y boti le envía su Nro. de trámite, el recibo ya se encuentra ingresado. Un/a operador/a lo verificará a la brevedad. Cualquier consulta que tenga, puede comunicarse por este medio."><b><span style="color:#14e0ab">Recibos duplicados</span></b><br>Le pedimos por favor que no duplique más sus trámites. Una vez que usted realiza la rendición del recibo por este medio y boti le envía su Nro. de trámite, el recibo ya se encuentra ingresado. Un/a operador/a lo verificará a la brevedad. Cualquier consulta que tenga, puede comunicarse por este medio.</button>
+    <!-- Recibo dupliado (fin) -->
+
+    <!-- Qué recibos se pueden rendir (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard11()" id="rendir" value="Del 1ro al día 20, inclusive de cada mes, podrá enviar el recibo del mes anterior y/o del corriente mes. A partir del 21, inclusive, se aceptarán únicamente los recibos del corriente mes."><b><span style="color:#14e0ab">¿Qué recibos se pueden rendir?</span></b><br>Del 1ro al día 20, inclusive de cada mes, podrá enviar el recibo del mes anterior y/o del corriente mes. A partir del 21, inclusive, se aceptarán únicamente los recibos del corriente mes.</button>
+    <!-- Qué recibos se pueden rendir (fin) -->
+
+    <!-- Debe presentarse en Entre Rios (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard13()" id="presentarse_entrerios" value="Deberá presentarse en la Sede Central, ubicada en Av. Entre Ríos 1492. Allí se encuentran atendiendo de lunes a viernes, en el horario de 9:00 a 15:00hs. (No requiere turno previo)"><b><span style="color:#14e0ab">Cuando deben presentarse en Av. Entre Ríos 1492 (NO COBRA HACE MÁS DE TRES MESES)</span></b><br>Deberá presentarse en la Sede Central, ubicada en Av. Entre Ríos 1492. Allí se encuentran atendiendo de lunes a viernes, en el horario de 9:00 a 15:00hs. (No requiere turno previo)</button>
+    <!-- Debe presentarse en Entre Rios (fin) -->
+
+    <!-- Consulta o reclamo 637 (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard14()" id="consultas_reclamos" value="Para consultas y/o reclamos debe dirigirse a la Sede Central, ubicada en la calle Pavón 1779. 
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:
+
+*-Si es ordinario:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165
+*-Si es amparo:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166
+"><b><span style="color:#14e0ab">Consultas y/o reclamos 637</span></b><br>Para consultas y/o reclamos debe dirigirse a la Sede Central, ubicada en la calle Pavón 1779.<br>La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:<br><br>*-Si es ordinario:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165<br>*-Si es amparo:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166
+</button>
+    <!-- Consulta o reclamo 637 (fin) -->
+
+
+    <!-- Se solicitan correcciones de recibo 637 (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard16()" id="tramite_curso" value="Hemos verificado en el sistema el estado de su trámite y se le han solicitado las siguientes correcciones: "><b><span style="color:#14e0ab">Cuando consultan por un trámite en curso </span><span style="color:#6ee67f">(IMPORTANTE: Completar correcciones)</span></b><br>Hemos verificado en el sistema el estado de su trámite y se le han solicitado las siguientes correcciones: <span style="color:#6ee67f">xx</span></button>
+    <!-- Se solicitan correcciones de recibo 637 (fin) -->
+
+    <!-- Cómo presentar el recibo (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard17()" id="presentar_recibo" value="Para realizar la rendición de los recibos, cuenta con las siguientes dos opciones:
+_*1. Presencial:*_
+*SÓLO CON TURNOS en las siguientes Sedes de Atención Social:
+-Sede de Atención Social N° 3: Av. San Juan 2353, San Cristóbal.
+-Sede de Atención Social N° 4: Coronel Salvadores 799, La Boca.
+-Sede de Atención Social N° 5: Cochabamba 4048, Boedo.
+-Sede de Atención Social N° 8: Av. Gral. Fernandez de la Cruz 4214, Villa Lugano.
+-Sede de Atención Social N° 15: Segui, F. J., Alte. 2125, La Paternal.
+*Para solicitar el turno debe ingresar al siguiente link:*
+https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=4266
+ 
+_*2. A través de BOTI:*_
+Agregue a Boti como contacto de WhatsApp con el número: 11-5050-0147 y escriba “quiero rendir mi recibo”
+*Si quiere realizarlo de esta forma, le solicitamos por favor responder “SI”*
+"><b><span style="color:#14e0ab">¿Cómo presentar los recibos?</b><br>Para realizar la rendición de los recibos, cuenta con las siguientes dos opciones:<br>
+_*1. Presencial:*_<br>
+*SÓLO CON TURNOS en las siguientes Sedes de Atención Social:<br>
+-Sede de Atención Social N° 3: Av. San Juan 2353, San Cristóbal.<br>
+-Sede de Atención Social N° 4: Coronel Salvadores 799, La Boca.<br>
+-Sede de Atención Social N° 5: Cochabamba 4048, Boedo.<br>
+-Sede de Atención Social N° 8: Av. Gral. Fernandez de la Cruz 4214, Villa Lugano.<br>
+-Sede de Atención Social N° 15: Segui, F. J., Alte. 2125, La Paternal.<br>
+*Para solicitar el turno debe ingresar al siguiente link:*<br>
+https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=4266<br><br>
+_*2. A través de BOTI:*_<br>
+Agregue a Boti como contacto de WhatsApp con el número: 11-5050-0147 y escriba “quiero rendir mi recibo”<br>
+*Si quiere realizarlo de esta forma, le solicitamos por favor responder “SI”*<br></button>
+    <!-- Cómo presentar el recibo (fin) -->
+
+    <!-- Instructivo BOTI (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard18()" id="instructivo_boti" value="Le adjunto un instructivo acerca de cómo rendir los recibos a través de BOTI:
+*1.* Agregue a Boti como contacto de WhatsApp con el número: *11-5050-0147*
+*2.* Escriba “Quiero Rendir mi recibo”
+*3.* Seleccione la opción B “Rendir mi recibo”
+*4.* Seleccione la opción C “Empezar trámite”
+*5.* Luego deberá ingresar al link que le envía Boti para registrarse en MiBa:
+  - Si ya posee una cuenta deberá escribir su correo y contraseña.
+  - Si no posee una cuenta, deberá ingresar su correo y algunos datos básicos para crear su perfil (nombre, apellido, tipo de documento, nacionalidad, número de documento y fecha de nacimiento).
+*6.* Haga clic en continuar y volverá a la conversación con Boti donde le va a confirmar si se completó el registro y le pedirá que confirme sus datos: Si los datos están correctos, seleccione la opción A “Están bien, seguimos”.
+*7.* Boti le va a pedir que acepte el pedido legal, elija la opción A “Sí, acepto”.
+*8.* Abra la cámara de WhatsApp y saque la foto de su documento de frente y dorso.
+*9.* Indique el número de comuna a la cual pertenece su domicilio.
+*10.* A continuación detalle la dirección de la vivienda alquilada.
+*11.* Seleccione la opción correspondiente al tipo de alquiler (A. hotel familiar; B. pensión; C. departamento; D. habitación en casa; E. otro)
+*12.* Complete la información del propietario de la vivienda, escribiendo nombre y apellido y número de teléfono.
+*13.* Indíquele a Boti el mes correspondiente al recibo.
+*14.* Envíe la foto de su recibo y finalice el trámite.
+
+    _*No se olvide de anotar el número de trámite. Con este número podrá hacer el seguimiento de la rendición de su recibo. Recuerde que le llegará la confirmación o la modificación de su trámite por correo electrónico._"><b><span style="color:#14e0ab">Instructivo para entregar el recibo a través de BOTI</span></b><br>Le adjunto un instructivo acerca de cómo rendir los recibos a través de BOTI:<br>
+*1.* Agregue a Boti como contacto de WhatsApp con el número: *11-5050-0147*<br>
+*2.* Escriba “Quiero Rendir mi recibo”<br>
+*3.* Seleccione la opción B “Rendir mi recibo”<br>
+*4.* Seleccione la opción C “Empezar trámite”<br><br>
+[...]<br><br>
+    _*No se olvide de anotar el número de trámite. Con este número podrá hacer el seguimiento de la rendición de su recibo. Recuerde que le llegará la confirmación o la modificación de su trámite por correo electrónico._</button>
+    <!-- Instructivo BOTI (fin) -->
+
+    <!-- De qué se trata el subsidio habitacional (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard19()" id="habitacional_quees" value="El 'Subsidio Habitacional 690' está dirigido a familias o personas solas que se encuentran en inminente situación de desamparo habitacional o que se hallan transitoriamente sin vivienda o refugio, por motivo de desalojo u otras causas."><b><span style="color:#14e0ab">¿De qué se trata el Subsidio Habitacional?</span></b><br>El 'Subsidio Habitacional 690' está dirigido a familias o personas solas que se encuentran en inminente situación de desamparo habitacional o que se hallan transitoriamente sin vivienda o refugio, por motivo de desalojo u otras causas.</button>
+    <!-- De qué se trata el subsidio habitacional (fin) -->
+
+    <!-- Cómo soliitar la inscripción al subsidio habitacional (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard20()" id="como_donde" value="Requisitos Subsidio Habitacional
+
+
+A continuación, le dejamos la información detallada para poder solicitar la inscripción a dicho subsidio.
+La documentación obligatoria que tendrá que presentar es la siguiente:
+
+
+
+
+  *-* Informe social realizado por el BAP u otras entidades dando informe de la situación de vulnerabilidad del grupo familiar;
+  *-* Negativa de ANSES;
+  *-* DNI o Residencia Precaria en caso de ser extranjero y aún no contar con DNI (original y fotocopia de todos los integrantes de su grupo familiar);
+  *-* Certificado de Escolaridad (para niños/as y/o adolescentes);
+  *-* Certificado de Vacunación (para niños/as y/o adolescentes);
+  *-* Certificado Único de Discapacidad o de embarazo según corresponda;
+  *-* Partida de Nacimiento de los menores de 18 años;
+
+
+
+
+**IMPORTANTE:* Debe acreditar 2 años de residencia en CABA en el DNI, de lo contrario, deberá presentar un informe social que pueda acreditarlo.
+ 
+  *-* Presentar un presupuesto mensual dentro de CABA:
+ 
+*Si es Dueño directo→* el presupuesto debe contar con nota del dueño compuesta por su DNI, nombre y apellido, domicilio, N° de teléfono, firma y aclaración; fotocopia del DNI del dueño; fotocopia de comprobantes de servicio de agua (AYSA) y comprobantes de impuestos (ABL/RENTAS). Tenga en cuenta que los servicios deberán estar a nombre del propietario/a de la vivienda y encontrarse actualizados (últimos 3 meses).
+ 
+*Si es en un Hotel→* Factura X a modo de presupuesto o bien, la tarjeta del hotel membretada con el monto mensual, dirección y número de teléfono. 
+
+
+
+
+_*Tenga en cuenta que sólo podrá realizarse en la Sede Central (Av. Entre Ríos 1492) de lunes a viernes de 9:00 a 15:00 hs._
+"><b><span style="color:#14e0ab">¿Cómo y dónde realizar la inscripción?</span></b><br>A continuación, le dejamos la información detallada para poder solicitar la inscripción a dicho subsidio.
+La documentación obligatoria que tendrá que presentar es la siguiente:<br><br>
+
+
+  *-* Informe social realizado por el BAP u otras entidades dando informe de la situación de vulnerabilidad del grupo familiar;<br>
+  *-* Negativa de ANSES;<br>
+  *-* DNI o Residencia Precaria en caso de ser extranjero y aún no contar con DNI (original y fotocopia de todos los integrantes de su grupo familiar);<br>
+  *-* Certificado de Escolaridad (para niños/as y/o adolescentes);<br>
+  *-* Certificado de Vacunación (para niños/as y/o adolescentes);<br>
+  *-* Certificado Único de Discapacidad o de embarazo según corresponda;<br>
+  *-* Partida de Nacimiento de los menores de 18 años;<br><br>
+
+
+**IMPORTANTE:* Debe acreditar 2 años de residencia en CABA en el DNI, de lo contrario, deberá presentar un informe social que pueda acreditarlo.<br><br>
+ 
+  *-* Presentar un presupuesto mensual dentro de CABA:<br><br>
+ 
+*Si es Dueño directo→* el presupuesto debe contar con nota del dueño compuesta por su DNI, nombre y apellido, domicilio, N° de teléfono, firma y aclaración; fotocopia del DNI del dueño; fotocopia de comprobantes de servicio de agua (AYSA) y comprobantes de impuestos (ABL/RENTAS). Tenga en cuenta que los servicios deberán estar a nombre del propietario/a de la vivienda y encontrarse actualizados (últimos 3 meses).<br><br>
+ 
+*Si es en un Hotel→* Factura X a modo de presupuesto o bien, la tarjeta del hotel membretada con el monto mensual, dirección y número de teléfono.<br><br>
+
+_*Tenga en cuenta que sólo podrá realizarse en la Sede Central (Av. Entre Ríos 1492) de lunes a viernes de 9:30 a 15:30 hs._</button>
+    <!-- Cómo soliitar la inscripción al subsidio habitacional (fin) -->
+
+    <!-- Cursos obligatorios (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard21()" id="cursos_obligatorios" value="A partir de las modificaciones del Decreto 690/2006, las personas beneficiarias del ´Programa de Atención Para Familias en Situación de Calle´ deberán efectuar al menos 48 horas anuales de capacitación a través de acciones formativas reconocidas y/u ofrecidas por intermedio de la Dirección General de Desarrollo e Inclusión Social dependiente de la Secretaria de Inclusión Social y Atención Inmediata del Ministerio de Desarrollo Humano y Hábitat. (tómese como motivo de excepción única y exclusivamente personas con CUD que acredite imposibilidad de trasladarse).
+
+
+_La inscripción a los cursos puede realizarse de las siguientes dos maneras:_
+*1) Presencial*
+- En la Sede Central de la Secretaría de Inclusión Social y Atención Inmediata, ingresando por Av. Entre Ríos 1492. Horarios de atención: lunes a viernes de 9:00 a 15:00 hs., de forma espontánea.
+- En el Dispositivo de Primer Acercamiento (DIPA), ubicado en la calle Combate de los Pozos. Horarios de atención: lunes a viernes de 16:00 a 22:00 hs., de forma espontánea.
+- En los Centros de Inclusión Social.
+
+
+*2) Virtual*
+- Ingresando al siguiente link: *https://linktr.ee/redesxinclusion*"><b><span style="color:#14e0ab">Cursos Obligatorios</span></b><br>A partir de las modificaciones del Decreto 690/2006, las personas beneficiarias del ´Programa de Atención Para Familias en Situación de Calle´ deberán efectuar al menos 48 horas anuales de capacitación a través de acciones formativas reconocidas y/u ofrecidas por intermedio de la Dirección General de Desarrollo e Inclusión Social dependiente de la Secretaria de Inclusión Social y Atención Inmediata del Ministerio de Desarrollo Humano y Hábitat. <b>(tómese como motivo de excepción única y exclusivamente personas con CUD que acredite imposibilidad de trasladarse).</b><br><br>
+
+
+_La inscripción a los cursos puede realizarse de las siguientes dos maneras:_<br>
+*1) Presencial*<br>
+- En la Sede Central de la Secretaría de Inclusión Social y Atención Inmediata, ingresando por Av. Entre Ríos 1492. Horarios de atención: lunes a viernes de 9:00 a 15:00 hs., de forma espontánea.<br>
+- En el Dispositivo de Primer Acercamiento (DIPA), ubicado en la calle Combate de los Pozos. Horarios de atención: lunes a viernes de 16:00 a 22:00 hs., de forma espontánea.<br>
+- En los Centros de Inclusión Social.<br><br>
+
+
+*2) Virtual*<br>
+- Ingresando al siguiente link: *https://linktr.ee/redesxinclusion*</button>
+    <!-- Cursos obligatorios (fin) -->
+
+    <!-- Datos para PAD (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard211()" id="datos_pad" value="Bien, le pido por favor tenga a bien informar los siguientes datos:
+- Nombre y apellido
+- DNI
+- Teléfono
+- Disponibilidad para ser llamado/a"><b><span style="color:#14e0ab">Solicitud de datos para PAD</span></b><br>Bien, le pido por favor tenga a bien informar los siguientes datos:<br>
+    - Nombre y apellido<br>
+    - DNI<br>
+    - Teléfono<br>
+    - Disponibilidad para ser llamado/a</button>
+    <!-- Datos para PAD (fin) -->
+
+    <!-- Datos para PAD 2 (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard212()" id="datos_pad2" value="Los datos proporcionados han sido cargados en el sistema, el Programa se estará comunicando con usted. O bien si lo desea puede presentarse de manera espontánea en la Sede Central, ingresando por la calle *Entre Ríos 1492 - box: 24*, en los horarios mencionados en la nota."><b><span style="color:#14e0ab">Datos para PAD cargados</span></b><br>Los datos proporcionados han sido cargados en el sistema, el Programa se estará comunicando con usted. O bien si lo desea puede presentarse de manera espontánea en la Sede Central, ingresando por la calle *Entre Ríos 1492 - box: 24*, en los horarios mencionados en la nota.</button>
+    <!-- Datos para PAD 2 (fin) -->
+
+        <h6 id="trabajadora_social">.</h6> <!-- Marca de salto de página-->
+
+        <h4 class="animado">TRABAJADOR/A SOCIAL</h4>
+
+        <!-- Trabajadora Social (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard22()" id="t_social" value="Le sugerimos que se acerque a la *Sede de Atención Social (SAS)* más cercana a su domicilio. Allí, podrá solicitar una entrevista con un/a *Trabajador/a Social*, de manera que le brinde orientación personalizada sobre su situación actual.
+
+
+Las direcciones de las SAS, que se encuentran funcionando en el horario de 9:30 a 15:30 hs., son las siguientes:
+  *-* SAS 1: Piedras 1277, San Nicolás; 
+  *-* SAS 1 BIS: Playón 1, Barrio 31, Retiro; 
+  *-* SAS 2: Vicente López 2050, Recoleta (último piso del Recoleta Urban Mall); 
+  *-* SAS 3: Av. San Juan 2353, San Cristóbal; 
+  *-* SAS 4: Coronel Salvadores 799, La Boca; 
+  *-* SAS 5: Cochabamba 4048, Boedo; 
+  *-* SAS 6: Av. Patricias Argentinas 277, Caballito;  
+  *-* SAS 7: Av. Rivadavia 7202 3° piso, Flores;
+  *-* SAS 8: Av. Fernández de la Cruz 4214, Villa Lugano;   
+  *-* SAS 9: Timoteo Gordillo 2212, Mataderos;
+  *-* SAS 12: Holmberg 2548, Villa Urquiza;    
+  *-* SAS 13: Av. Cabildo 3067, 2° piso, Belgrano; 
+  *-* SAS 14: Av. Coronel Díaz 2110, Palermo; 
+  *-* SAS 15: Almirante J. F. Seguí 2125, planta baja, La Paternal;   
+  *-* SAS Barrio Playón Chacarita: Av. Triunvirato 2651 (martes y jueves de 9:30 a 14:30 hs.). 
+
+
+*Recuerde que puede solicitar un turno para su atención en alguna de las SAS en el siguiente link:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=4346
+"><b><span style="color:#14e0ab">Trabajador/a Social</span></b><br>Le sugerimos que se acerque a la *Sede de Atención Social (SAS)* más cercana a su domicilio. Allí, podrá solicitar una entrevista con un/a *Trabajador/a Social*, de manera que le brinde orientación personalizada sobre su situación actual.<br><br>
+
+
+Las direcciones de las SAS, que se encuentran funcionando en el horario de 9:30 a 15:30 hs., son las siguientes:<br>
+  *-* SAS 1: Piedras 1277, San Nicolás;<br> 
+  *-* SAS 1 BIS: Playón 1, Barrio 31, Retiro;<br> 
+  *-* SAS 2: Vicente López 2050, Recoleta (último piso del Recoleta Urban Mall);<br>
+  *-* SAS 3: Av. San Juan 2353, San Cristóbal;<br>
+  *-* SAS 4: Coronel Salvadores 799, La Boca;<br>
+  *-* SAS 5: Cochabamba 4048, Boedo;<br>
+  *-* SAS 6: Av. Patricias Argentinas 277, Caballito;<br>
+  *-* SAS 7: Av. Rivadavia 7202 3° piso, Flores;<br>
+  *-* SAS 8: Av. Fernández de la Cruz 4214, Villa Lugano;<br>   
+  *-* SAS 9: Timoteo Gordillo 2212, Mataderos;<br>
+  *-* SAS 12: Holmberg 2548, Villa Urquiza;<br>
+  *-* SAS 13: Av. Cabildo 3067, 2° piso, Belgrano;<br>
+  *-* SAS 14: Av. Coronel Díaz 2110, Palermo;<br>
+  *-* SAS 15: Almirante J. F. Seguí 2125, planta baja, La Paternal;<br>  
+  *-* SAS Barrio Playón Chacarita: Av. Triunvirato 2651 (martes y jueves de 9:30 a 14:30 hs.).<br><br>
+
+
+*Recuerde que puede solicitar un turno para su atención en alguna de las SAS en el siguiente link:* https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=4346</button>
+    <!-- Trabajadora Social (fin) -->
+
+        <h6 id="certificado_medico_oficial">.</h6> <!-- Marca de salto de página-->
+
+        <h4 class="animado">CERTIFICADO MÉDICO OFICIAL(CMO)</h4>
+
+        <!-- Certificado Médico Oficial (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard23()" id="cmo" value="Esta línea de atención corresponde a las consultas sobre las *Sedes de Atención Social (ex servicios sociales zonales) de la Dirección General de Abordaje Comunitario.* Si necesita información sobre las Sedes de Atención Social, podrá encontrarla en el siguiente link: https://buenosaires.gob.ar/desarrollohumanoyhabitat/atencionsocial/sedes
+
+   _*Nuestro horario de atención en las SAS es de 9:30 a 15:30 hs. y en la Central de 9:00 a 15:00 hs._
+
+
+Lamentablemente desde nuestra área no contamos con la información suficiente para responder a su consulta. Sin embargo, le comparto los datos de contacto de la *Agencia Nacional de Discapacidad (ANDIS)*, de manera que pueda recibir un asesoramiento adecuado:
+ *-* Teléfono: 0800-555-3472
+ *-* SEDE EN CABA: Hipólito Yrigoyen 1447
+ _*Lunes a viernes de 8 a 16 hs., con los siguientes teléfonos 4379-4889 / 4379-4839 / 4379-4869_
+ *-* Wpp: 11-2478-4746 (Trámites y servicios: lunes a viernes 8:00 a 18:00 hs.)
+"><b><span style="color:#14e0ab">Certificado Médico Oficial (CMO)</span></b><br>Esta línea de atención corresponde a las consultas sobre las *Sedes de Atención Social (ex servicios sociales zonales) de la Dirección General de Abordaje Comunitario.* Si necesita información sobre las Sedes de Atención Social, podrá encontrarla en el siguiente link: https://buenosaires.gob.ar/desarrollohumanoyhabitat/atencionsocial/sedes<br>
+<br>
+   _*Nuestro horario de atención en las SAS es de 9:30 a 15:30 hs. y en la Central de 9:00 a 15:00 hs._<br><br>
+
+
+Lamentablemente desde nuestra área no contamos con la información suficiente para responder a su consulta. Sin embargo, le comparto los datos de contacto de la *Agencia Nacional de Discapacidad (ANDIS)*, de manera que pueda recibir un asesoramiento adecuado:<br>
+ *-* Teléfono: 0800-555-3472<br>
+ *-* SEDE EN CABA: Hipólito Yrigoyen 1447<br>
+ _*Lunes a viernes de 8 a 16 hs., con los siguientes teléfonos 4379-4889 / 4379-4839 / 4379-4869_<br>
+ *-* Wpp: 11-2478-4746 (Trámites y servicios: lunes a viernes 8:00 a 18:00 hs.)</button>
+    <!-- Certificado Médico Oficial (fin) -->
+
+        <h6 id="tarjetas">.</h6> <!-- Marca de salto de página-->
+
+        <h4 class="animado">TARJETAS Y DIRECCIONES DE PROGRAMAS SOCIALES</h4>
+
+    <!-- Tarjeta CABAL (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard24()" id="tarjeta_cabal" value="*TARJETA CABAL*
+4319-2553
+- Opción 1: Consulta de saldo.
+- Opción 2: Clave PIN.
+- Opción 3: Denuncia de robo, hurto o extravío.
+- Opción 4: Deterioro de tarjeta.
+"><b><span style="color:#14e0ab">Tarjeta CABAL</span></b><br>
+4319-2553<br>
+- Opción 1: Consulta de saldo.<br>
+- Opción 2: Clave PIN.<br>
+- Opción 3: Denuncia de robo, hurto o extravío.<br>
+- Opción 4: Deterioro de tarjeta.
+</button>
+    <!-- Tarjeta CABAL (fin) -->
+
+    <!-- Tarjeta VISA (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard25()" id="tarjeta_visa" value="*TARJETA VISA CIUDAD*
+0800-222-0400
+Opción 1: Denuncia por robo, hurto o extravío.
+Opción 6: Activar tarjeta.
+"><b><span style="color:#14e0ab">Tarjeta VISA CIUDAD</span></b>
+<br>0800-222-0400<br>
+Opción 1: Denuncia por robo, hurto o extravío.<br>
+Opción 6: Activar tarjeta.
+</button>
+    <!-- Tarjeta VISA (fin) -->
+
+    <!-- Tarjeta Ticket Social (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard26()" id="dir_ts" value="Retiro de tarjeta: Av. Rivadavia 2479, Balvanera. (Banco Ciudad; casi esquina Larrea)"><b><span style="color:#14e0ab">Programa Ticket Social</span></b><br>Retiro de tarjeta: Av. Rivadavia 2479, Balvanera. (Banco Ciudad; casi esquina Larrea)</button>
+    <!-- Tarjeta Ticket Social (fin) -->
+
+    <!-- Tarjeta Ciudadanía Porteña (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard27()" id="dir_cp" value="Retiro de tarjeta por 1ra vez: Salguero 979, Almagro. (Sede del Programa) 
+Retiro de tarjeta por reposición: Agaces 162, Nueva Pompeya."><b><span style="color:#14e0ab">Programa Ciudadanía Porteña</span></b><br>Retiro de tarjeta por 1ra vez: Salguero 979, Almagro. (Sede del Programa)<br>
+Retiro de tarjeta por reposición: Agaces 162, Nueva Pompeya.</button>
+    <!-- Tarjeta Ciudadanía Porteña (fin) -->
+
+    <!-- Tarjeta Nuestras Familias (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard28()" id="dir_nf" value="Retiro de tarjeta: Av. Del Barco Centenera 2908, Nueva Pompeya (Banco Ciudad; casi esquina Av. Perito Moreno)
+-Sólo por 1ra vez, se retira 10 días después de la fecha de pago, por terminación de DNI-"><b><span style="color:#14e0ab">Programa Nuestras Familias</span></b><br>Retiro de tarjeta: Av. Del Barco Centenera 2908, Nueva Pompeya (Banco Ciudad; casi esquina Av. Perito Moreno)<br>
+-Sólo por 1ra vez, se retira 10 días después de la fecha de pago, por terminación de DNI-</button>
+    <!-- Tarjeta Nuestras Familias (fin) -->
+
+    <!-- Tarjeta Subsidio Habitacional (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard29()" id="dir_637" value="Retiro de tarjeta: Av. Del Barco Centenera 2908, Nueva Pompeya (Banco Ciudad; casi esquina Av. Perito Moreno)"><b><span style="color:#14e0ab">Programa Sub. Habitacional</span></b><br>Retiro de tarjeta: Av. Del Barco Centenera 2908, Nueva Pompeya (Banco Ciudad; casi esquina Av. Perito Moreno)</button>
+    <!-- Tarjeta Subsidio Habitacional (fin) -->
+
+    <!-- Tarjeta Vivir en Casa (inicio) -->
+        <button type="button" class="block animado" onclick="copyToClipboard30()" id="dir_vc" value="Retiro de tarjeta: Av. Corrientes 2528, Balvanera. (Banco Ciudad)"><b><span style="color:#14e0ab">Programa Vivir en Casa</span></b><br>Retiro de tarjeta: Av. Corrientes 2528, Balvanera. (Banco Ciudad)</button>
+    <!-- Tarjeta Vivir en Casa (fin) -->
+
+        <h6 id="consultas_cp">.</h6> <!-- Marca de salto de página-->
+
+        <h4 class="consultas_cp">Consultas CP</h4>
+        <button type="button" class="block presentacion" onclick="copyToClipboard31()" id="consultas_cp1" value="Para consultas acerca del Programa Ciudadanía Porteña, podés comunicarte a los siguientes teléfonos de contacto 4867-6997 / 6902 / 6941 o bien, enviar un correo a la casilla: ciudadaniaportena@buenosaires.gob.ar 
+
+También podés asistir a las siguientes Sedes de Atención Social:
+   - Sede de Atención Social Nº3: Av. San Juan 2353, San Cristóbal.  
+   - Sede de Atención Social Nº4: Coronel Salvadores 799, La Boca.  
+   - Sede de Atención Social Nº8: Av. Fernández de la Cruz 4214, Villa Lugano. 
+*Horario de atención 9:30 a 15:00hs.
+
+
+Importante: la atención presencial en las Sedes de Atención Social se realiza por terminación de DNI. Comprobá el último número de tu DNI:
+- 0 - 1: corresponde Lunes
+- 2 - 3: corresponde Martes
+- 4 - 5: corresponde Miércoles
+- 6 - 7: corresponde Jueve
+- 8 - 9: corresponde Viernes
+"><b><span style="color:#14e0ab">Consultas y/o reclamos beneficiarios/as CP</b><br>Para consultas acerca del Programa Ciudadanía Porteña, podés comunicarte a los siguientes teléfonos de contacto 4867-6997 / 6902 / 6941 o bien, enviar un correo a la casilla: ciudadaniaportena@buenosaires.gob.ar 
+<br>
+También podés asistir a las siguientes Sedes de Atención Social:<br>
+   - Sede de Atención Social Nº3: Av. San Juan 2353, San Cristóbal.<br>  
+   - Sede de Atención Social Nº4: Coronel Salvadores 799, La Boca.<br>  
+   - Sede de Atención Social Nº8: Av. Fernández de la Cruz 4214, Villa Lugano.<br> 
+*Horario de atención 9:30 a 15:00hs.<br>
+<br>
+<br>
+Importante: la atención presencial en las Sedes de Atención Social se realiza por terminación de DNI. Comprobá el último número de tu DNI:<br>
+- 0 - 1: corresponde Lunes<br>
+- 2 - 3: corresponde Martes<br>
+- 4 - 5: corresponde Miércoles<br>
+- 6 - 7: corresponde Jueve<br>
+- 8 - 9: corresponde Viernes<br>
+</button>
+    </main>
+</body>
+
+<script>
+    function copiarTexto() {
+    var nombre = document.getElementById("botondesaludo").value;
+    var contenido = document.getElementById("botondesaludo");
+    var nombrePlaceholder = document.getElementById("nombre-placeholder");
+  
+    // Reemplazar el nombre en el contenido
+    nombrePlaceholder.textContent = nombre;
+  
+    // Seleccionar el texto
+    var seleccion = document.createRange();
+    seleccion.selectNodeContents(contenido);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(seleccion);
+  
+    // Copiar el texto seleccionado
+    document.execCommand("copy");
+  
+    // Restaurar el nombre placeholder
+    nombrePlaceholder.textContent = "placeholder";
+  
+    // Deseleccionar el texto
+    window.getSelection().removeAllRanges();
+	
+}
+    function copyToClipboard101() {
+    var copyText101 = document.getElementById("presentacion01").value;
+    navigator.clipboard.writeText(copyText101).then(() => {
+    });
+    }
+
+    function copyToClipboard102() {
+    var copyText102 = document.getElementById("presentacion02").value;
+    navigator.clipboard.writeText(copyText102).then(() => {
+    });
+    }
+
+    function copyToClipboard103() {
+    var copyText103 = document.getElementById("presentacion03").value;
+    navigator.clipboard.writeText(copyText103).then(() => {
+    });
+    }
+
+    function copyToClipboard104() {
+    var copyText104 = document.getElementById("presentacion04").value;
+    navigator.clipboard.writeText(copyText104).then(() => {
+    });
+    }
+
+    function copyToClipboard105() {
+    var copyText105 = document.getElementById("presentacion05").value;
+    navigator.clipboard.writeText(copyText105).then(() => {
+    });
+    }
+
+    function copyToClipboard106() {
+    var copyText106 = document.getElementById("presentacion06").value;
+    navigator.clipboard.writeText(copyText106).then(() => {
+    });
+    }
+
+    function copyToClipboard107() {
+    var copyText107 = document.getElementById("presentacion07").value;
+    navigator.clipboard.writeText(copyText107).then(() => {
+    });
+    }
+
+    function copyToClipboard108() {
+    var copyText108 = document.getElementById("presentacion08").value;
+    navigator.clipboard.writeText(copyText108).then(() => {
+    });
+    }
+
+    function copyToClipboard201() {
+    var copyText201 = document.getElementById("presentacion11").value;
+    navigator.clipboard.writeText(copyText201).then(() => {
+    });
+    }
+
+    function copyToClipboard202() {
+    var copyText202 = document.getElementById("presentacion12").value;
+    navigator.clipboard.writeText(copyText202).then(() => {
+    });
+    }
+
+    function copyToClipboard203() {
+    var copyText203 = document.getElementById("presentacion13").value;
+    navigator.clipboard.writeText(copyText203).then(() => {
+    });
+    }
+
+    function copyToClipboard204() {
+    var copyText204 = document.getElementById("presentacion14").value;
+    navigator.clipboard.writeText(copyText204).then(() => {
+    });
+    }
+
+    function copyToClipboard205() {
+    var copyText205 = document.getElementById("presentacion15").value;
+    navigator.clipboard.writeText(copyText205).then(() => {
+    });
+    }
+
+    function copyToClipboard206() {
+    var copyText206 = document.getElementById("presentacion16").value;
+    navigator.clipboard.writeText(copyText206).then(() => {
+    });
+    }
+
+    function copyToClipboard207() {
+    var copyText207 = document.getElementById("presentacion17").value;
+    navigator.clipboard.writeText(copyText207).then(() => {
+    });
+    }
+
+    function copyToClipboard208() {
+    var copyText208 = document.getElementById("presentacion18").value;
+    navigator.clipboard.writeText(copyText208).then(() => {
+    });
+    }
+
+    function copyToClipboard3() {
+    var copyText3 = document.getElementById("aguarde").value;
+    navigator.clipboard.writeText(copyText3).then(() => {
+    });
+    }
+
+    function copyToClipboard4() {
+    var copyText4 = document.getElementById("fin_consulta").value;
+    navigator.clipboard.writeText(copyText4).then(() => {
+    });
+    }
+
+    function copyToClipboard5() {
+    var copyText5 = document.getElementById("despedida").value;
+    navigator.clipboard.writeText(copyText5).then(() => {
+    });
+    }
+
+    function copyToClipboard6() {
+    var copyText6 = document.getElementById("despedida1").value;
+    navigator.clipboard.writeText(copyText6).then(() => {
+    });
+    }
+
+    function copyToClipboard7() {
+    var copyText7 = document.getElementById("fuera_competencias").value;
+    navigator.clipboard.writeText(copyText7).then(() => {
+    });
+    }
+
+    function copyToClipboard8() {
+    var copyText8 = document.getElementById("fecha_cobro").value;
+    navigator.clipboard.writeText(copyText8).then(() => {
+    });
+    }
+
+    function copyToClipboard9() {
+    var copyText9 = document.getElementById("no_mail_aprobado").value;
+    navigator.clipboard.writeText(copyText9).then(() => {
+    });
+    }
+
+    function copyToClipboard10() {
+    var copyText10 = document.getElementById("duplicados").value;
+    navigator.clipboard.writeText(copyText10).then(() => {
+    });
+    }
+
+    function copyToClipboard11() {
+    var copyText11 = document.getElementById("rendir").value;
+    navigator.clipboard.writeText(copyText11).then(() => {
+    });
+    }
+
+    function copyToClipboard12() {
+    var copyText12 = document.getElementById("informarnuevotextoaqui").value;
+    navigator.clipboard.writeText(copyText12).then(() => {
+    });
+    }
+
+    function copyToClipboard13() {
+    var copyText13 = document.getElementById("presentarse_entrerios").value;
+    navigator.clipboard.writeText(copyText13).then(() => {
+    });
+    }
+
+    function copyToClipboard14() {
+    var copyText14 = document.getElementById("consultas_reclamos").value;
+    navigator.clipboard.writeText(copyText14).then(() => {
+    });
+    }
+
+    function copyToClipboard15() {
+    var copyText15 = document.getElementById("informarnuevotextoaqui2").value;
+    navigator.clipboard.writeText(copyText15).then(() => {
+    });
+    }
+
+    function copyToClipboard16() {
+    var copyText16 = document.getElementById("tramite_curso").value;
+    navigator.clipboard.writeText(copyText16).then(() => {
+    });
+    }
+
+    function copyToClipboard17() {
+    var copyText17 = document.getElementById("presentar_recibo").value;
+    navigator.clipboard.writeText(copyText17).then(() => {
+    });
+    }
+
+    function copyToClipboard18() {
+    var copyText18 = document.getElementById("instructivo_boti").value;
+    navigator.clipboard.writeText(copyText18).then(() => {
+    });
+    }
+
+    function copyToClipboard19() {
+    var copyText19 = document.getElementById("habitacional_quees").value;
+    navigator.clipboard.writeText(copyText19).then(() => {
+    });
+    }
+
+    function copyToClipboard20() {
+    var copyText20 = document.getElementById("como_donde").value;
+    navigator.clipboard.writeText(copyText20).then(() => {
+    });
+    }
+
+    function copyToClipboard21() {
+    var copyText21 = document.getElementById("cursos_obligatorios").value;
+    navigator.clipboard.writeText(copyText21).then(() => {
+    });
+    }
+
+        function copyToClipboard211() {
+    var copyText211 = document.getElementById("datos_pad").value;
+    navigator.clipboard.writeText(copyText211).then(() => {
+    });
+    }
+
+        function copyToClipboard212() {
+    var copyText212 = document.getElementById("datos_pad2").value;
+    navigator.clipboard.writeText(copyText212).then(() => {
+    });
+    }
+
+    function copyToClipboard22() {
+    var copyText22 = document.getElementById("t_social").value;
+    navigator.clipboard.writeText(copyText22).then(() => {
+    });
+    }
+
+    function copyToClipboard23() {
+    var copyText23 = document.getElementById("cmo").value;
+    navigator.clipboard.writeText(copyText23).then(() => {
+    });
+    }
+
+    function copyToClipboard24() {
+    var copyText24 = document.getElementById("tarjeta_cabal").value;
+    navigator.clipboard.writeText(copyText24).then(() => {
+    });
+    }
+
+    function copyToClipboard25() {
+    var copyText25 = document.getElementById("tarjeta_visa").value;
+    navigator.clipboard.writeText(copyText25).then(() => {
+    });
+    }
+
+    function copyToClipboard26() {
+    var copyText26 = document.getElementById("dir_ts").value;
+    navigator.clipboard.writeText(copyText26).then(() => {
+    });
+    }
+
+    function copyToClipboard27() {
+    var copyText27 = document.getElementById("dir_cp").value;
+    navigator.clipboard.writeText(copyText27).then(() => {
+    });
+    }
+
+    function copyToClipboard28() {
+    var copyText28 = document.getElementById("dir_nf").value;
+    navigator.clipboard.writeText(copyText28).then(() => {
+    });
+    }
+
+    function copyToClipboard29() {
+    var copyText29 = document.getElementById("dir_637").value;
+    navigator.clipboard.writeText(copyText29).then(() => {
+    });
+    }
+
+    function copyToClipboard30() {
+    var copyText30 = document.getElementById("dir_vc").value;
+    navigator.clipboard.writeText(copyText30).then(() => {
+    });
+    }
+    function copyToClipboard31() {
+    var copyText31 = document.getElementById("consultas_cp1").value;
+    navigator.clipboard.writeText(copyText31).then(() => {
+    });
+    }
+
+    function copyToClipboard32() {
+    var copyText32 = document.getElementById("no_pagos").value;
+    navigator.clipboard.writeText(copyText32).then(() => {
+    });
+    }
+</script>
+
+<!-- SCROLL ANIMADO (inicio)-->
+<script src="js/animar.js"></script>
+<!-- SCROLL ANIMADO (fin)-->
+
+<footer>
+</footer>
+
+</html>

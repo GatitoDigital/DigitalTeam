@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1920px, initial-scale=1">
+	<link rel="icon" href="icons/cat1.ico">
+	<link rel="stylesheet" href="css/styleCPNFVC.css">
+	<title>DIGITAL Team</title>
+</head>
+
+<body>
+	<header>
+		<a href="index.html" id="logo">
+        	<img src="icons/cat1.png" alt="Logo Gatito">
+    	</a>
+    	<a href="index.html">
+    	<h1 id="team-name">DIGITAL team</h1>
+		</a>
+    	<div id="menu_principal">		
+    	<nav>
+			<ul>
+                <li><a href="menuCPNFVC_2.html" id="diseno">Moderno</a></li>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="menu637.html">690</a></li>
+				<li><a href="menuCUD.html">CUD</a></li>
+				<li><a href="menuBOTI.html">BOTI</a></li>
+				<li><a href="menuMAIL.html">MAIL</a></li>
+				<li><a href="menuCPNFVC.html" id="menuCPNFVC">CP-NF-VC</a></li>
+				<li><a href="menuINFO.html">INFO</a></li>
+			</ul>
+		</nav>
+		</div>
+		
+			<h3>Correcciones CP - NF - VC</h3>
+		
+		<div id="accesos">
+			<nav>
+			 <ul>
+				<li><a class="accesos" href="#">Titular</a></li>
+				<li><a class="accesos" href="#grupo_familiar">Grupo Familiar</a></li>
+				<li><a class="accesos" href="#finalizado">Finalizado</a></li>
+			</ul>
+			</nav>
+		</div>
+	</header>
+
+	<h4 id="requisitos_titular">TITULAR</h4>
+		<button type="button" class="block" onclick="copyToClipboard1()" id="dni_titular_frente" value="Adjunte el DNI (FRENTE) del/la titular."><b><span style="color:#8afff3">Adjunte el </span><span style="color:#b5baff">DNI FRENTE </span><span style="color:#8afff3">del/la titular</span></b><br>
+		Adjunte el DNI (FRENTE) del/la titular</button>
+
+		<button type="button" class="block" onclick="copyToClipboard2()" id="dni_titular_dorso" value="Adjunte el DNI (DORSO) del/la titular."><b><span style="color:#8afff3">Adjunte el </span><span style="color:#b5baff">DNI DORSO </span><span style="color:#8afff3">del/la titular</span></b><br>
+		Adjunte el DNI (DORSO) del/la titular</button>
+
+		<button type="button" class="block" onclick="copyToClipboard3()" id="cuil_titular" value="Adjunte la constancia de CUIL del/la titular."><b><span style="color:#8afff3">Adjunte la constancia de </span><span style="color:#b5baff">CUIL </span><span style="color:#8afff3">del/la titular</span></b><br>
+		Adjunte la constancia de CUIL del/la titular.</button>
+
+		<button type="button" class="block" onclick="copyToClipboard4()" id="negativa_titular" value="Adjunte la constancia de negativa de ANSES actualizada del/la titular de la solicitud del beneficio. Recuerde que el mismo debe tener fecha de emisión del mes corriente."><b><span style="color:#8afff3">Adjunte la constancia de </span><span style="color:#b5baff">Negativa de ANSES </span><span style="color:#8afff3">del/la titular</span></b><br>
+		Adjunte la constancia de negativa de ANSES actualizada del/la titular de la solicitud del beneficio. Recuerde que el mismo debe tener fecha de emisión del mes corriente.</button>
+
+		<button type="button" class="block" onclick="copyToClipboard5()" id="certificado_domicilio" value="Adjunte el Certificado de Domicilio expedido por la Policía de la Ciudad a nombre del/la titular de la solicitud del beneficio. Recuerde que el mismo cuenta con hasta 45 días de validez."><b><span style="color:#8afff3">Adjunte el Certificado de</span><span style="color:#b5baff"> Domicilio</span></b><br>
+		Adjunte el Certificado de Domicilio expedido por la Policía de la Ciudad a nombre del/la titular de la solicitud del beneficio. Recuerde que el mismo cuenta con hasta 45 días de validez.</button>
+
+		<button type="button" class="block" onclick="copyToClipboard6()" id="recibo_haberes" value="Adjunte Recibos de haberes (jubilación, pensión, empleo, etc.)"><b><span style="color:#8afff3">Adjunte Certificado de</span><span style="color:#b5baff"> Recibos de haberes</span></b><br>
+		Adjunte Recibos de haberes (jubilación, pensión, empleo, etc.)</button>
+
+
+<div id="en_construccion">
+<img src="images/en_construccion.png" title="En construcción, disculpe las molestias :P">
+</div>
+	
+</body>
+
+<script>
+    function copyToClipboard1() {
+    var copyText1 = document.getElementById("dni_titular_frente").value;
+    navigator.clipboard.writeText(copyText1).then(() => {
+    });
+	}
+
+    function copyToClipboard2() {
+    var copyText2 = document.getElementById("dni_titular_dorso").value;
+    navigator.clipboard.writeText(copyText2).then(() => {
+    });
+	}
+
+    function copyToClipboard3() {
+    var copyText3 = document.getElementById("cuil_titular").value;
+    navigator.clipboard.writeText(copyText3).then(() => {
+    });
+	}
+
+    function copyToClipboard4() {
+    var copyText4 = document.getElementById("negativa_titular").value;
+    navigator.clipboard.writeText(copyText4).then(() => {
+    });
+	}
+
+    function copyToClipboard5() {
+    var copyText5 = document.getElementById("certificado_domicilio").value;
+    navigator.clipboard.writeText(copyText5).then(() => {
+    });
+	}
+
+    function copyToClipboard6() {
+    var copyText6 = document.getElementById("recibo_haberes").value;
+    navigator.clipboard.writeText(copyText6).then(() => {
+    });
+	}
+
+</script>
+
+<footer>
+</footer>
+</html>

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* font-family: 'Bebas Neue', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor : url(../icons/cursor_hp1.png), auto;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.7s;
+}
+
+.container {
+   /* max-width: 1200px; */ 
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+}
+
+#img_logo {
+    width: 3rem;
+    margin-left: 2rem;
+}
+
+.logo {
+    font-size: 20px;
+    color: #41628a;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+.logo_grupo {
+    display: flex;
+    align-items: center;
+}
+
+/* Menú de navegación principal (inicio) */
+.nav_bar {
+    margin-right: 2rem;
+}
+
+.menu .nav_bar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .nav_bar ul li a {
+    font-size: 14px;
+    padding: 15px;
+    color: #fff;
+    display: block;
+    transition: color 0.7s;
+}
+
+#pagina_actual {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e887f5;
+}
+
+#pag_inicio:hover {
+    color: #8d29e6;
+}
+
+#pag_637:hover {
+    color: #69e0e0;
+}
+
+#pag_CUD:hover {
+    color: #ffa29c;
+}
+
+#pag_BOTI:hover {
+    color: #14e0ab;
+}
+
+#pag_MAIL:hover {
+    color: #946ad4;
+}
+
+#pag_CPNFVC:hover {
+    color: #2e61c7;
+}
+
+#pag_INFO:hover {
+    color: #fffd8c;
+}
+
+#menu {
+    display: none;
+}
+
+.menu_icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+/* Menú de navegación principal (fin) */
+
+#principal {
+    min-height: 100vh;
+    position: relative;
+}
+
+#solicitudes {
+    margin: 5rem 0 0 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.todos_botones {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+button {
+    border: 0;
+    line-height: 1.6;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(245, 245, 245, 0.2);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+}
+
+button:hover {
+    background-color: rgba(175, 175, 175, 0.5);
+}
+
+button:active {
+    box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.block {
+    display: block;
+    width: 95%;
+    border: none;
+    padding: 0.4rem 1.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 0.8rem;
+    cursor : url(../icons/cursor_hp2.png), pointer;  
+}
+
+.sabrina {
+    width: 60%;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+#tabla {
+    display: inline-block;
+    margin: 0 0 0 12rem;
+    padding: 1rem 2rem;
+    color: #aecef5;
+    transition: color 0.7s;
+    border: solid 1px #aecef5;
+    border-radius: 16px;
+}
+
+#tabla:hover {
+    color: #fff;
+    background-color: rgba(175, 175, 175, 0.5)
+}
+
+.asunto {
+    width: 22%;
+}
+
+.cuerpo {
+    width: 32%;
+}
+
+.correo {
+    width: 38%;
+}
+
+.agente {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+#ultimo_item {
+    margin-bottom: 3rem;
+}
+
+/* Video wallpaper (inicio) */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Video wallpaper (fin) */
+
+/* Cargar página con Fade-in (inicio) */
+body {
+    animation: fadeInAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+/* Cargar página con Fade-in (fin) */

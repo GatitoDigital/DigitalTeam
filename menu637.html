@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1920px, initial-scale=1">
+	<link rel="icon" href="icons/cat1.ico">
+	<link rel="stylesheet" href="css/style637.css">
+	<title>DIGITAL Team</title>
+</head>
+
+<body>
+	<header>
+		<a href="index.html" id="logo">
+        	<img src="icons/cat1.png" alt="Logo Gatito">
+    	</a>
+    	<a href="index.html">
+    	<h1 id="team-name">DIGITAL team</h1>
+
+    	<div id="menu_principal">    	
+    	<nav>
+			<ul>
+                <li><a href="menu637_2.html" id="diseno">Moderno</a></li>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="menu637.html" id="menu637">690</a></li>
+				<li><a href="menuCUD.html">CUD</a></li>
+				<li><a href="menuBOTI.html">BOTI</a></li>
+				<li><a href="menuMAIL.html">MAIL</a></li>
+				<li><a href="menuCPNFVC.html">CP-NF-VC</a></li>				
+				<li><a href="menuINFO.html">INFO</a></li>
+			</ul>
+		</nav>
+		</div>
+				
+			<h3>Respuestas Habitacional 637 / 690</h3>
+		
+		<div id="accesos">
+			<nav>
+			 <ul>
+				<li><a class="accesos" href="#">Finalizado</a></li>
+				<li><a class="accesos" href="#subsanaciones">Subsanaciones</a></li>
+				<li><a class="accesos" href="#rechazados">Rechazados</a></li>		
+			</ul>
+			</nav>
+		</div>
+	</header>
+
+	<h4 id="finalizado1">FINALIZADO</h4>
+		<button type="button" class="block" onclick="copyToClipboard1()" id="tram_finalizado1" value="Su recibo ha sido cargado con éxito.
+*Si se trata del primer recibo, recuerde que debe presentarse en la Sede Central ubicada en la calle Pavón 1779, con el original.
+
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:
+- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165
+- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166
+"><b><span style="color:#8affd8">CUANDO TIENE 637 SIN RECIBOS ADJUNTADOS</span></b><br>Su recibo ha sido cargado con éxito.<br>
+*Si se trata del primer recibo, recuerde que debe presentarse en la Sede Central ubicada en la calle Pavón 1779, con el original.<br><br>
+
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:<br>
+- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165<br>
+- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166</button>
+
+		<button type="button" class="block" onclick="copyToClipboard2()" id="tram_finalizado2" value="El recibo correspondiente al mes de xx ha sido cargado con éxito."><b><span style="color:#8affd8">CUANDO EN STD DECLARA UN MES ANTERIOR O MES SIGUIENTE AL QUE DEBERÍA RENDIR </span><span style="color:#6ee67f">(IMPORTANTE: Completar el mes)</span><br><span style="color:#8affd8">(siempre y cuando el recibo se encuentre correcto y corroboramos que corresponde al mes en curso)</span></b><br>El recibo correspondiente al mes de <span style="color:#6ee67f">xx</span> ha sido cargado con éxito.</button>
+
+<h6 id="subsanaciones">.</h6> <!-- Marca de salto de página-->
+
+	<h4 id="subsanaciones1">SUBSANACIONES</h4>
+	<h5 class="subcategoria">FORMATO INVÁLIDO</h5>
+		<button type="button" class="block" onclick="copyToClipboard3()" id="formato_invalido" value="No es posible visualizar el archivo ya que su formato es inválido.
+Por favor, envíelo nuevamente en formato PDF o IMAGEN (.jpg, .bmp, .png) 
+"><b><span style="color:#8affd8">EL FORMATO DEL ARCHIVO ES INVÁLIDO Y NO PUEDE DESCARGARSE</span></b><br>No es posible visualizar el archivo ya que su formato es inválido.<br>Por favor, envíelo nuevamente en formato PDF o IMAGEN (.jpg, .bmp, .png)</button>
+
+	<h5 class="subcategoria">RECIBOS INCOMPLETOS / MAL CONFECCIONADOS</h5>
+	<h5 class="subsubcategoria">- Datos que debe contener el recibo:</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard400()" id="mal_inquilino" value="El recibo que adjunta se encuentra incompleto. El mismo debe tener:
+	- Los datos del inquilino: nombre, apellido, DNI y n° de teléfono.
+Por favor, envíelo nuevamente con los datos faltantes."><b><span style="color:#8affd8">DATOS DEL INQUILINO</span></b><br>El recibo que adjunta se encuentra incompleto. El mismo debe tener:<br>
+- Datos del inquilino: nombre, apellido, DNI y n° de teléfono.<br>
+Por favor, envíelo nuevamente con los datos faltantes.<br><br></button>
+
+	<button type="button" class="block" onclick="copyToClipboard401()" id="mal_alquiler_barrio" value="El recibo que adjunta se encuentra incompleto. El mismo debe tener:
+	- Los datos del alquiler: dirección (calle y altura, manzana, casa, barrio) y monto a abonar.
+Por favor, envíelo nuevamente con los datos faltantes."><b><span style="color:#8affd8">DATOS DE ALQUILER (Barrio popular)</span></b><br>El recibo que adjunta se encuentra incompleto. El mismo debe tener:<br>
+- Datos del alquiler: dirección (calle y altura, manzana, casa, barrio) y monto a abonar.<br>
+Por favor, envíelo nuevamente con los datos faltantes.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard402()" id="mal_propietario" value="El recibo que adjunta se encuentra incompleto. El mismo debe tener:
+	- Los datos del propietario de la vivienda: nombre, apellido, firma, aclaración, DNI y n° de teléfono de contacto.
+Por favor, envíelo nuevamente con los datos faltantes."><b><span style="color:#8affd8">DATOS DEL PROPIETARIO</span></b><br>El recibo que adjunta se encuentra incompleto. El mismo debe tener:<br>
+- Datos del propietario de la vivienda: nombre, apellido, firma, aclaración, DNI y n° de teléfono de contacto.<br>
+Por favor, envíelo nuevamente con los datos faltantes.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard403()" id="mal_alquiler_formal" value="El recibo que adjunta se encuentra incompleto. El mismo debe tener:
+	- Los datos del alquiler: dirección (calle, altura y barrio) y monto a abonar.
+Por favor, envíelo nuevamente con los datos faltantes.
+"><b><span style="color:#8affd8">DATOS DE ALQUILER (Ciudad formal)</span></b><br>El recibo que adjunta se encuentra incompleto. El mismo debe tener:<br>
+- Datos del alquiler: dirección (calle, altura y barrio) y monto a abonar.<br>
+Por favor, envíelo nuevamente con los datos faltantes.<br><br></button>
+
+	<button type="button" class="block" onclick="copyToClipboard06()" id="ticket_fiscal" value="En el ticket fiscal deben figurar los datos del inquilino (Apellido, nombre y DNI) o bien puede presentarlo acompañado con la factura A, B o C correspondiente."><b><span style="color:#8affd8">TICKET FISCAL SIN DATOS DEL INQUILINO</span></b><br>En el ticket fiscal deben figurar los datos del inquilino (Apellido, nombre y DNI) o bien puede presentarlo acompañado con la factura A, B o C correspondiente.</button>
+
+
+	<h5 class="subsubcategoria">- Confeccionado como presupuesto (en los casos que sea hotel):</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard6()" id="presupuesto_hotel" value="El recibo adjunto corresponde a un presupuesto y no es un formato válido para la rendición del mismo. Debe confeccionarse en un formato de factura A, B o C, no X."><b><span style="color:#8affd8">CONFECCIONADO COMO PRESUPUESTO</span></b><br>El recibo adjunto corresponde a un presupuesto y no es un formato válido para la rendición del mismo. Debe confeccionarse en un formato de factura A, B o C, no X.</button>
+
+	<h5 class="subsubcategoria">- No figura el barrio / localidad (Solo en barrios populares):</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard7()" id="barrio_popular" value="En el recibo debe especificarse en qué localidad se encuentra la vivienda."><b><span style="color:#8affd8">NO FIGURA EL BARRIO / LOCALIDAD</span></b><br>En el recibo debe especificarse en qué localidad se encuentra la vivienda.</button>
+
+	<h5 class="subsubcategoria">- El periodo que declara en STD no es el mismo que el del recibo:</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard8()" id="mal_mes" value="El recibo adjunto corresponde al mes de xxxxx
+Debe adjuntar un recibo correspondiente al periodo de rendición seleccionado (mes de xxxx)"><b><span style="color:#8affd8">EL PERIODO DECLARADO EN STD NO ES EL MISMO QUE EL DEL RECIBO</span> <span style="color:#6ee67f">(IMPORTANTE: Completar los meses)</b><br>El recibo adjunto corresponde al mes de <span style="color:#6ee67f">xxxxx</span><br>Debe adjuntar un recibo correspondiente al periodo de rendición seleccionado <span style="color:#6ee67f">(mes de xxxx)</span></button>
+
+	<h5 class="subcategoria">NO SE PUEDE VISUALIZAR LA TOTALIDAD DEL RECIBO</h5>
+	<h5 class="subsubcategoria">- Imagen recortada:</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard9()" id="imagen_dueno" value="Debe adjuntar nuevamente la factura/recibo, ya que la imagen se encuentra recortada y no es posible visualizar la totalidad de los datos en la misma."><b><span style="color:#fcff45">IMAGEN RECORTADA </span><span style="color:#8affd8">- DUEÑO DIRECTO</span></b><br>Debe adjuntar nuevamente la factura/recibo, ya que la imagen se encuentra recortada y no es posible visualizar la totalidad de los datos en la misma.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard10()" id="imagen_hotel" value="Debe adjuntar nuevamente la factura, ya que la imagen se encuentra recortada y no es posible visualizar la totalidad de los datos en la misma."><b><span style="color:#8affd8">IMAGEN RECORTADA - HOTEL</span></b><br>Debe adjuntar nuevamente la factura, ya que la imagen se encuentra recortada y no es posible visualizar la totalidad de los datos en la misma.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard11()" id="imagen_dorso" value="Dado que los datos del xxxxxx figuran en el dorso del recibo. Se solicita que adjunte un archivo unificado con ambas caras. 
+A continuación, le adjunto un link que permite unificar las imágenes en un archivo, como se ha mencionado anteriormente: https://www.ilovepdf.com/es/jpg_a_pdf"><b><span style="color:#8affd8">ALGUNOS DATO FIGURA EN EL DORSO DEL RECIBO <span style="color:#6ee67f">(IMPORTANTE: Completar datos)</span></span></b><br>Dado que los datos del <span style="color:#6ee67f">xxxxxx</span> figuran en el dorso del recibo. Se solicita que adjunte un archivo unificado con ambas caras.<br>
+A continuación, le adjunto un link que permite unificar las imágenes en un archivo, como se ha mencionado anteriormente: https://www.ilovepdf.com/es/jpg_a_pdf</button>
+
+	<button type="button" class="block" onclick="copyToClipboard12()" id="imagen_borrosa" value="La imagen adjuntada se encuentra borrosa e ilegible. Debe adjuntar una nueva imagen donde sea posible visualizar la totalidad de los datos del recibo."><b><span style="color:#8affd8">IMAGEN BORROSA</span></b><br>La imagen adjuntada se encuentra borrosa e ilegible. Debe adjuntar una nueva imagen donde sea posible visualizar la totalidad de los datos del recibo.</button>
+
+	<h5 class="subcategoria">ADJUNTA DNI / RECIBO QUE NO CORRESPONDE</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard13()" id="dnixrecibo" value="Debe adjuntar aquí la factura/recibo correspondiente al período que desea rendir, no la imagen/archivo de su DNI."><b><span style="color:#8affd8">ADJUNTA </span><span style="color:#fcff45">DNI EN EL CASILLERO DEL RECIBO</span></b><br>Debe adjuntar aquí la factura/recibo correspondiente al período que desea rendir, no la imagen/archivo de su DNI.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard14()" id="dnixdueno" value="Debe adjuntar aquí la imagen o archivo de su DNI, no del DNI del dueño."><b><span style="color:#8affd8">ADJUNTA DNI DEL DUEÑO EN LUGAR DEL BENEFICIARIO</span></b><br>Debe adjuntar aquí la imagen o archivo de su DNI, no del DNI del dueño.</button>
+
+	<h5 class="subcategoria">IRREGULARIDADES C.A.I.</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard15()" id="cai_vencido" value="La factura se encuentra fuera de vigencia. Debe confeccionar y presentar una nueva donde el C.A.I. se encuentre vigente."><b><span style="color:#8affd8">C.A.I. VENCDO</span></b><br>La factura se encuentra fuera de vigencia. Debe confeccionar y presentar una nueva donde el C.A.I. se encuentre vigente.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard16()" id="cai_noseve" value="Debe adjuntar nuevamente el archivo de la factura de manera que pueda visualizarse el C.A.I. correspondiente. Asegúrese de que se encuentre vigente."><b><span style="color:#8affd8">NO SE VISUALIZA EL C.A.I.</span></b><br>Debe adjuntar nuevamente el archivo de la factura de manera que pueda visualizarse el C.A.I. correspondiente.  Asegúrese de que se encuentre vigente.</button>
+
+	<h5 class="subcategoria">IRREGULARIDADES DE CONFECCIÓN:</h5>
+
+	<button type="button" class="block" onclick="copyToClipboard17()" id="adulterado" value="Debe rehacer el recibo, ya que los recibos no deben estar modificados, tachados, borrados, ni presentar irregularidades."><b><span style="color:#8affd8">RECIBO ADULTERADO</span></b><br>Debe rehacer el recibo, ya que los recibos no deben estar modificados, tachados, borrados, ni presentar irregularidades.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard18()" id="tinta_distinta" value="Debe rehacer el recibo, ya que los recibos deben confeccionarse con la misma tinta y no dos distintas."><b><span style="color:#fcff45">TINTAS DISTINTAS</span></b><br>Debe rehacer el recibo, ya que los recibos deben confeccionarse con la misma tinta y no dos distintas.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard181()" id="no_coincide_dato" value="Los datos del recibo no coinciden con los datos declarados en el sistema. Debe rehacer el recibo indicando correctamente los datos del/la inquilino/a / propietario/a."><b><span style="color:#8affd8">NO COINCIDEN LOS DATOS DECLARADOS DEL INQUILINO/PROPIETARIO</span></b><br>Los datos del recibo no coinciden con los datos declarados en el sistema. Debe rehacer el recibo indicando correctamente los datos del/la inquilino/a / propietario/a."</button>
+
+<h6 id="rechazados">.</h6> <!-- Marca de salto de página-->
+
+	<h4 id="rechazados1">RECHAZADOS</h4>
+	<button type="button" class="block" onclick="copyToClipboard19()" id="no_pagos" value="Deberá presentarse en la Sede Central, ubicada en la calle Pavón 1779.
+
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:
+- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165
+- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166"><b><span style="color:#8affd8">NO FIGURA EN PLANILLA DE PAGOS Y ESTÁ EN BAJAS; O NO FIGURA EN NINGUNA</span></b><br>Deberá presentarse en la Sede Central, ubicada en la calle Pavón 1779.<br><br>
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:<br>
+- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165<br>
+- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166</button>
+
+	<button type="button" class="block" onclick="copyToClipboard20()" id="mal_periodo" value="El recibo/factura enviado no corresponde al período vigente.
+Del 1ro al día 20, inclusive de cada mes, podrá enviar el recibo del mes anterior y/o del corriente mes. A partir del 21, inclusive, se aceptarán únicamente los recibos del corriente mes. Deberá iniciar el trámite presentando la recibo/factura correcta."><b><span style="color:#8affd8">NO CORRESPONDE AL PERIODO VIGENTE</span></b><br>El recibo/factura enviado no corresponde al período vigente.<br>
+Del 1ro al día 20, inclusive de cada mes, podrá enviar el recibo del mes anterior y/o del corriente mes. A partir del 21, inclusive, se aceptarán únicamente los recibos del corriente mes. Deberá iniciar el trámite presentando el recibo/factura correcto.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard21()" id="fecha_futura" value="Debe adjuntar el recibo/factura el día de la fecha de realización que figura en el mismo, o bien, confeccionar uno nuevo con fecha de realización del día de hoy o anterior a este, no posterior, ya que no corresponde."><b><span style="color:#8affd8">FECHA DE REALIZACIÓN POSTERIOR AL DÍA QUE ENTREGA</span></b><br>Debe adjuntar el recibo/factura el día de la fecha de realización que figura en el mismo, o bien, confeccionar uno nuevo con fecha de realización del día de hoy o anterior a este, no posterior, ya que no corresponde.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard22()" id="con_lapiz" value="Los recibos no pueden confeccionarse con lápiz, los mismos deben realizarse con tinta. Deberá iniciar el trámite presentando la factura correcta."><b><span style="color:#8affd8">RECIBO CONFECCIONADO CON LAPIZ</span></b><br>Los recibos no pueden confeccionarse con lápiz, los mismos deben realizarse con tinta. Deberá iniciar el trámite presentando la factura correcta.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard23()" id="tres_meses" value="Los recibos no pueden confeccionarse con lápiz, los mismos deben realizarse con tinta. Deberá iniciar el trámite presentando la factura correcta."><b><span style="color:#8affd8">NO COBRA HACE MAS DE 3 MESES </span><br><span style="color:#6ee67f">(si el mes en curso es el 3er mes que no cobra, tiene tiempo de sacar turno para Pavón hasta el último día del mes en cuestión)</span></b><br>Deberá dirigirse a la Sede Central, ingresando por Av. Entre Ríos 1492. El horario de atención es de 9:00hs a 15:00hs, sin turno previo.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard24()" id="recibo_adulterado" value="El recibo/factura se encuentra con irregularidades. Deberá iniciar el trámite, tenga en cuenta que los recibos/facturas no deben estar modificados, tachados, borrados, ni presentar irregularidades."><b><span style="color:#8affd8">EL RECIBO / FACTURA SE ENCUENTRA ADULTERADO</span></b><br>El recibo/factura se encuentra con irregularidades. Deberá iniciar el trámite, tenga en cuenta que los recibos/facturas no deben estar modificados, tachados, borrados, ni presentar irregularidades.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard25()" id="transferencia" value="El comprobante adjunto no es un formato válido para la rendición de recibos correspondiente. Debe confeccionarse en un formato de factura A, B o C, o recibo de talonario."><b><span style="color:#8affd8">ADJUNTA COMPROBANTE DE TRANSFERENCIA</span></b><br>El comprobante adjunto no es un formato válido para la rendición de recibos correspondiente. Debe confeccionarse en un formato de factura A, B o C, o recibo de talonario.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard26()" id="no637no690_postulado" value="Deberá presentar el recibo/factura en la Sede Central, ubicada en la calle Pavón 1779.
+
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:
+- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165
+- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166"><b><span style="color:#8affd8">NO TIENE 637 NI 690 (Si la persona se encuentra postulada)</span><br><span style="color:#6ee67f">Se carga en planilla Drive que comparte <u>goatencionsocial</u>, el programa corroborá que no haya omitido la postulación de la persona.</span></b><br>Deberá presentar el recibo/factura en la Sede Central, ubicada en la calle Pavón 1779.<br>
+<br>
+La atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:<br>
+- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165<br>
+- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166</button>
+
+	<button type="button" class="block" onclick="copyToClipboard27()" id="no637no690_nopostulado" value="Deberá presentarse en la Sede Central (Av. Entre Ríos 1492) con toda la documentación, a fin de tramitar la postulación al programa."><b><span style="color:#8affd8">NO TIENE 637 NI 690 (Si la persona <u>NO</u> se encuentra postulada)</span><br><span style="color:#6ee67f">Se carga en planilla Drive que comparte <u>goatencionsocial</u>, el programa corroborá que no haya omitido la postulación de la persona.</span></b><br>Deberá presentarse en la Sede Central (Av. Entre Ríos 1492) con toda la documentación, a fin de tramitar la postulación al programa.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard28()" id="no637si690" value=" "><b><span style="color:#8affd8">NO TIENE 637 PERO SÍ 690</span><br><span style="color:#6ee67f">Se carga en planilla Drive que comparte <u>goatencionsocial</u> y se espera respuesta del programa.</button>
+
+	<button type="button" class="block" onclick="copyToClipboard29()" id="rechazado_duplicado" value="Solicitud rechazada dado que ha duplicado el trámite. Se continúa con el Trámite Nro. xx."><b><span style="color:#8affd8">RECHAZADO POR TRÁMITE DUPLICADO </span><span style="color:#6ee67f">(IMPORTANTE: Completar el N° de trámite)</span></b><br>Solicitud rechazada dado que ha duplicado el trámite. Se continúa con el Trámite Nro. <span style="color:#6ee67f">xx</span>.</button>
+
+<h6 id="final">.</h6> <!-- Marca de salto de página-->
+
+<script>
+    function copyToClipboard1() {
+    var copyText1 = document.getElementById("tram_finalizado1").value;
+    navigator.clipboard.writeText(copyText1).then(() => {
+    });
+	}
+
+	function copyToClipboard2() {
+    var copyText2 = document.getElementById("tram_finalizado2").value;
+    navigator.clipboard.writeText(copyText2).then(() => {
+    });
+	}
+
+	function copyToClipboard3() {
+    var copyText3 = document.getElementById("formato_invalido").value;
+    navigator.clipboard.writeText(copyText3).then(() => {
+    });
+	}
+
+	function copyToClipboard400() {
+    var copyText400 = document.getElementById("mal_inquilino").value;
+    navigator.clipboard.writeText(copyText400).then(() => {
+    });
+	}
+
+	function copyToClipboard401() {
+    var copyText401 = document.getElementById("mal_alquiler_barrio").value;
+    navigator.clipboard.writeText(copyText401).then(() => {
+    });
+	}
+
+	function copyToClipboard402() {
+    var copyText402 = document.getElementById("mal_propietario").value;
+    navigator.clipboard.writeText(copyText402).then(() => {
+    });
+	}
+
+	function copyToClipboard403() {
+    var copyText403 = document.getElementById("mal_alquiler_formal").value;
+    navigator.clipboard.writeText(copyText403).then(() => {
+    });
+	}
+
+	function copyToClipboard06() {
+    var copyText06 = document.getElementById("ticket_fiscal").value;
+    navigator.clipboard.writeText(copyText06).then(() => {
+    });
+	}
+
+	function copyToClipboard6() {
+    var copyText6 = document.getElementById("presupuesto_hotel").value;
+    navigator.clipboard.writeText(copyText6).then(() => {
+    });
+	}
+
+	function copyToClipboard7() {
+    var copyText7 = document.getElementById("barrio_popular").value;
+    navigator.clipboard.writeText(copyText7).then(() => {
+    });
+	}
+
+	function copyToClipboard8() {
+    var copyText8 = document.getElementById("mal_mes").value;
+    navigator.clipboard.writeText(copyText8).then(() => {
+    });
+	}
+
+	function copyToClipboard9() {
+    var copyText9 = document.getElementById("imagen_dueno").value;
+    navigator.clipboard.writeText(copyText9).then(() => {
+    });
+	}
+
+	function copyToClipboard10() {
+    var copyText10 = document.getElementById("imagen_hotel").value;
+    navigator.clipboard.writeText(copyText10).then(() => {
+    });
+	}
+
+	function copyToClipboard11() {
+    var copyText11 = document.getElementById("imagen_dorso").value;
+    navigator.clipboard.writeText(copyText11).then(() => {
+    });
+	}
+
+	function copyToClipboard12() {
+    var copyText12 = document.getElementById("imagen_borrosa").value;
+    navigator.clipboard.writeText(copyText12).then(() => {
+    });
+	}
+
+	function copyToClipboard13() {
+    var copyText13 = document.getElementById("dnixrecibo").value;
+    navigator.clipboard.writeText(copyText13).then(() => {
+    });
+	}
+
+	function copyToClipboard14() {
+    var copyText14 = document.getElementById("dnixdueno").value;
+    navigator.clipboard.writeText(copyText14).then(() => {
+    });
+	}
+
+	function copyToClipboard15() {
+    var copyText15 = document.getElementById("cai_vencido").value;
+    navigator.clipboard.writeText(copyText15).then(() => {
+    });
+	}
+
+	function copyToClipboard16() {
+    var copyText16 = document.getElementById("cai_noseve").value;
+    navigator.clipboard.writeText(copyText16).then(() => {
+    });
+	}
+
+	function copyToClipboard17() {
+    var copyText17 = document.getElementById("adulterado").value;
+    navigator.clipboard.writeText(copyText17).then(() => {
+    });
+	}
+
+	function copyToClipboard18() {
+    var copyText18 = document.getElementById("tinta_distinta").value;
+    navigator.clipboard.writeText(copyText18).then(() => {
+    });
+	}
+
+	function copyToClipboard181() {
+    var copyText181 = document.getElementById("no_coincide_dato").value;
+    navigator.clipboard.writeText(copyText181).then(() => {
+    });
+	}
+
+	function copyToClipboard19() {
+    var copyText19 = document.getElementById("no_pagos").value;
+    navigator.clipboard.writeText(copyText19).then(() => {
+    });
+	}
+
+	function copyToClipboard20() {
+    var copyText20 = document.getElementById("mal_periodo").value;
+    navigator.clipboard.writeText(copyText20).then(() => {
+    });
+	}
+
+	function copyToClipboard21() {
+    var copyText21 = document.getElementById("fecha_futura").value;
+    navigator.clipboard.writeText(copyText21).then(() => {
+    });
+	}
+
+	function copyToClipboard22() {
+    var copyText22 = document.getElementById("con_lapiz").value;
+    navigator.clipboard.writeText(copyText22).then(() => {
+    });
+	}
+
+	function copyToClipboard23() {
+    var copyText23 = document.getElementById("tres_meses").value;
+    navigator.clipboard.writeText(copyText23).then(() => {
+    });
+	}
+
+	function copyToClipboard24() {
+    var copyText24 = document.getElementById("recibo_adulterado").value;
+    navigator.clipboard.writeText(copyText24).then(() => {
+    });
+	}
+
+	function copyToClipboard25() {
+    var copyText25 = document.getElementById("transferencia").value;
+    navigator.clipboard.writeText(copyText25).then(() => {
+    });
+	}
+
+	function copyToClipboard26() {
+    var copyText26 = document.getElementById("no637no690_postulado").value;
+    navigator.clipboard.writeText(copyText26).then(() => {
+    });
+	}
+
+	function copyToClipboard27() {
+    var copyText27 = document.getElementById("no637no690_nopostulado").value;
+    navigator.clipboard.writeText(copyText27).then(() => {
+    });
+	}
+
+	function copyToClipboard28() {
+    var copyText28 = document.getElementById("no637si690").value;
+    navigator.clipboard.writeText(copyText28).then(() => {
+    });
+	}
+
+	function copyToClipboard29() {
+    var copyText29 = document.getElementById("rechazado_duplicado").value;
+    navigator.clipboard.writeText(copyText29).then(() => {
+    });
+	}
+</script>
+
+</body>
+
+<footer>
+</footer>
+</html>

@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* font-family: 'Bebas Neue', cursive; */
+
+/* Estilos para la barra de navegación */
+.nav_bar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos al extremo derecho */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si los elementos son demasiado anchos */
+    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en navegadores webkit */
+}
+
+.nav_links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%; /* Ancho máximo para evitar que los elementos se desborden */
+}
+
+.nav_links li {
+    margin-left: 10px; /* Espacio entre los elementos de la lista */
+}
+
+.nav_links li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #007bff;
+}
+
+/* Media query para ajustar la barra de navegación en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-end; /* Alinea los elementos al extremo derecho en pantallas pequeñas */
+    }
+
+    .nav_bar {
+        margin-top: 20px; /* Espacio entre el logo y la barra de navegación en pantallas pequeñas */
+    }
+
+    .nav_links {
+        flex-direction: row; /* Cambia la dirección a fila para mantener los elementos en una línea */
+        flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+        overflow-x: auto; /* Permite el desplazamiento horizontal si los elementos son demasiado anchos */
+        -webkit-overflow-scrolling: touch; /* Desplazamiento suave en navegadores webkit */
+    }
+
+    .nav_links li {
+        margin-left: 0;
+        margin-right: 10px; /* Espacio entre los elementos de la lista en pantallas pequeñas */
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    cursor : url(../icons/cursor_cat3.png), pointer;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.7s;
+}
+
+.container {
+   /* max-width: 1200px; */ 
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+}
+
+#img_logo {
+    width: 3rem;
+    margin-left: 2rem;
+}
+
+.logo {
+    font-size: 20px;
+    color: #8d29e6;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+.logo_grupo {
+    display: flex;
+    align-items: center;
+}
+
+/* Menú de navegación principal (inicio) */
+.nav_bar {
+    margin-right: 2rem;
+}
+
+.menu .nav_bar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .nav_bar ul li a {
+    font-size: 14px;
+    padding: 15px;
+    color: #fff;
+    display: block;
+    transition: color 0.7s;
+    cursor : url(../icons/cursor_cat4.png), pointer;
+}
+
+#pagina_actual {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8d29e6;
+}
+
+#pag_637:hover {
+    color: #69e0e0;
+}
+
+#pag_CUD:hover {
+    color: #ffa29c;
+}
+
+#pag_BOTI:hover {
+    color: #14e0ab;
+}
+
+#pag_MAIL:hover {
+    color: #946ad4;
+}
+
+#pag_CPNFVC:hover {
+    color: #2e61c7;
+}
+
+#pag_INFO:hover {
+    color: #fffd8c;
+}
+#pag_Edit:hover:hover {
+    color: #fffd8c;
+}
+
+#menu {
+    display: none;
+}
+
+.menu_icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+/* Menú de navegación principal (fin) */
+
+.bienvenida_container {
+    display: flex;
+}
+
+.inicios_rapidos {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem 0 0 0;
+}
+
+.slider-frame {
+  width: 40%;
+}
+
+/* Botones de inicio rápido (inicio) */
+.btn {
+    position: relative;
+    padding: 20px 50px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 5px;
+    text-indent: 10px;
+    display: block;
+    margin: 0.5rem 0;
+    width: 70%;
+    cursor : url(../icons/cursor_cat4.png), pointer;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(187, 35, 252), rgb(235, 110, 226), rgb(255, 77, 213), rgb(131, 42, 176));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.4s ease;
+}
+
+.btn:hover::after {
+    background-position: 100%;
+    filter: blur(15px);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(90deg, rgb(187, 35, 252), rgb(235, 110, 226), rgb(255, 77, 213), rgb(131, 42, 176));
+    background-size: 300%;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    background-position: 100%;
+}
+/* Botones de inicio rápido (fin) */
+
+/* Slider de imágenes (inicio) */
+.slider-frame {
+    width: 600px;
+    height: auto;
+    margin:50px auto 0;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 10s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+    width: 100%;
+    list-style: none;
+}
+
+.slider-frame img {
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+/* Slider de imágenes (fin) */
+
+.calendario {
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+}
+
+.changelog {
+    width: 90%;    
+    margin: 0 0 2rem 5rem;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: #3d1757;
+}
+
+/* Pie de página (inicio) */
+footer {
+    display: flex;
+    margin: 0 0 4rem 0;
+}
+
+#foot {
+    width: 81%;
+    text-align: center;
+    margin: 0 0 0 5rem;
+    border-radius: 20px 10px 10px 20px;
+    background: #383838;
+}
+
+#foot2 {
+    width: 9%;
+    text-align: center;
+    border-radius: 10px 20px 20px 10px;
+    background: #383838;
+}
+
+.acceso_foot {
+    color: #fff;
+    cursor : url(../icons/cursor_cat4.png), pointer;
+}
+
+.acceso_foot:hover {
+    color: #8d29e6;
+}
+
+.acceso_foot2 {
+    color: #383838;
+    cursor : url(../icons/cursor_hp1.png), pointer;
+}
+
+.acceso_foot2:hover {
+    color: #dec01b;
+}
+/* Pie de página (fin) */
+
+/* Fondo animado (inicio) */
+.fondo_animado {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: 6px solid rgba(141, 41, 230, 1);
+}
+
+.box div:nth-child(1) {
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 70%;
+    left: 50%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3) {
+    top: 17%;
+    left: 6%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 20%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 67%;
+    left: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 80%;
+    left: 70%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 60%;
+    left: 80%;
+    animation: animate 15s linear infinite;
+}
+
+.box div:nth-child(8) {
+    top: 32%;
+    left: 25%;
+    animation: animate 16s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 90%;
+    left: 25%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10) {
+    top: 20%;
+    left: 80%;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translate(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translate(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+/* Fondo animado (fin) */
+
+/* Cargar página con Fade-in (inicio) */
+body {
+    animation: fadeInAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+/* Cargar página con Fade-in (fin) */

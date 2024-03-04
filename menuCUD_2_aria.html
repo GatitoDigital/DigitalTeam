@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styleCUD_2_aria.css">
+    <link rel="icon" href="icons/cat1.ico">
+    <title>DIGITAL Team</title>
+</head>
+
+<header>
+    <div class="menu container">
+        <div class="logo_grupo">
+            <img id="img_logo" src="icons/cat1.png" alt="Logo Gatito" title="Miau...">
+            <a href="index.html" class="logo">DIGITAL Team</a>
+        </div>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="icons/menu_hamburguesa.png" class="menu_icono">
+        </label>
+        <nav class="nav_bar">
+            <ul>               
+                <li><a href="menuCUD_aria.html" id="diseno">Clásico</a></li>
+                <li><a href="index.html" id="pag_inicio">Inicio</a></li>
+                <li><a href="menu637_2.html" id="pag_637">690</a></li>
+                <li><a href="menuCUD_2.html" id="pagina_actual">CUD</a></li>
+                <li><a href="menuBOTI_2.html" id="pag_BOTI">BOTI</a></li>
+                <li><a href="menuMAIL_2.html" id="pag_MAIL">MAIL</a></li>
+                <li><a href="menuCPNFVC_2.html" id="pag_CPNFVC">CP-NF-VC</a></li>
+                <li><a href="menuINFO_2.html" id="pag_INFO">INFO</a></li>
+                <li><a href="Editable_2.html" id="pag_Edit">EDITAR</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="accesos_container">
+        <h1 class="titulo">Correcciones y respuestas CUD <span style="color:#8d29e6">(Aria)</h1>
+        <nav>
+            <ul class="accesos_nav">
+                <li><a class="accesos" href="menuCUD_2.html">↩️ Volver a CUD</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Fondo Animado (inicio) -->
+    <div class="fondo_animado">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>                      
+        </div>
+    </div>
+    <!-- Fondo Animado (fin) -->
+
+    <main>
+        <button type="button" class="block" onclick="copyToClipboard1()" id="sol_frente" value="Adjunte el FRENTE de la Solicitud de CUD con los datos de la persona a evaluar. Puede imprimir y completar el formulario desde aquí: http://cdn.buenosaires.gob.ar/adjuntosTramDigBO/Solicitud_CUD_Editable.pdf"><b><span style="color:#8afff3">Solicitud </span><span style="color:#b5baff">FRENTE </span></b></button>
+
+        <button type="button" class="block" onclick="copyToClipboard2()" id="sol_dorso" value="Adjunte el DORSO de la Solicitud de CUD con los datos de la persona a evaluar. Puede imprimir y completar el formulario desde aquí: http://cdn.buenosaires.gob.ar/adjuntosTramDigBO/Solicitud_CUD_Editable.pdf"><b><span style="color:#8afff3">Solicitud </span><span style="color:#b5baff">DORSO </span></b></button>
+
+        <button type="button" class="block group_final" id="invisible" value=""><b><span style="color:#8afff3">Rechazado por Prórroga</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard4()" id="cert_mental" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Psiquiatra, Neurólogo/a o Pediatra - éste último sólo en caso de niños/as menores de edad-) donde conste el diagnóstico completo y estado actual según CIE10. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">MENTAL</span></b></button>
+    
+        <button type="button" class="block group_plan" onclick="copyToClipboard16()" id="planilla_p1" value="Adjunte el Formulario P1 correspondiente a patologías de origen mental. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Psiquiatra o Neurólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P1.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P1 (MENTAL)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard14()" id="estudios_medicos1" value="Adjunte los informes de los estudios médicos realizados para la elaboración de su diagnóstico. Recuerde que los mismos cuentan con hasta 6 meses de validez a partir de su elaboración. Si los estudios médicos superan ese tiempo, su médico/a puede validarlos con nueva fecha, firma y sello o bien validarlos en un certificado aclarando los motivos correspondientes."><b><span style="color:#8afff3">ESTUDIOS MÉDICOS</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard5()" id="cert_epilepsia" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Neurólogo/a) donde conste el diagnóstico completo según CIE10, estado actual, tipo de crisis y frecuencia, con los esquemas terapéuticos realizados (indicando dosis y duración de cada uno de ellos). Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">EPILEPSIA</span></b></button>
+        
+        <button type="button" class="block group_plan" onclick="copyToClipboard17()" id="planilla_p3" value="Adjunte el Formulario P3 correspondiente a pacientes epilépticos. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Neurólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discpacidad%20-%20P3.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P3 (EPILEPSIA)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard15()" id="estudios_vencidos" value="Actualice o valide los estudios médicos. Recuerde que los mismos cuentan con una validez de hasta 6 meses a partir de su elaboración. Si su médico/a especialista (xx) considera que no requiere realizar nuevos estudios, puede validar los anteriores con nueva fecha, firma y sello o bien validarlos en un certificado refiriendo los motivos correspondientes."><b><span style="color:#8afff3">ESTUDIOS (actualizados o validados)</b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard6()" id="cert_motora" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Traumatólogo/a-Neurólogo/a-Fisiatra) donde conste el diagnóstico completo y estado actual, tratamientos y respuesta a los mismos. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">MOTORA</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard18()" id="planilla_p4" value="Adjunte el Formulario P4 correspondiente a patologías de origen cardiovascular. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Cardiólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P4.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P4 (CARDIOLOGÍA)</span></b></button>
+
+        <button type="button" class="block group_final" id="invisible" value=""><b><span style="color:#8afff3">Rechazado por Prórroga</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard7()" id="cert_auditiva" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Otorrino) donde conste el diagnóstico clínico-audiológico (tipo y grado), estado actual, evolución, tratamientos y complicaciones. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">AUDITIVA</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard19()" id="planilla_p5" value="Adjunte el Formulario P5 correspondiente a patologías de origen renal. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Nefrólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P5.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P5 (RENAL)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard27()" id="rechazada_1" value="Solicitud de trámite rechazada debido a que no reside en el ámbito de CABA. Si reside actualmente en CABA, regularice su situación y actualice su DNI; luego inicie una nueva solicitud de trámite."><b><span style="color:#8afff3">No reside en CABA</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard8()" id="cert_visual" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Oftalmólogo/a) donde conste el diagnóstico completo, estado actual, evolución, tratamientos y secuelas. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">VISUAL</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard20()" id="planilla_p6" value="Adjunte el Formulario P6 correspondiente a patologías de origen visual. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Oftalmólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P6.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P6 (VISUAL)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard28()" id="rechazada_2" value="Solicitud de trámite rechazada por duplicado. Continúa en Trámite Nro. XX"><b><span style="color:#8afff3">Rechazado por duplicado</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard9()" id="cert_respiratorio" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Neumonólogo/a) donde conste el diagnóstico completo detallando la severidad, antecedentes patológicos relacionados, tratamiento actual, respuesta y grado de adhesión al mismo. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">RESPIRATORIO</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard21()" id="planilla_p7" value="Adjunte el Formulario P7 correspondiente a patologías de columna vertebral. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Traumatólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P7.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P7 (COLUMNA VERTEBRAL)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard29()" id="rechazada_3" value="Estimado/a:
+Le informamos que no debe proseguir con su solicitud de renovación ya que la Agencia Nacional de Discapacidad (ANDIS), por resolución 1907/2023, extendió la validez de los Certificados Únicos de Discapacidad (CUD) vencidos en 2024 por un (1) año; a partir de su fecha de vencimiento. 
+
+Ante su prestadora, deberá presentar su Certificado con la normativa de prórroga impresa para validar la misma. Y, en cuanto al CUD, deberá renovarlo en la misma fecha, pero en el año 2025.
+              *Puede descargar e imprimir la prórroga mencionada en el siguiente link:
+https://www.boletinoficial.gob.ar/detalleAviso/primera/300857/20231214
+"><b><span style="color:#8afff3">Rechazado por Prórroga</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard10()" id="cert_cardiologico" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Cardiólogo/a) donde conste el diagnóstico completo, estado actual y clase funcional. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">CARDIOLÓGICO</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard22()" id="planilla_p8" value="Adjunte el Formulario P8 correspondiente a personas con artritis reumatoidea. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Reumatólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P8.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P8 (ARTRITIS REUMATOIDEA)</span></b></button>
+
+        <button type="button" class="block group_final" id="invisible" value=""><b><span style="color:#8afff3">Rechazado por Prórroga</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard11()" id="cert_renal" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Nefrólogo/a) donde conste el diagnóstico completo y estado actual. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">RENAL</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard23()" id="planilla_p9" value="Adjunte el Formulario P9 correspondiente a personas con miastenia gravis. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Neurólogo/a - Reumatólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P9.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P9 (MIASTENIA GRAVIS)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard30()" id="turno_mayores" value="xx a las xx, con la Junta Evaluadora xx. La Junta Médica se encuentra ubicada en la calle Piedras 1281, CABA. *Debe concurrir 15 minutos antes del horario del turno.
+
+Deberá presentar en un sobre de papel madera:
+    - Original y copia de DNI (frente y dorso) 
+    - Original y copia de Carnet de Obra Social o Prepaga (si corresponde)
+    - Copia de Constancia de CUIL (en caso de que no figure en su DNI)
+    - Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL).
+    - El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL).
+    - El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL). 
+    - Informes de los estudios complementarios (ORIGINAL Y COPIA). *Si tiene imágenes debe llevarlas aparte. 
+
+* En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:
+    https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf
+
+En el mencionado sobre deberá escribir: nombre y apellido de la persona a evaluar, número de teléfono de contacto y dirección de e-mail."><b><span style="color:#8afff3">Turno </span><span style="color:#b5baff">MAYORES</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard12()" id="cert_hepatico" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Hepatólogo/a) donde conste el diagnóstico completo, estado actual, alternativas de tratamiento y rehabilitación. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">HEPÁTICO</span></b></button>
+
+        <button type="button" class="block group_plan" onclick="copyToClipboard24()" id="planilla_p10" value="Adjunte el Formulario P10 correspondiente a personas con esclerosis múltiple. Recuerde que el mismo debe estar firmado y sellado por el/la especialista (Neurólogo/a - Reumatólogo/a) y cuenta con una validez de hasta 6 meses a partir de su emisión. Puede imprimir el formulario desde aquí: https://buenosaires.gob.ar/sites/default/files/2023-02/Certificado%20de%20discapacidad%20-%20P10.pdf"><b><span style="color:#8afff3">FORM. </span><span style="color:#b5baff">P10 (ESCLEROSIS MÚLTIPLE)</span></b></button>
+
+        <button type="button" class="block group_final" onclick="copyToClipboard31()" id="turno_menores" value="xx a las xx, con la Junta Evaluadora xx. La Junta Médica se encuentra ubicada en la calle Piedras 1281, CABA. *Debe concurrir 15 minutos antes del horario del turno.
+
+Deberá presentar en un sobre de papel madera:
+    - Original y copia de DNI del/la menor a evaluar (frente y dorso) 
+    - Original y copia de Carnet de Obra Social o Prepaga (si corresponde)
+    - Copia de Constancia de CUIL (en caso de que no figure en su DNI)
+    - Original y copia de Partida de Nacimiento del/la menor a evaluar.
+    - Original y copia de DNI del padre, madre, tutor/a legal (frente y dorso) 
+    - Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL).
+    - El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL).
+    - El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL). 
+    - Informes de los estudios complementarios (ORIGINAL Y COPIA). *Si tiene imágenes debe llevarlas aparte. 
+
+* En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:
+    https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf
+
+En el mencionado sobre deberá escribir: nombre y apellido del/la menor a evaluar, número de teléfono de contacto y dirección de e-mail."><b><span style="color:#8afff3">Turno </span><span style="color:#b5baff">MENORES</span></b></button>
+
+        <button type="button" class="block group_cert" onclick="copyToClipboard13()" id="cert_digestivo" value="Adjunte el Certificado Médico firmado y sellado por el/la especialista (Gastroenterólogo/a) donde conste el diagnóstico completo con detalle de comienzo de la enfermedad, severidad, antecedentes patológicos relacionados, tratamientos realizados, tratamiento actual, respuesta a los mismos y detalle de procedimientos quirúrgicos si los hubiese. Recuerde que el mismo cuenta con una validez de hasta 6 meses a partir de su emisión."><b><span style="color:#8afff3">Certif. </span><span style="color:#b5baff">DIGESTIVO</span></b></button>
+
+        <h4>OBS:</h4>
+
+        <!--CERTIFICADO MEDICO (inicio)-->
+        <button type="button" class="block respuestas_aria certif_med" onclick="copyToClip(document.getElementById('rp_certificado').innerHTML)"><b>Certificado médico</b></button>
+          
+        <div id=rp_certificado style="display:none">Se solicita Certif. médico con diagnóstico.</div>
+        <!--CERTIFICADO MEDICO (fin)-->
+
+        <!--ESTUDIOS MEDICOS (inicio)-->
+        <button type="button" class="block respuestas_aria" onclick="copyToClip(document.getElementById('rp_estudios').innerHTML)"><b>Inf. Estudios médicos</b></button>
+          
+        <div id=rp_estudios style="display:none">Se solicita Inf. estudios médicos.</div>
+        <!--ESTUDIOS MEDICOS (fin)-->
+
+        <!--CERTIFICADO Y ESTUDIOS MEDICOS (inicio)-->
+        <button type="button" class="block respuestas_aria" onclick="copyToClip(document.getElementById('rp_cert_estudios').innerHTML)"><b>Cert. + Inf. médicos</b></button>
+          
+        <div id=rp_cert_estudios style="display:none">Se solicita Certif. médico con diagnóstico e Inf. estudios médicos.</div>
+        <!--CERTIFICADO Y ESTUDIOS MEDICOS (fin)-->
+    </main>
+</body>
+
+<script>
+    function copyToClipboard1() {
+    var copyText1 = document.getElementById("sol_frente").value;
+    navigator.clipboard.writeText(copyText1).then(() => {
+    });
+    }
+
+    function copyToClipboard2() {
+    var copyText2 = document.getElementById("sol_dorso").value;
+    navigator.clipboard.writeText(copyText2).then(() => {
+    });
+    }
+
+    function copyToClipboard3() {
+    var copyText3 = document.getElementById("sol_menor").value;
+    navigator.clipboard.writeText(copyText3).then(() => {
+    });
+    }
+
+ function copyToClipboard4() {
+    var copyText4 = document.getElementById("cert_mental").value;
+    navigator.clipboard.writeText(copyText4).then(() => {
+    });
+    }
+
+function copyToClipboard5() {
+    var copyText5 = document.getElementById("cert_epilepsia").value;
+    navigator.clipboard.writeText(copyText5).then(() => {
+    });
+    }
+
+function copyToClipboard6() {
+    var copyText6 = document.getElementById("cert_motora").value;
+    navigator.clipboard.writeText(copyText6).then(() => {
+    });
+    }
+
+function copyToClipboard7() {
+    var copyText7 = document.getElementById("cert_auditiva").value;
+    navigator.clipboard.writeText(copyText7).then(() => {
+    });
+    }
+
+function copyToClipboard8() {
+    var copyText8 = document.getElementById("cert_visual").value;
+    navigator.clipboard.writeText(copyText8).then(() => {
+    });
+    }
+
+
+function copyToClipboard9() {
+    var copyText9 = document.getElementById("cert_respiratorio").value;
+    navigator.clipboard.writeText(copyText9).then(() => {
+    });
+    }
+
+function copyToClipboard10() {
+    var copyText10 = document.getElementById("cert_cardiologico").value;
+    navigator.clipboard.writeText(copyText10).then(() => {
+    });
+    }
+
+function copyToClipboard11() {
+    var copyText11 = document.getElementById("cert_renal").value;
+    navigator.clipboard.writeText(copyText11).then(() => {
+    });
+    }
+
+function copyToClipboard12() {
+    var copyText12 = document.getElementById("cert_hepatico").value;
+    navigator.clipboard.writeText(copyText12).then(() => {
+    });
+    }
+
+function copyToClipboard13() {
+    var copyText13 = document.getElementById("cert_digestivo").value;
+    navigator.clipboard.writeText(copyText13).then(() => {
+    });
+    }
+
+function copyToClipboard14() {
+    var copyText14 = document.getElementById("estudios_medicos1").value;
+    navigator.clipboard.writeText(copyText14).then(() => {
+    });
+    }
+
+function copyToClipboard15() {
+    var copyText15 = document.getElementById("estudios_vencidos").value;
+    navigator.clipboard.writeText(copyText15).then(() => {
+    });
+    }
+
+function copyToClipboard16() {
+    var copyText16 = document.getElementById("planilla_p1").value;
+    navigator.clipboard.writeText(copyText16).then(() => {
+    });
+    }
+
+function copyToClipboard17() {
+    var copyText17 = document.getElementById("planilla_p3").value;
+    navigator.clipboard.writeText(copyText17).then(() => {
+    });
+    }
+
+function copyToClipboard18() {
+    var copyText18 = document.getElementById("planilla_p4").value;
+    navigator.clipboard.writeText(copyText18).then(() => {
+    });
+    }
+
+function copyToClipboard19() {
+    var copyText19 = document.getElementById("planilla_p5").value;
+    navigator.clipboard.writeText(copyText19).then(() => {
+    });
+    }
+
+function copyToClipboard20() {
+    var copyText20 = document.getElementById("planilla_p6").value;
+    navigator.clipboard.writeText(copyText20).then(() => {
+    });
+    }
+
+function copyToClipboard21() {
+    var copyText21 = document.getElementById("planilla_p7").value;
+    navigator.clipboard.writeText(copyText21).then(() => {
+    });
+    }
+
+function copyToClipboard22() {
+    var copyText22 = document.getElementById("planilla_p8").value;
+    navigator.clipboard.writeText(copyText22).then(() => {
+    });
+    }
+
+function copyToClipboard23() {
+    var copyText23 = document.getElementById("planilla_p9").value;
+    navigator.clipboard.writeText(copyText23).then(() => {
+    });
+    }
+
+function copyToClipboard24() {
+    var copyText24 = document.getElementById("planilla_p10").value;
+    navigator.clipboard.writeText(copyText24).then(() => {
+    });
+    }
+
+function copyToClipboard25() {
+    var copyText25 = document.getElementById("subsanacion_1").value;
+    navigator.clipboard.writeText(copyText25).then(() => {
+    });
+    }
+
+function copyToClipboard26() {
+    var copyText26 = document.getElementById("subsanacion_2").value;
+    navigator.clipboard.writeText(copyText26).then(() => {
+    });
+    }
+
+function copyToClipboard27() {
+    var copyText27 = document.getElementById("rechazada_1").value;
+    navigator.clipboard.writeText(copyText27).then(() => {
+    });
+    }
+
+function copyToClipboard28() {
+    var copyText28 = document.getElementById("rechazada_2").value;
+    navigator.clipboard.writeText(copyText28).then(() => {
+    });
+    }
+
+function copyToClipboard29() {
+    var copyText29 = document.getElementById("rechazada_3").value;
+    navigator.clipboard.writeText(copyText29).then(() => {
+    });
+    }
+
+function copyToClipboard30() {
+    var copyText30 = document.getElementById("turno_mayores").value;
+    navigator.clipboard.writeText(copyText30).then(() => {
+    });
+    }
+
+function copyToClipboard31() {
+    var copyText31 = document.getElementById("turno_menores").value;
+    navigator.clipboard.writeText(copyText31).then(() => {
+    });
+    }
+</script>
+
+<footer>
+</footer>
+
+</html>

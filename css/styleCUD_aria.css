@@ -1,0 +1,201 @@
+/* HEADER */
+header {
+  width: 100%;
+  height: 14.375rem;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: linear-gradient(#352340, #000);
+}
+
+header #logo img {
+  margin: 1.25rem;
+  float: left;
+  width: 4.688rem;
+}
+
+/*DIGITAL Team */
+#team-name {
+  font-size: 2.2rem;
+  font-style: italic;
+  float: left;
+  padding: 0.625rem;
+  color: #fff;
+  text-shadow: 1px 2px 3px violet, 0 0 1em violet, 0 0 0.2em violet;
+}
+
+/* NAVEGACIÓN */
+nav {
+  float: right;
+  padding: 10px 20px 0 0;
+}
+
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav ul li {
+  font-size: 1.7rem;
+  font-family: sans-serif;
+  display: inline-block;
+  float: left;
+  padding: 0.938rem;
+}
+
+nav ul li a {
+  color: #ffa29c;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.7s; 
+}
+
+a:hover {
+  color: #fff;
+}
+
+#menuCUD {
+  color: #fff;
+  font-size: 130%;
+  text-shadow: 0 0 0.2em orange, 0 0 1em orange, 0 0 0.2em orange;  
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.7s;
+}
+
+/* Botones de Inicio Rápido */
+#menu_principal {
+  float: right;
+}
+
+#accesos {
+  float: left;
+  margin: 7rem 0 0 0;
+  position: fixed;
+}
+
+.accesos {
+  background-color: #ffa29c;
+  color: #fff;
+  padding: 20px 50px 20px 50px;
+  text-decoration: none;
+  font-size: 1.7rem;
+  float: left;
+  display: inline-block;
+  border-radius: 15px;
+  text-shadow: 0 0 0.2em #5c5c5c, 0 0 1em #de746d, 0 0 0.2em orange;
+}
+
+.accesos:hover {
+  background-color: #ffd6d4;
+}
+
+/* Menú de navegación principal (fin) */
+
+#diseno {
+    background-color: #424242;
+    margin: 0.5rem 2.5rem 0 0;
+    padding: 0.5rem 1rem;
+    border: solid 1px #ffa29c;
+    border-radius: 16px;
+}
+
+/* BODY */
+body {
+  width: 90%;
+  margin-top: 14.375rem;
+  left: 0;
+  background-color: #000;
+  zoom: 0.54;
+  background-image: url(../images/bg_purple.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h3 {
+  margin: 5rem 0 0 28rem;
+  font-size: 2rem;
+  color: #fff;
+  float: left;
+  position: fixed;
+  font-family:'Helvetica','Verdana','Monaco';
+}
+
+#Solicitud_de_CUD {
+  margin-top: 16.25rem;
+}
+
+h4 {
+  margin: 0 0 0 6rem;
+  font-size: 2rem;
+  color: #fff;
+  font-family:'Helvetica','Verdana','Monaco';
+  text-shadow: 1px 2px 3px #000, 0 0 1em #e482ff, 0 0 0.2em #000;
+  display: inline-block;
+}
+
+button {
+  border: 0;
+  line-height: 1.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: left;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+}
+
+button:hover {
+  background-color: rgba(87, 54, 133, 0.7);   
+}
+
+button:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(181, 186, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.block {
+  display: block;
+  width: 90%;
+  border: none;
+  background-color: rgba(44, 16, 69, 0.7);
+  padding: 0.875rem 1.75rem;
+  font-size: 28px;
+  cursor: pointer;
+  text-align: left;
+  margin: 0.938rem 0 0 5rem;
+}
+
+#sol_frente , #sol_dorso , .group_cert , .group_plan {
+  display: inline-block;
+  width: 30%;
+}
+
+.group_final {
+  display: inline-block;
+  width: 27%;
+}
+
+#invisible {
+  visibility: hidden;
+}
+
+.respuestas_aria {
+  width: 17%;
+  display: inline-block;
+  margin: 0 0 4rem 2.3rem;
+}
+
+.certif_med {
+  margin-left: 3.2rem;  
+}

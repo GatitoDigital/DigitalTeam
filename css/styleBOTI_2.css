@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* font-family: 'Bebas Neue', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #181818;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.7s;
+}
+
+.container {
+   /* max-width: 1200px; */ 
+    margin: 0 auto;
+    justify-content: space-between;
+    background-color: #000;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+}
+
+#img_logo {
+    width: 3rem;
+    margin-left: 2rem;
+}
+
+.logo {
+    font-size: 20px;
+    color: #14e0ab;
+    font-weight: 800;
+    margin-left: 1rem;
+}
+
+.logo_grupo {
+    display: flex;
+    align-items: center;
+}
+
+/* Menú de navegación principal (inicio) */
+.nav_bar {
+    margin-right: 2rem;
+}
+
+.menu .nav_bar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .nav_bar ul li a {
+    font-size: 14px;
+    padding: 15px;
+    color: #fff;
+    display: block;
+    transition: color 0.7s;
+}
+
+#pagina_actual {
+    font-size: 20px;
+    font-weight: bold;
+    color: #14e0ab;
+}
+
+#pag_inicio:hover {
+    color: #8d29e6;
+}
+
+#pag_637:hover {
+    color: #69e0e0;
+}
+
+#pag_CUD:hover {
+    color: #ffa29c;
+}
+
+#pag_MAIL:hover {
+    color: #946ad4;
+}
+
+#pag_CPNFVC:hover {
+    color: #2e61c7;
+}
+
+#pag_INFO:hover {
+    color: #fffd8c;
+}
+
+#menu {
+    display: none;
+}
+
+.menu_icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+/* Menú de navegación principal (fin) */
+
+#diseno {
+    background-color: #424242;
+    margin: 0.5rem 2.5rem 0 0;
+    padding: 0.5rem 1rem;
+    border: solid 1px #14e0ab;
+    border-radius: 16px;
+}
+
+#diseno:hover {
+    color: #14e0ab;
+}
+
+/* Menu de accesos rápidos (inicio) */
+.accesos_container {
+    width: 100%;
+    position: fixed;
+    margin-top: 3.5rem;
+    height: 6rem;
+    background-color: #000;
+    z-index: 10;
+}
+
+.titulo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 0 1rem 10rem;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.accesos {
+    position: relative;
+    float: left;
+    padding: 8px 10px;
+    margin-left: 1rem;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border: 1px solid #14e0ab;
+    z-index: 2;
+}
+
+.accesos::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    left: 0;
+    top: -200%;
+    background-color: #14e0ab;
+    border-radius: 70%;
+    transition: all 0.8s ease;
+    z-index: -1;
+}
+
+.accesos:hover:before {
+    top: 0;
+    border-radius: 0%;
+}
+/* Menu de accesos rápidos (fin) */
+
+/* Títulos de secciones (inicio) */
+main {
+    padding-top: 10rem;
+}
+
+h4 {
+    margin: 1rem 0 1rem 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+h6 {
+    margin-bottom: 9.5rem;
+    color: #000;
+}
+
+p {
+    margin: 0 0 0 3rem;
+    color: #fff;
+    font-weight: bold;
+}
+/* Títulos de secciones (fin) */
+
+/* Botones main (inicio) */
+.block {
+    width: 90%;
+    margin: 10px 0 10px 2rem;
+    padding: 20px 40px 20px 20px;
+    z-index: 9;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(122, 122, 122, 0.1);
+    border-left: 1px solid rgba(186, 255, 201, 0.4);
+    border-top: 1px solid rgba(186, 255, 201, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 300ms;
+    color: #fff;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.block:hover{
+    transform: translateX(12px);
+    background: rgba(190, 190, 190, 0.2);
+}
+
+.block:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(186, 255, 201, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+    border-top: 0;
+    border-right: 0;
+}
+
+.presentacion {
+    width: 21.9%;
+    display: inline-block;
+    margin-left: 0.8rem;
+}
+
+.presentacionAgusAzu {
+    margin-left: 1.7rem;
+}
+/* Botones main (fin) */
+
+/* Fondo animado (inicio) */
+.container1 {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.particulas {
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+}
+
+.particulas span {
+    position: relative;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    background: rgba(154, 217, 179, 0.25);
+    box-shadow: 0 0 0 10px rgba(180, 219, 197, 0.25),
+    0 0 50px rgba(157, 209, 178, 0.25),
+    -100px 0 rgba(157, 209, 178, 0.25),
+    100px 0 rgba(104, 196, 150, 0.25);
+    margin: 0 4px;
+    border-radius: 50%;
+    animation: animate 60s ease-in-out infinite;
+    animation-duration: calc(500s / var(--i));
+}
+
+.particulas span:nth-child(even) {
+    background: rgba(156, 255, 177, 0.25);
+    box-shadow: 0 0 0 10px rgba(123, 201, 146, 0.25),
+    0 0 50px rgba(87, 158, 121, 0.25),
+    -100px 0 rgba(73, 135, 103, 0.25),
+    100px 0 rgba(96, 219, 158, 0.25);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(120vh) scale(0) rotate(90deg);
+    }
+    20% {
+        transform: translateY(100vh) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50vh) scale(0.5) rotate(360deg);
+    }
+}
+/* Fondo animado (fin) */
+
+/* Scroll animado (inicio) */
+.animado {
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.mostrarAnimacion {  
+    animation: mostrarAnimacion 1s;  
+}
+
+@keyframes mostrarAnimacion {
+    0% {
+        transform: translateY(60px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/* Scroll animado (fin) */
+
+/* Cargar página con Fade-in (inicio) */
+body {
+    animation: fadeInAnimation ease 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+/* Cargar página con Fade-in (fin) */

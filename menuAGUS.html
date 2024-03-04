@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styleAGUS.css">
+    <link rel="icon" href="icons/cat1.ico">
+    <title>DIGITAL Team</title>
+</head>
+
+<header>
+    <div class="menu container">
+        <div class="logo_grupo">
+            <img id="img_logo" src="icons/hp_icon.webp" alt="Logo Gatito" title="The best Digital Team ever :)">
+            <a href="index.html" class="logo">HOGWARTS School</a>
+        </div>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="icons/menu_hamburguesa.png" class="menu_icono">
+        </label>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="#" id="pagina_actual">AGUS</a></li>                
+                <li><a href="index.html" id="pag_inicio">Inicio</a></li>
+                <li><a href="menu637_2.html" id="pag_637">690</a></li>
+                <li><a href="menuCUD_2.html" id="pag_CUD">CUD</a></li>
+                <li><a href="menuBOTI_2.html" id="pag_BOTI">BOTI</a></li>
+                <li><a href="menuMAIL_2.html" id="pag_MAIL">MAIL</a></li>
+                <li><a href="menuCPNFVC_2.html" id="pag_CPNFVC">CP-NF-VC</a></li>
+                <li><a href="menuINFO_2.html" id="pag_INFO">INFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <main id="principal">
+        <section class="todos_botones">
+            <h3 id="solicitudes">Solicitudes de Licencias</h3>
+
+        <!--DESTINATARIO (inicio)-->
+        <button type="button" class="block sabrina" onclick="copyToClip(document.getElementById('para_sabrina_rrhh').innerHTML)"><b>Para: RRHH (Destinatario)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rrhh.dgabco@buenosaires.gob.ar</span></button>
+          
+        <div id=para_sabrina_rrhh style="display:none">rrhh.dgabco@buenosaires.gob.ar</div>
+        <!--DESTINATARIO (fin)-->
+
+        <!--Tabla de licencias (inicio)-->
+            <a href="menuAGUS_tabla.html" id="tabla">Ir al Cáliz de Fuego 🔥</a>
+        <!--Tabla de licencias (fin)-->
+
+        <!--ASUNTO: Agus (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_agus').innerHTML)"><b><span style="color:#c78df2">AGUS</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_agus style="display:none">Solicitud día de Home Office de la agente Agustina Guillermina Rios Rios</div>
+        <!--ASUNTO: Agus (fin)-->
+
+        <!--CUERPO: Agus (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_agus').innerHTML)"><b><span style="color:#c78df2">AGUS</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_agus style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Agustina Guillermina Rios Rios.<br>
+        <br>
+        Nombre y apellido de la persona: Agustina Guillermina Rios Rios<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-42828460-2<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 7<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Agus (fin)-->
+
+        <!--CORREO: Agus (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_agus').innerHTML)"><b><span style="color:#c78df2">AGUS</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, ariosrios@buenosaires.gob.ar</span></button>
+          
+        <div id=correo_agus style="display:none">rjpirilli@gmail.com, ariosrios@buenosaires.gob.ar</div>
+        <!--CORREO: Agus (fin)-->
+
+        <!--ASUNTO: Aria (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_aria').innerHTML)"><b><span style="color:#c1ff87">ARIA</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_aria style="display:none">Solicitud día de Home Office de la agente Aria Kobashigawa</div>
+        <!--ASUNTO: Aria (fin)-->
+
+        <!--CUERPO: Aria (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_aria').innerHTML)"><b><span style="color:#c1ff87">ARIA</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_aria style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Aria Kobashigawa.<br>
+        <br>
+        Nombre y apellido de la persona: Aria Kobashigawa<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 20-32236622-2<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 7<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. 
+        </div>
+        <!--CUERPO: Aria (fin)-->
+
+        <!--CORREO: Aria (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_aria').innerHTML)"><b><span style="color:#c1ff87">ARIA</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, franciscokobashigawa@buenosaires.gob.ar</span></button>
+          
+        <div id=correo_aria style="display:none">rjpirilli@gmail.com, franciscokobashigawa@buenosaires.gob.ar</div>
+        <!--CORREO: Aria (fin)-->
+
+        <!--ASUNTO: Luna (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_luna').innerHTML)"><b><span style="color:#ffb694">LUNA</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_luna style="display:none">Solicitud día de Home Office de la agente Luna Marasco Fauez</div>
+        <!--ASUNTO: Luna (fin)-->
+
+        <!--CUERPO: Luna (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_luna').innerHTML)"><b><span style="color:#ffb694">LUNA</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_luna style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Luna Marasco Fauez.<br>
+        <br>
+        Nombre y apellido de la persona: Luna Marasco Fauez<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-43080831-7<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 9<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Luna (fin)-->
+
+        <!--CORREO: Luna (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_luna').innerHTML)"><b><span style="color:#ffb694">LUNA</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, lunymarasco19@gmail.com</span></button>
+          
+        <div id=correo_luna style="display:none">rjpirilli@gmail.com, lunymarasco19@gmail.com</div>
+        <!--CORREO: Luna (fin)-->
+
+        <!--ASUNTO: Flor (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_flor').innerHTML)"><b><span style="color:#9cf5ff">FLOR</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_flor style="display:none">Solicitud día de Home Office de la agente María Florencia Sanchez</div>
+        <!--ASUNTO: Flor (fin)-->
+
+        <!--CUERPO: Flor (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_flor').innerHTML)"><b><span style="color:#9cf5ff">FLOR</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_flor style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente María Florencia Sanchez.<br>
+        <br>
+        Nombre y apellido de la persona: María Florencia Sanchez<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-31926246-1<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 8<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Flor (fin)-->
+
+        <!--CORREO: Flor (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_flor').innerHTML)"><b><span style="color:#9cf5ff">FLOR</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, mariaflorenciasanchez296@gmail.com</span></button>
+          
+        <div id=correo_flor style="display:none">rjpirilli@gmail.com, mariaflorenciasanchez296@gmail.com</div>
+        <!--CORREO: Flor (fin)-->
+
+        <!--ASUNTO: Sabri (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_sabri').innerHTML)"><b><span style="color:#ffff85">SABRI</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_sabri style="display:none">Solicitud día de Home Office de la agente Sabrina Antonella Ventura</div>
+        <!--ASUNTO: Sabri (fin)-->
+
+        <!--CUERPO: Sabri (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_sabri').innerHTML)"><b><span style="color:#ffff85">SABRI</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_sabri style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Sabrina Antonella Ventura.<br>
+        <br>
+        Nombre y apellido de la persona: Sabrina Antonella Ventura<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-35148743-2<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 4<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Sabri (fin)-->
+
+        <!--CORREO: Sabri (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_sabri').innerHTML)"><b><span style="color:#ffff85">SABRI</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, venturasabrina16@gmail.com</span></button>
+          
+        <div id=correo_sabri style="display:none">rjpirilli@gmail.com, venturasabrina16@gmail.com</div>
+        <!--CORREO: Sabri (fin)-->
+
+        <!--ASUNTO: Azu (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_azu').innerHTML)"><b><span style="color:#698eff">AZU</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_azu style="display:none">Solicitud día de Home Office de la agente Azul Bueno D'Albo</div>
+        <!--ASUNTO: Azu (fin)-->
+
+        <!--CUERPO: Azu (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_azu').innerHTML)"><b><span style="color:#698eff">AZU</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_azu style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Azul Bueno D'Albo.<br>
+        <br>
+        Nombre y apellido de la persona: Azul Bueno D'Albo<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-43170757-3<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 11<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Azu (fin)-->
+
+        <!--CORREO: Azu (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_azu').innerHTML)"><b><span style="color:#698eff">AZU</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, azulbelenb48@gmail.com</span></button>
+          
+        <div id=correo_azu style="display:none">rjpirilli@gmail.com, azulbelenb48@gmail.com</div>
+        <!--CORREO: Azu (fin)-->
+
+        <!--ASUNTO: Agus P (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_agusp').innerHTML)"><b><span style="color:#ffd1f3">AGUS P</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_agusp style="display:none">Solicitud día de Home Office de la agente Agustina Mara Pirilli</div>
+        <!--ASUNTO: Agus P (fin)-->
+
+        <!--CUERPO: Agus P (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_agusp').innerHTML)"><b><span style="color:#ffd1f3">AGUS P</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_agusp style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Agustina Mara Pirilli.<br>
+        <br>
+        Nombre y apellido de la persona: Agustina Mara Pirilli<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-43405625-5<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 5<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Agus P (fin)-->
+
+        <!--CORREO: Agus P (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_agusp').innerHTML)"><b><span style="color:#ffd1f3">AGUS P</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, aguspirillimara@gmail.com</span></button>
+          
+        <div id=correo_agusp style="display:none">rjpirilli@gmail.com, aguspirillimara@gmail.com</div>
+        <!--CORREO: Agus P (fin)-->
+
+        <!--ASUNTO: China (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_china').innerHTML)"><b><span style="color:#f17aff">CHINA</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_china style="display:none">Solicitud día de Home Office de la agente Nadia Sofía Pizarro Fernández</div>
+        <!--ASUNTO: China (fin)-->
+
+        <!--CUERPO: China (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_china').innerHTML)"><b><span style="color:#f17aff">CHINA</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_china style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Nadia Sofía Pizarro Fernández.<br>
+        <br>
+        Nombre y apellido de la persona: Nadia Sofía Pizarro Fernández<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 23-41778042-4<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Lanus<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: China (fin)-->
+
+        <!--CORREO: China (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_china').innerHTML)"><b><span style="color:#f17aff">CHINA</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, nadiapizarrofer99@gmail.com</span></button>
+          
+        <div id=correo_china style="display:none">rjpirilli@gmail.com, nadiapizarrofer99@gmail.com</div>
+        <!--CORREO: China (fin)-->
+
+        <!--ASUNTO: Mati (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_mati').innerHTML)"><b><span style="color:#ff6b86">MATI</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_mati style="display:none">Solicitud día de Home Office del agente Matias Nahuel Suarez Cañete</div>
+        <!--ASUNTO: Mati (fin)-->
+
+        <!--CUERPO: Mati (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_mati').innerHTML)"><b><span style="color:#ff6b86">MATI</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_mati style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office del agente Matias Nahuel Suarez Cañete.<br>
+        <br>
+        Nombre y apellido de la persona: Matias Nahuel Suarez Cañete<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 20-41925367-8<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Merlo<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Mati (fin)-->
+
+        <!--CORREO: Mati (inicio)-->
+        <button type="button" class="block correo agente" onclick="copyToClip(document.getElementById('correo_mati').innerHTML)"><b><span style="color:#ff6b86">MATI</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, matiasnsuarez44@gmail.com</span></button>
+          
+        <div id=correo_mati style="display:none">rjpirilli@gmail.com, matiasnsuarez44@gmail.com</div>
+        <!--CORREO: Mati (fin)-->
+
+        <!--ASUNTO: Pato (inicio)-->
+        <button type="button" class="block asunto agente" onclick="copyToClip(document.getElementById('asunto_pato').innerHTML)"><b><span style="color:#c3e8a5">PATO</span> (Asunto)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Solicitud día de Home Office</span></button>
+          
+        <div id=asunto_pato style="display:none">Solicitud día de Home Office de la agente Patricia Mabel Gallegos</div>
+        <!--ASUNTO: Pato (fin)-->
+
+        <!--CUERPO: Pato (inicio)-->
+        <button type="button" class="block cuerpo agente" onclick="copyToClip(document.getElementById('cuerpo_pato').innerHTML)"><b><span style="color:#c3e8a5">PATO</span> (Cuerpo de mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">Buenos días, por el presente se envía la solicitud [...]</span></button>
+          
+        <div id=cuerpo_pato style="display:none">
+        Buenos días,<br>
+        &nbsp;&nbsp;Por el presente se envía la solicitud de Home Office de la agente Patricia Mabel Gallegos.<br>
+        <br>
+        Nombre y apellido de la persona: Patricia Mabel Gallegos<br>
+        Función: Personal Administrativo<br>
+        Número de Cuil: 27-20860015-5<br>
+        Sede donde trabaja: Sede Central<br>
+        Destino (en caso de GCTD - ED_SA_COM): Comuna 1<br>
+        Tipo de licencia: HO<br>
+        Fecha de inicio y fin: //2024<br>
+        Cantidad de días/hs: 1 día<br>
+        <br>
+        Saludos cordiales.<br>
+        Agustina. -
+        </div>
+        <!--CUERPO: Pato (fin)-->
+
+        <!--CORREO: Pato (inicio)-->
+        <button type="button" class="block correo agente" id="ultimo_item" onclick="copyToClip(document.getElementById('correo_pato').innerHTML)"><b><span style="color:#c3e8a5">PATO</span> CC (Mail)</b><br>&nbsp;&nbsp;<span style="color:#aecef5">rjpirilli@gmail.com, patriciagallegos@outlook.com</span></button>
+          
+        <div id=correo_pato style="display:none">rjpirilli@gmail.com, patriciagallegos@outlook.com</div>
+        <!--CORREO: Pato (fin)-->
+
+        </section>
+
+    <br><br><br>
+        
+        <div class="video_wallpaper">
+            <video muted autoplay loop>
+                <source src="video/hp_video_wallpaper.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+</body>
+
+<!-- FUNCION PARA COPIAR TEXTO ENRIQUECIDO (inicio)-->
+<script>
+    function copyToClip(str) {
+    function listener(e) {
+        e.clipboardData.setData("text/html", str);
+        e.clipboardData.setData("text/plain", str);
+        e.preventDefault();
+    }
+      document.addEventListener("copy", listener);
+      document.execCommand("copy");
+      document.removeEventListener("copy", listener);
+    };
+</script>
+<!-- FUNCION PARA COPIAR TEXTO ENRIQUECIDO (fin)-->
+
+<footer>
+</footer>
+
+</html>

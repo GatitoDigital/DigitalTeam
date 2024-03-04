@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/styleAGUS_tabla.css">
+    <link rel="icon" href="icons/cat1.ico">
+    <title>DIGITAL Team</title>
+</head>
+
+<header>
+    <div class="menu container">
+        <div class="logo_grupo">
+            <img id="img_logo" src="icons/hp_icon.webp" alt="Logo Gatito" title="The best Digital Team ever :)">
+            <a href="index.html" class="logo">HOGWARTS School</a>
+        </div>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="icons/menu_hamburguesa.png" class="menu_icono">
+        </label>
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="#" id="pagina_actual">AGUS</a></li>                
+                <li><a href="index.html" id="pag_inicio">Inicio</a></li>
+                <li><a href="menu637_2.html" id="pag_637">690</a></li>
+                <li><a href="menuCUD_2.html" id="pag_CUD">CUD</a></li>
+                <li><a href="menuBOTI_2.html" id="pag_BOTI">BOTI</a></li>
+                <li><a href="menuMAIL_2.html" id="pag_MAIL">MAIL</a></li>
+                <li><a href="menuCPNFVC_2.html" id="pag_CPNFVC">CP-NF-VC</a></li>
+                <li><a href="menuINFO_2.html" id="pag_INFO">INFO</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <main id="principal">
+        <section class="todos_botones">
+            <h3 id="titulo">Lista de licencias</h3>
+
+        <!--Tabla de licencias (inicio)-->
+            <a href="menuAGUS.html" id="btn-volver">↩️ Volver a Hogwarts</a>
+        <!--Tabla de licencias (fin)-->
+        <br>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard01()" id="ausente" value="AI.- Ausente Injustificado"><b>AI.- Ausente Injustificado</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard02()" id="nacimiento" value="Artículo 26.- Licencias por nacimiento de hijo"><b>Artículo 26.- Licencias por nacimiento de hijo</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard03()" id="vacaciones" value="Artículo 18.- Descanso anual remunerado"><b>Artículo 18.- Descanso anual remunerado</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard04()" id="matrimonio" value="Artículo 27.- Licencia por matrimonio"><b>Artículo 27.- Licencia por matrimonio</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard05()" id="enfermedad" value="Artículo 19.– Licencia por afecciones comunes"><b>Artículo 19.– Licencia por afecciones comunes</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard06()" id="fallecimiento" value="Artículo 28.- Licencia por fallecimiento"><b>Artículo 28.- Licencia por fallecimiento</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard07()" id="enfermedad_familiar" value="Artículo 20.- Licencia por efermedad de familiar o menor del cual se ejerza su representación legal"><b>Artículo 20.- Licencia por efermedad de familiar o menor del cual se ejerza su representación legal</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard08()" id="electivo" value="Artículo 29.- Licencia por cargos electivos"><b>Artículo 29.- Licencia por cargos electivos<br><br></button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard09()" id="enfermedad_largo" value="Artículo 21.– Licencia por enfermedad de largo tratamiento"><b>Artículo 21.– Licencia por enfermedad de largo tratamiento</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard10()" id="sangre" value="Artículo 30.- Licencia por donación de sangre"><b>Artículo 30.- Licencia por donación de sangre</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard11()" id="maternidad" value="Artículo 22.- Licencia por maternidad"><b>Artículo 22.- Licencia por maternidad</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard12()" id="deportiva" value="Artículo 30 Bis.- Licencia deportiva"><b>Artículo 30 Bis.- Licencia deportiva</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard13()" id="hijo_fallecido" value="Artículo 22 bis - Licencia por nacimiento de hijo muerto o fallecido a poco de nacer"><b>Artículo 22 bis - Licencia por nacimiento de hijo muerto o fallecido a poco de nacer</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard14()" id="prevencion" value="Artículo 30 Ter: Licencia especial para controles de prevención"><b>Artículo 30 Ter: Licencia especial para controles de prevención</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard15()" id="adopcion" value="Artículo 23.– Licencia por adopción"><b>Artículo 23.– Licencia por adopción</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard16()" id="organos" value="C.C. 09/10 Artículo 67 a) Donación de órganos, tejidos o Cél. para trasplante"><b>C.C. 09/10 Artículo 67 a) Donación de órganos, tejidos o Cél. para trasplante</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard17()" id="alimentacion" value="Artículo 24.– Pausa por alimentación y cuidado de hijo"><b>Artículo 24.– Pausa por alimentación y cuidado de hijo</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard18()" id="reproduccion" value="C.C. 09/10 Artículo 67 b) Técnicas de reproducción asistida"><b>C.C. 09/10 Artículo 67 b) Técnicas de reproducción asistida</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard19()" id="adaptacion" value="Artículo 24 bis.- Licencia por adaptación escolar de hijo"><b>Artículo 24 bis.- Licencia por adaptación escolar de hijo</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard20()" id="particulares" value="C.C. 09/10 Artículo 67 c) Trámites particulares"><b>C.C. 09/10 Artículo 67 c) Trámites particulares</button>
+
+        <button type="button" class="block tipo-licencia first" onclick="copyToClipboard21()" id="examenes" value="Artículo 25.– Licencia por exámenes"><b>Artículo 25.– Licencia por exámenes</button>
+
+        <button type="button" class="block tipo-licencia" onclick="copyToClipboard22()" id="mudanza" value="C.C. 09/10 Artículo 67 d) Mudanza"><b>C.C. 09/10 Artículo 67 d) Mudanza</button>
+        </section>
+
+        <div class="video_wallpaper">
+            <video muted autoplay loop>
+                <source src="video/hp_video_wallpaper_2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </main>
+</body>
+
+<script>
+    function copyToClipboard01() {
+    var copyText01 = document.getElementById("ausente").value;
+    navigator.clipboard.writeText(copyText01).then(() => {
+    });
+    }
+
+    function copyToClipboard02() {
+    var copyText02 = document.getElementById("nacimiento").value;
+    navigator.clipboard.writeText(copyText02).then(() => {
+    });
+    }
+
+    function copyToClipboard03() {
+    var copyText03 = document.getElementById("vacaciones").value;
+    navigator.clipboard.writeText(copyText03).then(() => {
+    });
+    }
+
+    function copyToClipboard04() {
+    var copyText04 = document.getElementById("matrimonio").value;
+    navigator.clipboard.writeText(copyText04).then(() => {
+    });
+    }
+
+    function copyToClipboard05() {
+    var copyText05 = document.getElementById("enfermedad").value;
+    navigator.clipboard.writeText(copyText05).then(() => {
+    });
+    }
+
+    function copyToClipboard06() {
+    var copyText06 = document.getElementById("fallecimiento").value;
+    navigator.clipboard.writeText(copyText06).then(() => {
+    });
+    }
+
+    function copyToClipboard07() {
+    var copyText07 = document.getElementById("enfermedad_familiar").value;
+    navigator.clipboard.writeText(copyText07).then(() => {
+    });
+    }
+
+    function copyToClipboard08() {
+    var copyText08 = document.getElementById("electivo").value;
+    navigator.clipboard.writeText(copyText08).then(() => {
+    });
+    }
+
+    function copyToClipboard09() {
+    var copyText09 = document.getElementById("enfermedad_largo").value;
+    navigator.clipboard.writeText(copyText09).then(() => {
+    });
+    }
+
+    function copyToClipboard10() {
+    var copyText10 = document.getElementById("sangre").value;
+    navigator.clipboard.writeText(copyText10).then(() => {
+    });
+    }
+
+    function copyToClipboard11() {
+    var copyText11 = document.getElementById("maternidad").value;
+    navigator.clipboard.writeText(copyText11).then(() => {
+    });
+    }
+
+    function copyToClipboard12() {
+    var copyText12 = document.getElementById("deportiva").value;
+    navigator.clipboard.writeText(copyText12).then(() => {
+    });
+    }
+
+    function copyToClipboard13() {
+    var copyText13 = document.getElementById("hijo_fallecido").value;
+    navigator.clipboard.writeText(copyText13).then(() => {
+    });
+    }
+
+    function copyToClipboard14() {
+    var copyText14 = document.getElementById("prevencion").value;
+    navigator.clipboard.writeText(copyText14).then(() => {
+    });
+    }
+
+    function copyToClipboard15() {
+    var copyText15 = document.getElementById("adopcion").value;
+    navigator.clipboard.writeText(copyText15).then(() => {
+    });
+    }
+
+    function copyToClipboard16() {
+    var copyText16 = document.getElementById("organos").value;
+    navigator.clipboard.writeText(copyText16).then(() => {
+    });
+    }
+
+    function copyToClipboard17() {
+    var copyText17 = document.getElementById("alimentacion").value;
+    navigator.clipboard.writeText(copyText17).then(() => {
+    });
+    }
+
+    function copyToClipboard18() {
+    var copyText18 = document.getElementById("reproduccion").value;
+    navigator.clipboard.writeText(copyText18).then(() => {
+    });
+    }
+
+    function copyToClipboard19() {
+    var copyText19 = document.getElementById("adaptacion").value;
+    navigator.clipboard.writeText(copyText19).then(() => {
+    });
+    }
+
+    function copyToClipboard20() {
+    var copyText20 = document.getElementById("particulares").value;
+    navigator.clipboard.writeText(copyText20).then(() => {
+    });
+    }
+
+    function copyToClipboard21() {
+    var copyText21 = document.getElementById("examenes").value;
+    navigator.clipboard.writeText(copyText21).then(() => {
+    });
+    }
+
+    function copyToClipboard22() {
+    var copyText22 = document.getElementById("mudanza").value;
+    navigator.clipboard.writeText(copyText22).then(() => {
+    });
+    }
+</script>
+
+<!-- FUNCION PARA COPIAR TEXTO ENRIQUECIDO (inicio)-->
+<script>
+    function copyToClip(str) {
+    function listener(e) {
+        e.clipboardData.setData("text/html", str);
+        e.clipboardData.setData("text/plain", str);
+        e.preventDefault();
+    }
+      document.addEventListener("copy", listener);
+      document.execCommand("copy");
+      document.removeEventListener("copy", listener);
+    };
+</script>
+<!-- FUNCION PARA COPIAR TEXTO ENRIQUECIDO (fin)-->
+
+<footer>
+</footer>
+
+</html>
