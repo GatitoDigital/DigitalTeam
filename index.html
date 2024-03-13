@@ -32,6 +32,39 @@
             border: none;
             z-index: 9998;
         }
+
+        /* Estilos adicionales para el contenedor del video */
+        #video-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #video-container video {
+            width: 80%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #close-video-button {
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -79,23 +112,24 @@
     <main class="bienvenida_container">
 
         <div class="inicios_rapidos">
-        <a class="btn" href="javascript:void(0);" onclick="javascript:
-            window.open('https://tramitesdigitales.buenosaires.gob.ar/auth/login', '_blank');
-            window.open('https://docs.google.com/spreadsheets/d/1hX749fwegh0t2noND-LirEZxR3NkHs2hOuTUOeG7J84/edit#gid=1535602770', '_blank');
-            window.open('https://docs.google.com/spreadsheets/d/14DnJMCd6vMaQF1LKrdaAs3N_y6Yr7-GQ7cOX_lzaHz4/edit#gid=1203265252', '_blank'); ">Inicio rápido 637</a>
-        <a class="btn" href="javascript:void(0);" onclick="javascript:
-            window.open('https://tramitesdigitales.buenosaires.gob.ar/auth/login', '_blank');
-            window.open('https://docs.google.com/forms/d/e/1FAIpQLScd-fiHX-MTU5L8QZsJtkYWnzmIV7Ovwb8Sojuu4KwQ4s7U9w/viewform', '_blank');
-            window.open('https://sigehos.gcba.gob.ar/accounts/login/?next=/o/authorize/%3Fclient_id%3DVzpwK5yd5tjsuyFF31HxlU0FTWryAuYNrlEFm8b3%26response_type%3Dtoken%26state%3Drandom_state_string%26redirect_uri%3Dhttps%3A//his.gcba.gob.ar/gestorDeEncuentros/token.html'); ">Inicio rápido CUD</a>
-        <a class="btn" href="javascript:void(0);" onclick="javascript:
-            window.open('https://go.botmaker.com/#/chats/3NJUENYB7ATYGM8S8QE2', '_blank');
-            window.open('https://docs.google.com/forms/d/e/1FAIpQLScQgMiCAAURYaslpQM0hU_7wWGsPtswpUi4NBnSfZimpUjKCA/viewform', '_blank');
-            window.open('https://docs.google.com/document/d/1bdmXS0N6dYhaQnsaOPvUE_T7D-a_nV1SQwghfMnWbLs/edit', '_blank'); ">Inicio rápido BOTI</a>
-        <a class="btn" href="javascript:void(0) ;" onclick="javascript:
-            window.open('https://outlook.live.com/owa/', '_blank');
-            window.open('https://docs.google.com/forms/d/e/1FAIpQLSel8neuO5fEXfOoaHWLjCVJGjv_cb6X7QPhDs1L8VG9wspLBQ/viewform', '_blank');
-             ">Inicio rápido MAIL</a>
-        <a class="btn" href="Extencion/Digital.zip">Instalar Extencion del Gatito</a>
+            <a class="btn" href="javascript:void(0);" onclick="javascript:
+                window.open('https://tramitesdigitales.buenosaires.gob.ar/auth/login', '_blank');
+                window.open('https://docs.google.com/spreadsheets/d/1hX749fwegh0t2noND-LirEZxR3NkHs2hOuTUOeG7J84/edit#gid=1535602770', '_blank');
+                window.open('https://docs.google.com/spreadsheets/d/14DnJMCd6vMaQF1LKrdaAs3N_y6Yr7-GQ7cOX_lzaHz4/edit#gid=1203265252', '_blank'); ">Inicio rápido 637</a>
+            <a class="btn" href="javascript:void(0);" onclick="javascript:
+                window.open('https://tramitesdigitales.buenosaires.gob.ar/auth/login', '_blank');
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScd-fiHX-MTU5L8QZsJtkYWnzmIV7Ovwb8Sojuu4KwQ4s7U9w/viewform', '_blank');
+                window.open('https://sigehos.gcba.gob.ar/accounts/login/?next=/o/authorize/%3Fclient_id%3DVzpwK5yd5tjsuyFF31HxlU0FTWryAuYNrlEFm8b3%26response_type%3Dtoken%26state%3Drandom_state_string%26redirect_uri%3Dhttps%3A//his.gcba.gob.ar/gestorDeEncuentros/token.html'); ">Inicio rápido CUD</a>
+            <a class="btn" href="javascript:void(0);" onclick="javascript:
+                window.open('https://go.botmaker.com/#/chats/3NJUENYB7ATYGM8S8QE2', '_blank');
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLScQgMiCAAURYaslpQM0hU_7wWGsPtswpUi4NBnSfZimpUjKCA/viewform', '_blank');
+                window.open('https://docs.google.com/document/d/1bdmXS0N6dYhaQnsaOPvUE_T7D-a_nV1SQwghfMnWbLs/edit', '_blank'); ">Inicio rápido BOTI</a>
+            <a class="btn" href="javascript:void(0) ;" onclick="javascript:
+                window.open('https://outlook.live.com/owa/', '_blank');
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLSel8neuO5fEXfOoaHWLjCVJGjv_cb6X7QPhDs1L8VG9wspLBQ/viewform', '_blank');
+                 ">Inicio rápido MAIL</a>
+            <a class="btn" href="Extencion/Digital.zip">Instalar Extencion del Gatito</a>
+    <a class="btn" id="toggle-video-button" href="#" onclick="toggleVideo()">Como instalar extencion.</a>
         </div>
 
         <div class="slider-frame">
@@ -132,10 +166,19 @@
     </section>
 
     <!-- Botón plegable para abrir el chat -->
-    <button id="toggle-chat-button" onclick="toggleChat()">Abrir Chat</button>
+    <a id="toggle-chat-button" href="#" onclick="toggleChat()">Abrir Chat</a>
 
     <!-- Marco del chat (inicialmente oculto) -->
     <iframe id="chat-frame" src="chat.html"></iframe>
+
+    <!-- Contenedor del reproductor de video (inicialmente oculto) -->
+    <div id="video-container">
+        <video controls>
+            <source src="video/instalacion.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <a id="close-video-button" href="#" onclick="closeVideo()">Cerrar Video</a>
+    </div>
 
     <script>
         function toggleChat() {
@@ -148,6 +191,16 @@
                 chatFrame.style.display = 'none';
                 toggleButton.textContent = 'Abrir Chat';
             }
+        }
+
+        function toggleVideo() {
+            var videoContainer = document.getElementById('video-container');
+            videoContainer.style.display = videoContainer.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function closeVideo() {
+            var videoContainer = document.getElementById('video-container');
+            videoContainer.style.display = 'none';
         }
     </script>
 
