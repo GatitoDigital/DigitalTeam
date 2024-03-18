@@ -13,9 +13,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Configuramos los eventos de clic en los botones
         document.getElementById('copyButton1').addEventListener('click', function () {
-            const text = `Deberá presentarse en la Sede Central, ubicada en la calle Pavón 1779.\n\nLa atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:\n- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165\n- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166`;
-            copyToClipboard(text.replace('Matías', nombre));
+            const mensaje = `Deberá presentarse en la Sede Central, ubicada en la calle Pavón 1779.\n\nLa atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:\n- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165\n- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166`;
+            copyToClip(mensaje.replace('Matías', nombre));
         });
+    } else {
+        // Si no se proporcionó un nombre válido
+        alert('El nombre ingresado es inválido.');
+    }
+});
+
+function copyToClip(str) {
+    function listener(e) {
+        e.clipboardData.setData("text/html", str);
+        e.clipboardData.setData("text/plain", str);
+        e.preventDefault();
+    }
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
+}
+
 
 document.getElementById('copyButton2').addEventListener('click', function () {
     solicitarEdad();
