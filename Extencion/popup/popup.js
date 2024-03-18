@@ -17,8 +17,38 @@ document.addEventListener('DOMContentLoaded', function () {
             copyToClipboard(text.replace('Matías', nombre));
         });
 
-document.getElementById('copyButton2').addEventListener('click', function () {
-    solicitarEdad();
+        document.getElementById('copyButton2').addEventListener('click', function () {
+            solicitarEdad();
+        });
+
+        document.getElementById('copyButton3').addEventListener('click', function () {
+            const ahora = new Date();
+            const hora = ahora.getHours();
+            let text;
+            if (hora < 13) {
+                text = `Buenos días, mi nombre es ${nombre};\n¿En qué puedo ayudarte?`;
+            } else {
+                text = `Buenas tardes, mi nombre es ${nombre};\n¿En qué puedo ayudarte?`;
+            }
+            copyToClipboard(text);
+        });
+
+        document.getElementById('copyButton4').addEventListener('click', function () {
+            const text = `Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊`;
+            copyToClipboard(text);
+        });
+
+        // Actualizamos el contenido del span con el nombre ingresado por el usuario
+        document.querySelectorAll('#namePlaceholder').forEach(function (element) {
+            element.textContent = nombre;
+        });
+
+        // Mostramos el mensaje de bienvenida con el nombre del usuario
+        document.getElementById('welcomeMessage').textContent = `¡Bienvenido, ${nombre}!`;
+    } else {
+        // Si el usuario no ingresa un nombre, mostramos un mensaje de advertencia
+        alert("Debes ingresar un nombre para poder utilizar la extensión.");
+    }
 });
 
 function solicitarEdad() {
@@ -36,7 +66,7 @@ function solicitarEdad() {
     }
 
     // Solicitar la edad al usuario
-    var edad = prompt(`ingresa la edad del solicitante:`);
+    var edad = prompt(`Ingresa la edad del solicitante:`);
 
     // Verificar si se proporcionó una edad válida
     if (edad !== null && !isNaN(edad) && edad.trim() !== '') {
@@ -44,7 +74,7 @@ function solicitarEdad() {
         edad = parseInt(edad);
 
         // Si es menor de edad, solicitar la fecha y hora del turno
-		{
+        {
             var fechaTurno = prompt("Ingresa la fecha y hora del turno (Ejemplo: 07/03/2024 a las 11:00hs)");
         }
 
@@ -71,7 +101,7 @@ Deberá presentar en un sobre de papel madera:
         <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
         <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
         <li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
-		<li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
+        <li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
         &nbsp;&nbsp;&nbsp;&nbsp;*Si tiene imágenes debe llevarlas a parte.<br></li>
     </ul>
 * En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
@@ -100,8 +130,8 @@ Deberá presentar en un sobre de papel madera:
         <li>La Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL)</li>
         <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
         <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
-		<li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
-		<li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
+        <li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
+        <li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
         &nbsp;&nbsp;&nbsp;&nbsp;*Si tiene imágenes debe llevarlas a parte.<br></li>
     </ul>
 * En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
@@ -112,12 +142,11 @@ Deberá presentar en un sobre de papel madera:
 &nbsp;&nbsp;&nbsp;&nbsp;<b><i><span style="color:#fa5a50">*Le solicito por favor confirmar asistencia al turno.</span></i></b>
 <br><br>
 De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -
-`;
+Saludos cordiales. -`;
         }
 
         // Copiar el mensaje al portapapeles
-        copyToClip(mensaje);
+        copyToClipboard(mensaje);
 
     } else {
         // Si no se proporcionó una edad válida
@@ -125,62 +154,23 @@ Saludos cordiales. -
     }
 }
 
-function copyToClip(str) {
-    function listener(e) {
-        e.clipboardData.setData("text/html", str);
-        e.clipboardData.setData("text/plain", str);
-        e.preventDefault();
-    }
-    document.addEventListener("copy", listener);
-    document.execCommand("copy");
-    document.removeEventListener("copy", listener);
-}
-
-
-
-
-
-		
-        document.getElementById('copyButton3').addEventListener('click', function () {
-            const ahora = new Date();
-            const hora = ahora.getHours();
-            let text;
-            if (hora < 13) {
-                text = `Buenos días, mi nombre es ${nombre};\n¿En qué puedo ayudarte?`;
-            } else {
-                text = `Buenas tardes, mi nombre es ${nombre};\n¿En qué puedo ayudarte?`;
-            }
-            copyToClipboard(text);
-        });
-
-        document.getElementById('copyButton4').addEventListener('click', function () {
-            const text = `Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊`;
-            copyToClipboard(text);
-        });
-		
-        // Actualizamos el contenido del span con el nombre ingresado por el usuario
-        document.querySelectorAll('#namePlaceholder').forEach(function(element) {
-            element.textContent = nombre;
-        });
-
-        // Mostramos el mensaje de bienvenida con el nombre del usuario
-        document.getElementById('welcomeMessage').textContent = `¡Bienvenido, ${nombre}!`;
-    } else {
-        // Si el usuario no ingresa un nombre, mostramos un mensaje de advertencia
-        alert("Debes ingresar un nombre para poder utilizar la extensión.");
-    }
-});
-
 function copyToClipboard(text) {
+    if (window.self !== window.top) {
+        // Si el script se está ejecutando dentro de un iframe, muestra una alerta en su lugar
+        alert("No se puede copiar al portapapeles cuando se ejecuta dentro de un iframe.");
+        return;
+    }
+
+    // Si no estamos dentro de un iframe, intentamos copiar al portapapeles
     navigator.clipboard.writeText(text).then(function() {
         console.log('Texto copiado al portapapeles: ' + text);
     }, function(err) {
         console.error('No se pudo copiar el texto: ', err);
     });
-	
 }
- // Función para abrir el popup
-        function openPopup() {
-            // Abre un popup con la URL especificada
-            window.open('chat.html', 'Popup', 'width=300,height=300');
-        }
+
+// Función para abrir el popup
+function openPopup() {
+    // Abre un popup con la URL especificada
+    window.open('Chat.html', 'Popup', 'width=300,height=300');
+}
