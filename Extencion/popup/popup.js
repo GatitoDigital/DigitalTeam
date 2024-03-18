@@ -155,22 +155,16 @@ Saludos cordiales. -`;
 }
 
 function copyToClipboard(text) {
-    if (window.self !== window.top) {
-        // Si el script se está ejecutando dentro de un iframe, muestra una alerta en su lugar
-        alert("No se puede copiar al portapapeles cuando se ejecuta dentro de un iframe.");
-        return;
-    }
-
-    // Si no estamos dentro de un iframe, intentamos copiar al portapapeles
-    navigator.clipboard.writeText(text).then(function() {
+    navigator.clipboard.writeText(text).then(function () {
         console.log('Texto copiado al portapapeles: ' + text);
-    }, function(err) {
+    }).catch(function (err) {
         console.error('No se pudo copiar el texto: ', err);
+        alert('No se pudo copiar el texto al portapapeles.');
     });
 }
 
 // Función para abrir el popup
 function openPopup() {
     // Abre un popup con la URL especificada
-    window.open('Chat.html', 'Popup', 'width=300,height=300');
+    window.open('chat.html', 'Popup', 'width=300,height=300');
 }
