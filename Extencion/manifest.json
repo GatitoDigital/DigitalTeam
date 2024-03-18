@@ -19,5 +19,6 @@
     "16": "images/cat1.png",
     "48": "images/cat1.png",
     "128": "images/cat1.png"
-  }
+  },
+  "update_url": "https://gatitodigital.github.io/DigitalTeam/Extencion/manifest.json"
 }
