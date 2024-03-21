@@ -1141,7 +1141,7 @@ Saludos cordiales. -
 <!--CONSULTA ESTADO DE ENTREGA DE RECIBO (fin)-->
 
     <h6 id="vivir_en_casa">.</h6> <!-- Marca de salto de página-->
-    <h4 class="block animado">VIVIR EN CASA</h4>
+    <h4>VIVIR EN CASA</h4>
 
 <!--CONSULTA FECHA DE COBRO VC (inicio)-->
 <button type="button" class="block animado" onclick="solicitarNombre()"><b>CONSULTA FECHA DE DEPÓSITO</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Se informa fecha de cobro e información del programa en caso de que desee realizar un reclamo.</span></button>
@@ -1162,10 +1162,13 @@ Saludos cordiales. -
 
 <script>
     function solicitarNombre() {
-        var nombre = prompt("Por favor, ingresa tu nombre:");
-        var saludo = obtenerSaludo();
-        var texto = saludo + ", mi nombre es " + nombre + ";\n\n" + document.getElementById("rechazado_std").innerHTML;
-        copyToClip(texto);
+        var nombre = prompt("Por favor, ingresa tu nombre:", localStorage.getItem("ultimoNombre") || "");
+        if (nombre) {
+            localStorage.setItem("ultimoNombre", nombre);
+            var saludo = obtenerSaludo();
+            var texto = saludo + ", mi nombre es " + nombre + ";\n\n" + document.getElementById("rechazado_std").innerHTML;
+            copyToClip(texto);
+        }
     }
 
     function obtenerSaludo() {
@@ -1181,8 +1184,10 @@ Saludos cordiales. -
         dummy.select();
         document.execCommand("copy");
         document.body.removeChild(dummy);
+        alert("Texto copiado al portapapeles");
     }
 </script>
+
 <!--CONSULTA FECHA DE COBRO VC (fin)-->
 <!--RECLAMOS O CONSULTAS VC (inicio)-->
 <button type="button" class="block animado" onclick="copyToClip(document.getElementById('rechazado_std2').innerHTML)"><b>Reclamos y/o Consulta VC</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Buenos días, mi nombre es XXXXXXXX;<br>
