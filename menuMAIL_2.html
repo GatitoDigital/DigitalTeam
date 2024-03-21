@@ -223,57 +223,86 @@ Saludos cordiales. -
 <!--COMO REALIZAR EL TRAMITE RENOVACION (fin)-->
 
 <!--COMO REALIZAR EL TRAMITE AMPLIACION (inicio)-->
-<button type="button" class="block" onclick="copyToClip(document.getElementById('cud_ampliacion').innerHTML)"><b>CÓMO REALIZAR EL TRÁMITE DE <span style="color:#96f1ff">AMPLIACIÓN</span></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Orientación para tramitar la ampliación de CUD en forma digital y presencial en las SAS.</span></button>
+<button type="button" class="block" onclick="solicitarNombreAmpliacion()"><b>CÓMO REALIZAR EL TRÁMITE DE <span style="color:#96f1ff">AMPLIACIÓN</span></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Orientación para tramitar la ampliación de CUD en forma digital y presencial en las SAS.</span></button>
   
-<div id=cud_ampliacion style="display:none">
-Buenos días, mi nombre es Candela;<br>
-<br>
-&nbsp;&nbsp;&nbsp;Me comunico con usted acerca de su consulta por el <b>Certificado Único de Discapacidad (CUD)</b>. El trámite para la ampliación del CUD se realiza <u>de la misma manera que el trámite para obtenerlo por primera vez.</u><br>
-A continuación, le dejo detallada la información para que pueda iniciar con la ampliación del mismo:
-<br><br>
-<b>*Por favor lea atentamente cada punto</b>
-<ul>
-    <li>Si la persona que será titular del CUD cuenta con <b><u>DNI con domicilio en CABA</u></b>, debe ingresar al link que se encuentra a continuación. Allí podrá consultar y conocer los requisitos y las planillas necesarias según el tipo de discapacidad que deba certificar para acceder al turno:<br><b><u>https://www.buenosaires.gob.ar/tramites/certificado-de-discapacidad</b></u></li>
-</ul>
-<b>Para realizar la presentación de la documentación tiene las siguientes dos opciones:</b><br>
-<ul>
-    <li><b>DIGITAL:</b> Una vez reunida toda la documentación podrá subirla aquí y continuar el pedido del turno en forma online:<br> 
-<b><u>https://tramitesdigitales.buenosaires.gob.ar/formulario/formularioTemplate/solicitudCUD</b></u></li>
-</ul>
-<b><i><span style="color:#fa5a50">Si la documentación adjunta se encuentra correcta, un/a operador/a procederá a comunicarse con usted para otorgarle un turno con la Junta Médica Evaluadora correspondiente.</span></i></b><br><br>
-<ul>
-    <li><b>PRESENCIAL:</b> Podrá acercarse o enviar a otra persona (con DNI original del/la solicitante) para presentar la documentación o bien, solicitar los requisitos y planillas requeridas, en las siguientes <b>Sedes de Atención Social Desconcentrada (SAS)</b>, ex Servicios Sociales Zonales, que se encuentran funcionando en el horario de 09:30 a 15:30hs.</li>
-</ul>
-<ul>
-    <li>SAS 1: Piedras 1277, San Nicolás</li>
-    <li>SAS 1 BIS: Playón 1, Barrio 31, Retiro</li>
-    <li>SAS 2: Vicente López 2050, Recoleta (último piso del Recoleta Urban Mall)</li>
-    <li>SAS 3: Av. San Juan 2353, San Cristóbal</li>
-    <li>SAS 4: Coronel Salvadores 799, La Boca</li>
-    <li>SAS 5: Cochabamba 4048, Boedo</li>
-    <li>SAS 6: Av. Patricias Argentinas 277, Caballito</li>
-    <li>SAS 7: Av. Rivadavia 7202 3° piso, Flores</li>
-    <li>SAS 8: Av. Fernández de la Cruz 4214, Villa Lugano</li>
-    <li>SAS 9: Timoteo Gordillo 2212, Mataderos</li>
-    <li>SAS 12: Holmberg 2548, Villa Urquiza</li>
-    <li>SAS 13: Av. Cabildo 3067, 2 piso, Belgrano</li>
-    <li>SAS 14: Av. Coronel Díaz 2110, Palermo</li>
-    <li>SAS 15: Almirante F.J. Seguí 2125, planta baja, La Paternal</li>
-    <li>SAS Barrio Playón Chacarita: Av. Triunvirato 2651 (martes y jueves de 9.30 a 14.30hs.)</li>
-</ul>
-*Recuerde que puede solicitar un turno para su atención en alguna de las SAS en el siguiente link: <b><u>https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=4345</b></u>
-<br><br>
-<b><i><span style="color:#fa5a50">Si la documentación presentada se encuentra correcta, le otorgarán un turno con la Junta Evaluadora correspondiente ahí mismo.</span></b></i>
-<br><br>
-<b>A TENER EN CUENTA:</b>
-<ul>
-    <li>Toda la documentación médica cuenta con hasta <b>6 meses de validez</b>. En cuanto a los estudios, si ya posee para ser presentados y superan los 6 meses de vigencia, a criterio del/la médico/a especialista deben ser revalidados aclarando los motivos correspondientes.</li><br>
-    <li>En caso de que la persona a evaluar no pueda asistir el día del turno con la Junta Evaluadora: puede presentarse un familiar o responsable llevando un Certificado Médico expedido por el/la médico/a de cabecera, donde conste el estado actual de la persona titular del CUD o bien, un Certificado de Supervivencia emitido por la Policía de la Ciudad, ambos certificados con hasta <u>48hs de anticipación al turno con la Junta Médica.</u></li><br>
-    <li>La persona que realiza el CUD en la Ciudad Autónoma de Buenos Aires, debe constatar <b>domicilio en CABA en su documento</b>, si consta dirección fuera del ámbito de CABA debe realizar el cambio de domicilio o bien, realizar el trámite de CUD en la localidad que le corresponde.</li>
-</ul>
-Quedo a disposición ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -
+<div id="cud_ampliacion" style="display:none">Buenos días, mi nombre es Candela;<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;Me comunico con usted acerca de su consulta por el <b>Certificado Único de Discapacidad (CUD)</b>. El trámite para la ampliación del CUD se realiza <u>de la misma manera que el trámite para obtenerlo por primera vez.</u><br>
+    A continuación, le dejo detallada la información para que pueda iniciar con la ampliación del mismo:
+    <br><br>
+    <b>*Por favor lea atentamente cada punto</b>
+    <ul>
+        <li>Si la persona que será titular del CUD cuenta con <b><u>DNI con domicilio en CABA</u></b>, debe ingresar al link que se encuentra a continuación. Allí podrá consultar y conocer los requisitos y las planillas necesarias según el tipo de discapacidad que deba certificar para acceder al turno:<br><b><u>https://www.buenosaires.gob.ar/tramites/certificado-de-discapacidad</b></u></li>
+    </ul>
+    <b>Para realizar la presentación de la documentación tiene las siguientes dos opciones:</b><br>
+    <ul>
+        <li><b>DIGITAL:</b> Una vez reunida toda la documentación podrá subirla aquí y continuar el pedido del turno en forma online:<br> 
+    <b><u>https://tramitesdigitales.buenosaires.gob.ar/formulario/formularioTemplate/solicitudCUD</b></u></li>
+    </ul>
+    <b><i><span style="color:#fa5a50">Si la documentación adjunta se encuentra correcta, un/a operador/a procederá a comunicarse con usted para otorgarle un turno con la Junta Médica Evaluadora correspondiente.</span></i></b><br><br>
+    <ul>
+        <li><b>PRESENCIAL:</b> Podrá acercarse o enviar a otra persona (con DNI original del/la solicitante) para presentar la documentación o bien, solicitar los requisitos y planillas requeridas, en las siguientes <b>Sedes de Atención Social Desconcentrada (SAS)</b>, ex Servicios Sociales Zonales, que se encuentran funcionando en el horario de 09:30 a 15:30hs.</li>
+    </ul>
+    <ul>
+        <li>SAS 1: Piedras 1277, San Nicolás</li>
+        <li>SAS 1 BIS: Playón 1, Barrio 31, Retiro</li>
+        <li>SAS 2: Vicente López 2050, Recoleta (último piso del Recoleta Urban Mall)</li>
+        <li>SAS 3: Av. San Juan 2353, San Cristóbal</li>
+        <li>SAS 4: Coronel Salvadores 799, La Boca</li>
+        <li>SAS 5: Cochabamba 4048, Boedo</li>
+        <li>SAS 6: Av. Patricias Argentinas 277, Caballito</li>
+        <li>SAS 7: Av. Rivadavia 7202 3° piso, Flores</li>
+        <li>SAS 8: Av. Fernández de la Cruz 4214, Villa Lugano</li>
+        <li>SAS 9: Timoteo Gordillo 2212, Mataderos</li>
+        <li>SAS 12: Holmberg 2548, Villa Urquiza</li>
+        <li>SAS 13: Av. Cabildo 3067, 2 piso, Belgrano</li>
+        <li>SAS 14: Av. Coronel Díaz 2110, Palermo</li>
+        <li>SAS 15: Almirante F.J. Seguí 2125, planta baja, La Paternal</li>
+        <li>SAS Barrio Playón Chacarita: Av. Triunvirato 2651 (martes y jueves de 9.30 a 14.30hs.)</li>
+    </ul>
+    *Recuerde que puede solicitar un turno para su atención en alguna de las SAS en el siguiente link: <b><u>https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=4345</b></u>
+    <br><br>
+    <b><i><span style="color:#fa5a50">Si la documentación presentada se encuentra correcta, le otorgarán un turno con la Junta Evaluadora correspondiente ahí mismo.</span></b></i>
+    <br><br>
+    <b>A TENER EN CUENTA:</b>
+    <ul>
+        <li>Toda la documentación médica cuenta con hasta <b>6 meses de validez</b>. En cuanto a los estudios, si ya posee para ser presentados y superan los 6 meses de vigencia, a criterio del/la médico/a especialista deben ser revalidados aclarando los motivos correspondientes.</li><br>
+        <li>En caso de que la persona a evaluar no pueda asistir el día del turno con la Junta Evaluadora: puede presentarse un familiar o responsable llevando un Certificado Médico expedido por el/la médico/a de cabecera, donde conste el estado actual de la persona titular del CUD o bien, un Certificado de Supervivencia emitido por la Policía de la Ciudad, ambos certificados con hasta <u>48hs de anticipación al turno con la Junta Médica.</u></li><br>
+        <li>La persona que realiza el CUD en la Ciudad Autónoma de Buenos Aires, debe constatar <b>domicilio en CABA en su documento</b>, si consta dirección fuera del ámbito de CABA debe realizar el cambio de domicilio o bien, realizar el trámite de CUD en la localidad que le corresponde.</li><br>
+        <li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
+    </ul>
+    Quedo a disposición ante cualquier consulta que desee realizarnos.<br>
+    Saludos cordiales. -
 </div>
+
+<script>
+    function solicitarNombreAmpliacion() {
+        var nombre = prompt("Por favor, ingresa tu nombre:", localStorage.getItem("ultimoNombre") || "");
+        if (nombre) {
+            localStorage.setItem("ultimoNombre", nombre);
+            var saludo = obtenerSaludo();
+            var contenido = document.getElementById("cud_ampliacion").innerHTML;
+            var texto = contenido.replace("Candela", nombre);
+            copyToClip(texto);
+        }
+    }
+
+    function obtenerSaludo() {
+        var fecha = new Date();
+        var hora = fecha.getHours();
+        return hora >= 13 ? "Buenas tardes" : "Buenos días";
+    }
+
+    function copyToClip(str) {
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.innerHTML = str;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        alert("Texto copiado al portapapeles");
+    }
+</script>
 <!--COMO REALIZAR EL TRAMITE AMPLIACION (fin)-->
 
 <!--RECHAZADO POR PRORROGA (inicio)-->
