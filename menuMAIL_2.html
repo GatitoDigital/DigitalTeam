@@ -1187,40 +1187,50 @@ Saludos cordiales. -
         alert("Texto copiado al portapapeles");
     }
 </script>
-
 <!--CONSULTA FECHA DE COBRO VC (fin)-->
+
 <!--RECLAMOS O CONSULTAS VC (inicio)-->
-<button type="button" class="block animado" onclick="copyToClip(document.getElementById('rechazado_std2').innerHTML)"><b>Reclamos y/o Consulta VC</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Buenos días, mi nombre es XXXXXXXX;<br>
-<br>
-Atenta a su consulta, para consultas y/o reclamos de beneficiarios/as de Vivir en Casa puede acercarse a la calle Av. Belgrano 858.<br>
-*Atención: lunes a viernes de 9:00 a 15:00hs.<br>
-También puede comunicarse al número: 4342-8587 o a la casilla de correo: vivirencasa@buenosaires.gob.ar<br>
-<br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -</span></button>
+<button type="button" class="block animado" onclick="solicitarNombreVC()"><b>Reclamos y/o Consulta VC</b><br><span style="color:#fce8ff">Cuando desean realizar un reclamo o consulta sobre Vivir en Casa.</span></button>
   
-<div id=rechazado_std2 style="display:none">
-Buenos días, mi nombre es XXXXXXX;<br>
-<br>
-Atenta a su consulta, para consultas y/o reclamos de beneficiarios/as de Vivir en Casa puede acercarse a la calle Av. Belgrano 858.
-<br>
-*Atención: lunes a viernes de 9:00 a 15:00hs.
-<br>
-También puede comunicarse al número: 4342-8587 o a la casilla de correo: vivirencasa@buenosaires.gob.ar
-<br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -
+<div id="rechazado_std2" style="display:none">
+    Buenos días, mi nombre es XXXXXXXX;<br>
+    <br>
+    Atenta a su consulta, para consultas y/o reclamos de beneficiarios/as de Vivir en Casa puede acercarse a la calle Av. Belgrano 858.<br>
+    *Atención: lunes a viernes de 9:00 a 15:00hs.<br>
+    También puede comunicarse al número: 4342-8587 o a la casilla de correo: vivirencasa@buenosaires.gob.ar<br>
+    <br>
+    De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
+    Saludos cordiales. -
 </div>
 
-El depósito de <b>Vivir en Casa (VC)</b> se realiza a partir del <u>4º día hábil de cada mes</u>. 
-En caso de que no le hayan depositado aún, puede acercarse a realizar el reclamo correspondiente al área de Vivir en Casa ubicada en la calle <b>Av. Belgrano 858</b>.<br>
-<i>*Atención: lunes a viernes de 9:00 a 15:00hs.</i><br>
-<br>
-También puede comunicarse al número: <b>4342-8587</b> o a la casilla de correo: <u>vivirencasa@buenosaires.gob.ar</u><br>
-<br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -
-</div>
+<script>
+    function solicitarNombreVC() {
+        var nombre = prompt("Por favor, ingresa tu nombre:", localStorage.getItem("ultimoNombre") || "");
+        if (nombre) {
+            localStorage.setItem("ultimoNombre", nombre);
+            var saludo = obtenerSaludo();
+            var contenido = document.getElementById("rechazado_std2").innerHTML;
+            var texto = contenido.replace("XXXXXXXX", nombre);
+            copyToClip(texto);
+        }
+    }
+
+    function obtenerSaludo() {
+        var fecha = new Date();
+        var hora = fecha.getHours();
+        return hora >= 13 ? "Buenas tardes" : "Buenos días";
+    }
+
+    function copyToClip(str) {
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.innerHTML = str;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        alert("Texto copiado al portapapeles");
+    }
+</script>
 <!--RECLAMOS O CONSULTAS VC (fin)-->
 
     <h6 id="trabajadora_social">.</h6> <!-- Marca de salto de página-->
