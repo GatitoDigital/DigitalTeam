@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Team</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            min-width: 280px; /* Definir un ancho mínimo */
+            max-width: 400px; /* Definir un ancho máximo */
+        }
+
+        /* Estilos para la barra de navegación */
+        .nav-bar {
+            position: fixed; /* Fijar la barra de navegación en la parte superior */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Altura fija para evitar superposición */
+            background-color: #333; /* Color de fondo de la barra de navegación */
+            padding: 10px 0; /* Espaciado interno */
+            display: flex;
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples líneas */
+        }
+
+        .nav-bar a {
+            color: white; /* Color del texto */
+            text-decoration: none; /* Quitar subrayado */
+            padding: 0 10px; /* Espaciado horizontal */
+        }
+
+        /* Estilo para el logo */
+        .logo {
+            width: 50px; /* Ancho de la imagen */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+
+        /* Estilos para el mensaje de bienvenida */
+        .welcome-message {
+            text-align: center;
+            margin-top: 10px; /* Ajustar margen para dejar espacio para la barra de navegación */
+            font-size: 12px; /* Tamaño de fuente reducido */
+            color: #333;
+            background-color: #ccc; /* Fondo gris */
+            padding: 5px; /* Reducir el relleno */
+            border-radius: 5px; /* Bordes redondeados */
+            width: calc(100% - 20px); /* Ancho ajustado al contenedor */
+        }
+
+        /* Estilos para los botones */
+        .button-container {
+            text-align: center;
+            margin-top: 80px; /* Margen superior ajustado para dejar espacio para la barra de navegación */
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            width: calc(100% - 20px); /* Usar el ancho total disponible */
+            background-color: #000; /* Fondo negro */
+            color: #ff5271; /* Texto rojo */
+        }
+
+        .button:hover {
+            background-color: #333;
+        }
+
+        .button h3 {
+            margin-top: 0;
+            color: #14e0ab; /* Títulos en verde claro */
+        }
+
+        .button p {
+            margin-bottom: 0;
+            color: #ff5271; /* Texto en blanco */
+        }
+    </style>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <div class="nav-bar">
+        <a href="#">Inicio</a>
+        <a href="https://gatitodigital.github.io/DigitalTeam/" target="_blank">
+            <img class="logo" src="icons/cat1.png" alt="Logo"> <!-- Logo en el centro -->
+        </a>
+        <a href="chat.html">Chat</a>
+        <div class="welcome-message" id="welcomeMessage">
+            <!-- Aquí puedes poner tu mensaje de bienvenida -->
+          </div>
+
+    </div>
+<br>
+    <div class="button-container">
+        <button type="button" class="block copyButton1 button" id="copyButton1">
+            <h3>Rechazado 690</h3>
+            <p></p>
+        </button>
+        
+        <button type="button" class="block copyButton2 button" id="copyButton2">
+            <h3>Turno Otorgado Mail</h3>
+            <p>certificado unico de discapacidad</p>
+        </button>
+
+        <button type="button" class="block copyButton3 button" id="copyButton3">
+            <h3>Presentación BOTI</h3>
+            <p><span id="namePlaceholder2">Buenas</span>, mi nombre es <span id="namePlaceholder">XXXXX</span>;<br>¿En qué puedo ayudarte?</p>
+        </button>
+        
+        <button type="button" class="block copyButton4 button" id="copyButton4">
+            <h3>Despedida BOTI</h3>
+            <p>Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊</p>
+        </button>
+		    <!-- Botón de actualización -->
+    <a href="https://gatitodigital.github.io/DigitalTeam/Extencion/Digital.zip" download class="update-button">
+        <button type="button">
+            <h3>Actualizar Extensión</h3>
+            <p>Descargar última versión</p>
+        </button>
+    </div>
+</body>
+</html>
