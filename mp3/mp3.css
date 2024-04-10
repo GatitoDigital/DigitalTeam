@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 body {
-	background-color: rgb(237, 237, 237);
+  background-color: transparent; /* Hace el fondo transparente */
+  margin: 0; /* Elimina los márgenes */
+  padding: 0; /* Elimina el relleno */
 }
+
 h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13pt;
