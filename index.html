@@ -8,30 +8,30 @@
     <link rel="icon" href="icons/cat1.ico">
     <title>DIGITAL Team</title>
     <style>
-        /* Estilos adicionales para el botón plegable */
-        #toggle-chat-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 9999;
-        }
+    /* Estilos adicionales para el botón plegable */
+    #toggle-music-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 9999;
+    }
 
-        #chat-frame {
-            display: none;
-            position: fixed;
-            bottom: 80px; /* ajusta según tu preferencia */
-            right: 20px;
-            width: 300px; /* ajusta según tu preferencia */
-            height: 490px; /* ajusta según tu preferencia */
-            border: none;
-            z-index: 9998;
-        }
+    #music-widget-container {
+        display: none;
+        position: fixed;
+        bottom: 80px; /* ajusta según tu preferencia */
+        right: 10px;
+        width: 250px; /* ajusta según tu preferencia */
+        height: 100px; /* ajusta según tu preferencia */
+        border: none;
+        z-index: 9998;
+    }
 
         /* Estilos adicionales para el contenedor del video */
         #video-container {
@@ -168,11 +168,13 @@
         </div>
     </section>
 
-    <!-- Botón plegable para abrir el chat -->
-    <a id="toggle-chat-button" href="#" onclick="toggleChat()">Abrir Chat</a>
+    <!-- Botón plegable para abrir el reproductor de música -->
+    <button id="toggle-music-button" onclick="toggleMusicPlayer()">Reproductor de Música</button>
 
-    <!-- Marco del chat (inicialmente oculto) -->
-    <iframe id="chat-frame" src="chat.html"></iframe>
+    <!-- Contenedor del reproductor de música (inicialmente oculto) -->
+<div id="music-widget-container" style="width: 480px; height: 320px;">
+    <iframe id="music-widget-iframe" src="Reproductor.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+</div>
 
     <!-- Contenedor del reproductor de video (inicialmente oculto) -->
     <div id="video-container">
@@ -184,15 +186,12 @@
     </div>
 
     <script>
-        function toggleChat() {
-            var chatFrame = document.getElementById('chat-frame');
-            var toggleButton = document.getElementById('toggle-chat-button');
-            if (chatFrame.style.display === 'none') {
-                chatFrame.style.display = 'block';
-                toggleButton.textContent = 'Cerrar Chat';
+        function toggleMusicPlayer() {
+            var musicWidget = document.getElementById('music-widget-container');
+            if (musicWidget.style.display === 'none') {
+                musicWidget.style.display = 'block';
             } else {
-                chatFrame.style.display = 'none';
-                toggleButton.textContent = 'Abrir Chat';
+                musicWidget.style.display = 'none';
             }
         }
 
