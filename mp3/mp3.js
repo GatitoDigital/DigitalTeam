@@ -3,22 +3,22 @@
 var playlist = [
     {
         "song": "Cancion 1",
-        "album": "The Animals",
-        "artist": "The Animals",
+        "album": "Digital Team",
+        "artist": "Digital Team",
         "artwork": "http://upload.wikimedia.org/wikipedia/en/thumb/a/a8/Rising_sun_animals_US.jpg/220px-Rising_sun_animals_US.jpg",
         "mp3": "mp3/Cancion 1.mp3"
     },
     {
         "song": "Cancion 2",
-        "album": "Talking Book",
-        "artist": "Stevie Wonder",
+        "album": "Digital Team",
+        "artist": "Digital Team",
         "artwork": "https://i.imgur.com/Py4XcBT.png",
         "mp3": "mp3/Cancion 2.mp3"
     },
     {
         "song": "Cancion 3",
-        "album": "Premiere",
-        "artist": "The Noisy Freaks",
+        "album": "Digital Team",
+        "artist": "Digital Team",
         "artwork": "http://i1285.photobucket.com/albums/a583/TheGreatOzz1/Hosted-Images/Noisy-Freeks-Image_zps4kilrxml.png",
         "mp3": "mp3/Cancion 3.mp3"
     }
