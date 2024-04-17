@@ -690,11 +690,35 @@ Saludos cordiales. -
 <!--POSEE CERTIFICADO NO CUD, CONSULTA POR AUTOPISTA (fin)-->
 
 <!--TURNO OTORGADO POR MAIL (ASUNTO) (inicio)-->
-<button type="button" class="block animado" onclick="copyToClip(document.getElementById('turno_otorgado_asunto').innerHTML)"><b>TURNO OTORGADO POR MAIL <span style="color:#96f1ff">(ASUNTO)</span> <span style="color:#6ee67f">(IMPORTANTE: Completar Nro. de trámite)</span></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Solicitud Certificado Único de Discapacidad - Nro. de Trámite XX</span></button>
-  
-<div id=turno_otorgado_asunto style="display:none">
-Solicitud Certificado Único de Discapacidad - Nro. de Trámite XX.
+<button type="button" class="block animado" onclick="copyWithTramite()">
+    <b>TURNO OTORGADO POR MAIL <span style="color:#96f1ff">(ASUNTO)</span> <span style="color:#6ee67f">(IMPORTANTE: Completar Nro. de trámite)</span></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#fce8ff">Solicitud Certificado Único de Discapacidad - Nro. de Trámite XX</span>
+</button>
+
+<div id="turno_otorgado_asunto" style="display:none">
+    Solicitud Certificado Único de Discapacidad - Nro. de Trámite XX.
 </div>
+
+<script>
+    function copyWithTramite() {
+        var numTramite = prompt("Por favor, ingrese el número de trámite:");
+
+        if (numTramite !== null && numTramite !== "") {
+            var texto = document.getElementById('turno_otorgado_asunto').innerText; // Usamos innerText para obtener el texto
+            texto = texto.replace("Nro. de Trámite XX", "Nro. de Trámite " + numTramite);
+            copyToClip(texto);
+        }
+    }
+
+    function copyToClip(texto) {
+        navigator.clipboard.writeText(texto)
+            .then(() => {
+                alert("Texto copiado al portapapeles: \n" + texto);
+            })
+            .catch(err => {
+                console.error('Error al intentar copiar el texto al portapapeles: ', err);
+            });
+    }
+</script>
 <!--TURNO OTORGADO POR MAIL (ASUNTO) (fin)-->
 
 <!--TURNO OTORGADO POR MAIL (MAYORES) (inicio)-->
