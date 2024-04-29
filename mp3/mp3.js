@@ -94,7 +94,7 @@ function reset() {
     album.title = playlist[currentSong]['album'];
     artist.innerHTML = playlist[currentSong]['artist'];
     artist.title = playlist[currentSong]['artist'];
-    artwork.setAttribute("style", "background:url(https://i.imgur.com/3idGgyU.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
+    artwork.setAttribute("style", "background:url(mp3/Disco.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
     music.innerHTML = '<source src="' + playlist[currentSong]['mp3'] + '" type="audio/mp3">';
     music.load();
 }
