@@ -217,7 +217,7 @@ next.onclick = function () {
     album.title = playlist[currentSong]['album'];
     artist.innerHTML = playlist[currentSong]['artist'];
     artist.title = playlist[currentSong]['artist'];
-    artwork.setAttribute("style", "transform: rotate(" + rot + "deg); background:url(https://i.imgur.com/3idGgyU.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
+    artwork.setAttribute("style", "transform: rotate(" + rot + "deg); background:url(mp3/Disco.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
     music.load();
     duration = music.duration;
     music.play();
@@ -246,7 +246,7 @@ previous.onclick = function () {
     album.title = playlist[currentSong]['album'];
     artist.innerHTML = playlist[currentSong]['artist'];
     artist.title = playlist[currentSong]['artist'];
-    artwork.setAttribute("style", "transform: rotate(" + rot + "deg); background:url(https://i.imgur.com/3idGgyU.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
+    artwork.setAttribute("style", "transform: rotate(" + rot + "deg); background:url(mp3/Disco.png), url('" + playlist[currentSong]['artwork'] + "') center no-repeat;");
     music.load();
     duration = music.duration;
     music.play();
