@@ -2,220 +2,94 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="icons/cat1.ico">
-    <title>DIGITAL Team</title>
+    <title>En Mantenimiento</title>
     <style>
-    /* Estilos adicionales para el botón plegable */
-    #toggle-music-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        z-index: 9999;
-    }
-
-    #music-widget-container {
-        display: none;
-        position: fixed;
-        bottom: 80px; /* ajusta según tu preferencia */
-        right: 10px;
-        width: 250px; /* ajusta según tu preferencia */
-        height: 100px; /* ajusta según tu preferencia */
-        border: none;
-        z-index: 9998;
-    }
-
-        /* Estilos adicionales para el contenedor del video */
-        #video-container {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Cambié el color de fondo a gris oscuro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: #fff; /* Cambié el color del texto a blanco */
         }
 
-        #video-container video {
-            width: 90%;
-            max-width: 1200px;
-            height: 750px;
-            display: block;
-            margin: 0 auto;
-        }
-
-        #close-video-button {
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            cursor: pointer;
-            display: block;
-            margin-top: 20px;
+        .container {
             text-align: center;
+        }
+
+        h1 {
+            color: #ff8c00; /* Cambié el color del título a naranja */
+        }
+
+        img {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+
+        .reload-button {
+            background-color: #555; /* Cambié el color de fondo del botón a un gris más oscuro */
+            color: #fff; /* Cambié el color del texto del botón a blanco */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .reload-button:hover {
+            background-color: #777; /* Cambié el color de fondo del botón cuando se pasa el mouse a un gris más oscuro */
+        }
+
+        .countdown {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #ff8c00; /* Cambié el color del texto del contador a naranja */
         }
     </style>
 </head>
-
-<header>
-    <div class="menu container">
-        <div class="logo_grupo">
-            <img id="img_logo" src="icons/cat1.png" alt="Logo Gatito" title="The best Digital Team ever :)">
-            <a href="#" class="logo">DIGITAL Team</a>
-        </div>
-        <input type="checkbox" id="menu">
-        <label for="menu">
-            <img src="icons/menu_hamburguesa.png" class="menu_icono">
-        </label>
-        <nav class="nav_bar">
-            <ul>
-                <li><a href="#" id="pagina_actual">Inicio</a></li>
-                <li><a href="menu637_2.html" id="pag_637">690</a></li>
-                <li><a href="menuCUD_2.html" id="pag_CUD">CUD</a></li>
-                <li><a href="menuBOTI_2.html" id="pag_BOTI">BOTI</a></li>
-                <li><a href="menuMAIL_2.html" id="pag_MAIL">MAIL</a></li>
-                <li><a href="menuCPNFVC_2.html" id="pag_CPNFVC">CP-NF-VC</a></li>
-                <li><a href="menuINFO_2.html" id="pag_INFO">INFO</a></li>
-                <li><a href="Editable_2.html" id="pag_Edit">EDITAR</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
 <body>
-    <div class="fondo_animado">
-        <div class="box">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>                      
-        </div>
-    </div>
-
-    <main class="bienvenida_container">
-
-        <div class="inicios_rapidos">
-            <a class="btn" href="javascript:void(0);" onclick="javascript:
-                window.open('https://tramitesdigitales.buenosaires.gob.ar/auth/login', '_blank');
-                window.open('https://docs.google.com/spreadsheets/d/1hX749fwegh0t2noND-LirEZxR3NkHs2hOuTUOeG7J84/edit#gid=1535602770', '_blank');
-                window.open('https://docs.google.com/spreadsheets/d/14DnJMCd6vMaQF1LKrdaAs3N_y6Yr7-GQ7cOX_lzaHz4/edit#gid=1203265252', '_blank'); ">Inicio rápido 637</a>
-            <a class="btn" href="javascript:void(0);" onclick="javascript:
-                window.open('https://tramitesdigitales.buenosaires.gob.ar/auth/login', '_blank');
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLScd-fiHX-MTU5L8QZsJtkYWnzmIV7Ovwb8Sojuu4KwQ4s7U9w/viewform', '_blank');
-                window.open('https://sigehos.gcba.gob.ar/accounts/login/?next=/o/authorize/%3Fclient_id%3DVzpwK5yd5tjsuyFF31HxlU0FTWryAuYNrlEFm8b3%26response_type%3Dtoken%26state%3Drandom_state_string%26redirect_uri%3Dhttps%3A//his.gcba.gob.ar/gestorDeEncuentros/token.html'); ">Inicio rápido CUD</a>
-            <a class="btn" href="javascript:void(0);" onclick="javascript:
-                window.open('https://go.botmaker.com/#/chats/3NJUENYB7ATYGM8S8QE2', '_blank');
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLScQgMiCAAURYaslpQM0hU_7wWGsPtswpUi4NBnSfZimpUjKCA/viewform', '_blank');
-                window.open('https://docs.google.com/document/d/1bdmXS0N6dYhaQnsaOPvUE_T7D-a_nV1SQwghfMnWbLs/edit', '_blank'); ">Inicio rápido BOTI</a>
-            <a class="btn" href="javascript:void(0) ;" onclick="javascript:
-                window.open('https://outlook.live.com/owa/', '_blank');
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLSel8neuO5fEXfOoaHWLjCVJGjv_cb6X7QPhDs1L8VG9wspLBQ/viewform', '_blank');
-                 ">Inicio rápido MAIL</a>
-            <a class="btn" href="javascript:void(0) ;" onclick="javascript:
-            window.open('https://docs.google.com/forms/d/e/1FAIpQLSc7t15yyFMTVKA-5XouPopmWg5bfcx3JZvp1bLKVv6QmfJv_Q/viewform', '_blank');
-             ">Formulario de licencias</a>
-            <a class="btn" href="Extencion/Digital.zip">Descargar Extencion</a>
-    <a class="btn" id="toggle-video-button" href="#" onclick="toggleVideo()">Video de instalacion</a>
-        </div>
-
-        <div class="slider-frame">
-            <ul>
-                <li><img src="images/slider1.jpg" alt=""></li>
-                <li><img src="images/slider2.jpg" alt=""></li>
-                <li><img src="images/slider3.jpg" alt=""></li>
-                <li><img src="images/slider4.jpg" alt=""></li>
-            </ul>
-        </div>  
-    </main>
-    
-    <section>
-        <div class="calendario">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FArgentina%2FBuenos_Aires&showTz=0&showPrint=0&showDate=1&showTitle=0&src=YWJvcmRhamVkaWdpdGFsQGdtYWlsLmNvbQ&src=MjBjYTY1M2UxMDNlMTNhY2EzMzUzODhhMTFmMmFmYjk1ZjQ2N2NkYzQwOTkyNGZiZGYxMTNiYzdjNmQzY2NhOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MzlmNzVhM2ZhN2Q1YTE4YzUwZGE3ZDJjZDRiMDk4MzE2ZmI3MmYxYmZmZTM2MmNiN2ZlNmFlYTU1OGU3YThjNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=N2MyZDU3Nzk2YTM0OTgwMGIwZTM4NWRlNjA1YjE1MTdhMjAzYWMwNzhlNzhkYTU0MDFiYWMxZjFiMmQwYTM5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MTgzMzBkN2YzZGExM2IzZTlhNmY5YTA2ZTQzYmJiMjlhYTg2MjY0ZmQ1ZmVjNzlmMzhhN2NkZWNkMWFkYmMwNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2E4NDljZDFmYWU5YTk3ZjVjYjgyY2ViZTJjMWJmNTBkMzA4OTg4YmRkOTkyYjlhMTIzZmYxZWQwOWQzNjIzYkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YjdhN2MyNWJhYjgyNDY0ODQ1NmNiOWUyZTZjZWFmYzYyNWFhNzM3YTVmN2RiNTg2NTZkMDI4NWFkNmE5NGQzZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NGU1NDFmNWU1YzA5NDI0OWZjYWVlZjZhZjNhMDEzMTczYTE1MmJkNGUxYjM2MTU2NDBlZTcxNzMwZDgwNTU3YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Yjc0ZmNmZjNiNTExODFjMmUxZWYyNTk0ZDgwN2NlYzZlMjQ2ODA3MDJhMjdiYjIyMjk4NDQ5ZDlhMzk1ODBhZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuYXIjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23B39DDB&color=%23D81B60&color=%238E24AA&color=%23039BE5&color=%233F51B5&color=%23009688&color=%239E69AF&color=%23bebaba&color=%2333B679&color=%230B8043" style="border-width:0" width="80%" height="600" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <div class="changelog">
-            <p><b>Últimas modificaciones:</b><br>
-                - CUD: Se elimina leyenda si la persona a evaluar no puede asistir.<br>
-                - CUD: Se actualiza item "Rechazado por prórroga" a la resolucíón 2024 prorrogado hasta el 2025.<br>
-                - BOTI: Se elimina párrafo "Sabías que a partir de abril la atención es con turno"<br>
-                - 690: Se elimina párrafo "Sabías que a partir de abril la atención es con turno"<br>
-                - AGUS: Se elimina correo de Sabrina.<br>
-                - AGUS: Se agrega copia CC a "rjpirilli@gmail.com"<br>
-                - MAIL: Se agrega item "Leche maternizada / Pañales"<br>
-                - MAIL: Se agrega item "Ya tiene turno para la Junta, consulta si puede ser en otra sede"<br>
-                <br>
-                <b>Modificaciones anteriores:</b><br>
-                - AGUS: Se agrega autocopiado a la tabla de licencias.<br>
-                - MAIL: Se modifica texto del item "Fuera de nuestra área de competencias" "[...] Mediante esta casilla de mail brindamos asesoramiento sobre los trámites y servicios que realizamos en las Sedes de Atención Social (ex servicios sociales zonales) y a través del Sistema de Trámites Digitales, que dependen del Ministerio de Desarrollo Humano y Hábitat del Gobierno de la Ciudad de Buenos Aires.[...]"<br>
-                - MAIL: Se modifica texto del item "Turno otorgado por mail" tanto mayores como menores. Se agrega aclaración cuando la persona a evaluar se encuentra imposibilitada de movilizarse para asistir a la junta.<br>
-            </p>
-        </div>
-    </section>
-
-    <!-- Botón plegable para abrir el reproductor de música -->
-    <button id="toggle-music-button" onclick="toggleMusicPlayer()">Reproductor de Música</button>
-
-    <!-- Contenedor del reproductor de música (inicialmente oculto) -->
-<div id="music-widget-container" style="width: 480px; height: 320px;">
-    <iframe id="music-widget-iframe" src="Reproductor.html" frameborder="0" style="width: 100%; height: 100%;"></iframe>
-</div>
-
-    <!-- Contenedor del reproductor de video (inicialmente oculto) -->
-    <div id="video-container">
-        <video controls>
-            <source src="video/instalacion.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-        <a id="close-video-button" href="#" onclick="closeVideo()">Cerrar Video</a>
+    <div class="container">
+        <h1>El Gatito digital se encuentra en mantenimiento</h1>
+        <img src="icons/cat1.png" alt="Logo Gatito Digital"> <!-- Ajusté la ruta de la imagen -->
+        <br> <!-- Agregué un salto de línea antes del botón -->
+        <button class="reload-button" onclick="window.location.reload();">Recargar página</button>
+        <div class="countdown" id="countdown"></div>
     </div>
 
     <script>
-        function toggleMusicPlayer() {
-            var musicWidget = document.getElementById('music-widget-container');
-            if (musicWidget.style.display === 'none') {
-                musicWidget.style.display = 'block';
-            } else {
-                musicWidget.style.display = 'none';
+        // Fecha y hora de regreso (8 de mayo de 2024 a las 10:00)
+        var returnDate = new Date("May 7, 2024 10:00:00").getTime();
+
+        // Actualizar el contador cada segundo
+        var x = setInterval(function() {
+            // Obtener la fecha y hora actual
+            var now = new Date().getTime();
+
+            // Calcular la diferencia entre la fecha de regreso y la fecha actual
+            var distance = returnDate - now;
+
+            // Calcular días, horas, minutos y segundos restantes
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Mostrar el contador en el elemento con id "countdown"
+            document.getElementById("countdown").innerHTML = "Vuelve en: " + days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // Cuando el contador llegue a cero, mostrar un mensaje
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "¡La página está de vuelta!";
             }
-        }
-
-        function toggleVideo() {
-            var videoContainer = document.getElementById('video-container');
-            videoContainer.style.display = videoContainer.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function closeVideo() {
-            var videoContainer = document.getElementById('video-container');
-            videoContainer.style.display = 'none';
-        }
+        }, 1000);
     </script>
-
 </body>
-
-<footer>
-    <div id="foot">
-        <a href="menuLOG.html" class="acceso_foot">ver.2.d.050224</a>
-    </div>
-
-    <div id="foot2">
-        <a href="menuAGUS.html" class="acceso_foot2">Alohomora</a>
-    </div>
-</footer>
-
 </html>
