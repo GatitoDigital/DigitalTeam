@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Mantenimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Cambié el color de fondo a gris oscuro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: #fff; /* Cambié el color del texto a blanco */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff8c00; /* Cambié el color del título a naranja */
+        }
+
+        img {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+
+        .reload-button {
+            background-color: #555; /* Cambié el color de fondo del botón a un gris más oscuro */
+            color: #fff; /* Cambié el color del texto del botón a blanco */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .reload-button:hover {
+            background-color: #777; /* Cambié el color de fondo del botón cuando se pasa el mouse a un gris más oscuro */
+        }
+
+        .countdown {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #ff8c00; /* Cambié el color del texto del contador a naranja */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>El Gatito digital se encuentra en mantenimiento</h1>
+        <img src="icons/cat1.png" alt="Logo Gatito Digital"> <!-- Ajusté la ruta de la imagen -->
+        <br> <!-- Agregué un salto de línea antes del botón -->
+        <button class="reload-button" onclick="window.location.reload();">Recargar página</button>
+        <div class="countdown" id="countdown"></div>
+    </div>
+
+    <script>
+        // Fecha y hora de regreso (8 de mayo de 2024 a las 10:00)
+        var returnDate = new Date("May 8, 2024 10:00:00").getTime();
+
+        // Actualizar el contador cada segundo
+        var x = setInterval(function() {
+            // Obtener la fecha y hora actual
+            var now = new Date().getTime();
+
+            // Calcular la diferencia entre la fecha de regreso y la fecha actual
+            var distance = returnDate - now;
+
+            // Calcular días, horas, minutos y segundos restantes
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Mostrar el contador en el elemento con id "countdown"
+            document.getElementById("countdown").innerHTML = "Vuelve en: " + days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            // Cuando el contador llegue a cero, mostrar un mensaje
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "¡La página está de vuelta!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
