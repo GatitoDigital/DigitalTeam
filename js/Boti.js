@@ -33,6 +33,7 @@
                 copyToClipboard(textoSaludo);
             }
         }
+		
 
         // Evento clic del botón de saludo
         document.getElementById('botondesaludo').addEventListener('click', obtenerNombreUsuario);
@@ -224,6 +225,12 @@
 
     function copyToClipboard32() {
     var copyText32 = document.getElementById("no_pagos").value;
+    navigator.clipboard.writeText(copyText32).then(() => {
+    });
+    }
+	
+    function copyToClipboard33() {
+    var copyText32 = document.getElementById("desalojoboti").value;
     navigator.clipboard.writeText(copyText32).then(() => {
     });
     }
