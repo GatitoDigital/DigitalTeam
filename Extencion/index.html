@@ -61,20 +61,22 @@
         }
 
         .button {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
+            display: block;
+            margin: 10px auto;
+            padding: 15px 20px;
             border: none;
-            border-radius: 25px;
+            border-radius: 25px; /* Bordes más redondeados */
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: background-color 0.3s ease;
-            width: calc(100% - 20px); /* Usar el ancho total disponible */
+            width: calc(100% - 40px); /* Usar el ancho total disponible */
+            max-width: 300px; /* Definir un ancho máximo */
             background-color: #000; /* Fondo negro */
             color: #ff5271; /* Texto rojo */
+            text-align: center; /* Alinear texto al centro */
         }
 
         .button:hover {
@@ -89,6 +91,32 @@
         .button p {
             margin-bottom: 0;
             color: #ff5271; /* Texto en blanco */
+        }
+
+        /* Estilo para el botón de descarga */
+        .update-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .update-button button {
+            background-color: #14e0ab; /* Cambiar el color del botón a verde */
+            color: white; /* Cambiar el color del texto a blanco */
+            text-decoration: none; /* Quitar el subrayado del texto */
+            border: none; /* Quitar el borde */
+            padding: 10px 20px; /* Ajustar el relleno */
+            border-radius: 25px; /* Bordes más redondeados */
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+            font-size: 14px; /* Tamaño de fuente */
+            font-weight: bold; /* Texto en negrita */
+            text-transform: uppercase; /* Convertir el texto a mayúsculas */
+            letter-spacing: 1px; /* Espaciado entre letras */
+            transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+        }
+
+        .update-button button:hover {
+            background-color: #0da985; /* Cambiar el color del botón a un tono más oscuro al pasar el cursor */
         }
     </style>
     <script src="popup.js"></script>
@@ -106,7 +134,7 @@
           </div>
 
     </div>
-<br>
+    <br>
     <div class="button-container">
         <button type="button" class="block copyButton1 button" id="copyButton1">
             <h3>Rechazado 690</h3>
@@ -116,6 +144,11 @@
         <button type="button" class="block copyButton2 button" id="copyButton2">
             <h3>Turno Otorgado Mail</h3>
             <p>certificado unico de discapacidad</p>
+        </button>
+		
+        <button type="button" class="block copyButton2 button" id="copyButton5">
+            <h3>Turno Reprogramado Mail</h3>
+            <p>CUD Turno Reprogramado</p>
         </button>
 
         <button type="button" class="block copyButton3 button" id="copyButton3">
@@ -128,11 +161,12 @@
             <p>Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊</p>
         </button>
 		    <!-- Botón de actualización -->
-    <a href="https://gatitodigital.github.io/DigitalTeam/Extencion/Digital.zip" download class="update-button">
-        <button type="button">
-            <h3>Actualizar Extensión</h3>
-            <p>Descargar última versión</p>
-        </button>
+        <a href="https://gatitodigital.github.io/DigitalTeam/Extencion/Digital.zip" download class="update-button">
+            <button type="button">
+                <h3>Actualizar Extensión</h3>
+                <p>Descargar última versión</p>
+            </button>
+        </a>
     </div>
 </body>
 </html>
