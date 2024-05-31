@@ -275,6 +275,20 @@ function copyToClip(str) {
             copyToClipboard(text);
         });
 		
+document.getElementById('copyButton6').addEventListener('click', function () {
+    // Solicitar al usuario que ingrese el número de trámite
+    const numeroTramite = prompt("Ingrese el número de trámite:");
+
+    // Verificar si el usuario ingresó un número de trámite
+    if (numeroTramite !== null) {
+        // Generar el texto con el número de trámite ingresado
+        const text = `Solicitud Certificado Único de Discapacidad - Nro. de Trámite ${numeroTramite}.`;
+
+        // Copiar el texto al portapapeles
+        copyToClipboard(text);
+    }
+});
+		
         // Actualizamos el contenido del span con el nombre ingresado por el usuario
         document.querySelectorAll('#namePlaceholder').forEach(function(element) {
             element.textContent = nombre;
