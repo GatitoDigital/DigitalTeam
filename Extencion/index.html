@@ -92,34 +92,23 @@
             margin-bottom: 0;
             color: #ff5271; /* Texto en blanco */
         }
-
-        /* Estilo para el botón de descarga */
-        .update-button {
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-        }
-
-        .update-button button {
-            background-color: #14e0ab; /* Cambiar el color del botón a verde */
-            color: white; /* Cambiar el color del texto a blanco */
-            text-decoration: none; /* Quitar el subrayado del texto */
-            border: none; /* Quitar el borde */
-            padding: 10px 20px; /* Ajustar el relleno */
-            border-radius: 25px; /* Bordes más redondeados */
-            cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-            font-size: 14px; /* Tamaño de fuente */
-            font-weight: bold; /* Texto en negrita */
-            text-transform: uppercase; /* Convertir el texto a mayúsculas */
-            letter-spacing: 1px; /* Espaciado entre letras */
-            transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
-        }
-
-        .update-button button:hover {
-            background-color: #0da985; /* Cambiar el color del botón a un tono más oscuro al pasar el cursor */
-        }
     </style>
-
+<script>
+    document.getElementById("copyButton6").onclick = function() {
+        var tramiteNumber = prompt("Ingrese el número de trámite:");
+        if (tramiteNumber !== null && tramiteNumber !== "") {
+            var message = "Solicitud Certificado Único de Discapacidad - Nro. de Trámite " + tramiteNumber + ".";
+            navigator.clipboard.writeText(message).then(function() {
+                alert("Texto copiado al portapapeles: " + message);
+            }, function(err) {
+                alert("Error al copiar al portapapeles: " + err);
+            });
+        } else {
+            alert("Número de trámite no ingresado.");
+        }
+    }
+</script>
+    <script src="popup.js"></script>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -141,6 +130,11 @@
             <p></p>
         </button>
         
+        <button type="button" class="block copyButton2 button" id="copyButton6">
+            <h3>Asunto Mail</h3>
+            <p></p>
+        </button>
+		
         <button type="button" class="block copyButton2 button" id="copyButton2">
             <h3>Turno Otorgado Mail</h3>
             <p>certificado unico de discapacidad</p>
@@ -160,316 +154,6 @@
             <h3>Despedida BOTI</h3>
             <p>Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊</p>
         </button>
-		    <!-- Botón de actualización -->
-        <a href="https://gatitodigital.github.io/DigitalTeam/Extencion/Digital.zip" download class="update-button">
-            <button type="button">
-                <h3>Actualizar Extensión</h3>
-                <p>Descargar última versión</p>
-            </button>
-        </a>
     </div>
-    <script>document.addEventListener('DOMContentLoaded', function () {
-    // Verificamos si hay un último usuario guardado en el almacenamiento local
-    const ultimoUsuario = localStorage.getItem('ultimoUsuario');
-
-    // Si hay un último usuario guardado, lo utilizamos como nombre predeterminado
-    const nombrePredeterminado = ultimoUsuario ? ultimoUsuario : '';
-
-    // Preguntamos al usuario su nombre al abrir la extensión
-    const nombre = prompt("Ingresa tu nombre:", nombrePredeterminado);
-    if (nombre !== null && nombre.trim() !== '') {
-        // Guardamos el nombre del usuario en el almacenamiento local
-        localStorage.setItem('ultimoUsuario', nombre);
-
-        // Configuramos los eventos de clic en los botones
-        document.getElementById('copyButton1').addEventListener('click', function () {
-            const text = `Deberá presentarse en la Sede Central, ubicada en la calle Pavón 1779.\n\nLa atención en la Sede Central es por turno, le dejamos el link para que pueda gestionarlo:\n- Si es ordinario: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5165\n- Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?idPrestacion=5166`;
-            copyToClipboard(text.replace('Matías', nombre));
-        });
-
-document.getElementById('copyButton2').addEventListener('click', function () {
-    solicitarEdad();
-});
-
-function solicitarEdad() {
-    // Obtener la hora actual del sistema
-    const horaActual = new Date().getHours();
-
-    // Definir la variable de saludo
-    let saludo;
-
-    // Determinar si es por la mañana (antes de las 13:00) o por la tarde
-    if (horaActual < 13) {
-        saludo = 'Buen día';
-    } else {
-        saludo = 'Buenas tardes';
-    }
-
-    // Solicitar la edad al usuario
-    var edad = prompt(`ingresa la edad del solicitante:`);
-
-    // Verificar si se proporcionó una edad válida
-    if (edad !== null && !isNaN(edad) && edad.trim() !== '') {
-        // Convertir la edad a número entero
-        edad = parseInt(edad);
-
-        // Si es menor de edad, solicitar la fecha y hora del turno
-		{
-            var fechaTurno = prompt("Ingresa la fecha y hora del turno (Ejemplo: 07/03/2024 a las 11:00hs)");
-        }
-
-        // Solicitar el nombre de la junta
-        var nombreJunta = prompt("Ingresa el nombre y numero de la junta (Ejemplo: MEDICA N°3R)");
-
-        // Generar el mensaje según la edad
-        var mensaje;
-        if (edad >= 18) {
-            // Mensaje para mayores de edad
-            mensaje = `${saludo}, mi nombre es ${nombre};<br>
-<br>
-Me comunico con usted acerca de su trámite de solicitud del Certificado Único de Discapacidad (CUD).<br><br>
-El turno asignado corresponde al día <b>${fechaTurno}, con la Junta Evaluadora ${nombreJunta}</b>.<br>
-La Junta Evaluadora se encuentra ubicada en la calle Piedras 1281, CABA.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;*Recuerde que la persona a evaluar debe asistir el día del turno, en lo posible concurrir 15 minutos antes.<br>
-<br>
-Deberá presentar en un sobre de papel madera:
-    <ul>
-        <li>Fotocopia del DNI de ambos lados (original por fuera del sobre)</li>
-        <li>Fotocopia del Carnet de la Obra Social o Prepaga (si corresponde)</li>
-        <li>Constancia de CUIL</li>
-        <li>La Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL)</li>
-        <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
-        <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
-        <li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
-		<li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;*Si tiene imágenes debe llevarlas a parte.<br></li>
-    </ul>
-* En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
-<span style="color:#0033ff"><u>https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf</u></span><br>
-<br>
-<b>En el mencionado sobre deberá escribir: nombre y apellido de la persona a evaluar, número de teléfono de contacto y dirección de mail.</b><br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b><i><span style="color:#fa5a50">*Le solicito por favor confirmar asistencia al turno.</span></i></b>
-<br><br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -`;
-        } else {
-            // Mensaje para menores de edad
-            mensaje = `${saludo}, mi nombre es ${nombre};<br>
-<br>
-Me comunico con usted acerca de su trámite de solicitud del Certificado Único de Discapacidad (CUD).<br><br>
-El turno asignado corresponde al día <b>${fechaTurno}, con la Junta Evaluadora ${nombreJunta}</b>.<br>
-La Junta Evaluadora se encuentra ubicada en la calle Piedras 1281, CABA.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;*Recuerde que la persona a evaluar debe asistir el día del turno, en lo posible concurrir 15 minutos antes.<br>
-<br>
-Deberá presentar en un sobre de papel madera:
-    <ul>
-        <li>Fotocopia del DNI de ambos lados tanto de la persona a evaluar como del padre/la madre, o tutor/a legal (original por fuera del sobre)</li>
-        <li>Fotocopia de la Partida de Nacimiento (original por fuera del sobre)</li>
-        <li>Fotocopia del Carnet de la Obra Social o Prepaga (si corresponde)</li>
-        <li>La Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL)</li>
-        <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
-        <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
-		<li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
-		<li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;*Si tiene imágenes debe llevarlas a parte.<br></li>
-    </ul>
-* En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
-<span style="color:#0033ff"><u>https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf</u></span><br>
-<br>
-<b>En el mencionado sobre deberá escribir: nombre y apellido de la persona a evaluar, número de teléfono de contacto y dirección de mail.</b><br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b><i><span style="color:#fa5a50">*Le solicito por favor confirmar asistencia al turno.</span></i></b>
-<br><br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -
-`;
-        }
-
-        // Copiar el mensaje al portapapeles
-        copyToClip(mensaje);
-
-    } else {
-        // Si no se proporcionó una edad válida
-        alert('La edad ingresada es invalida.');
-    }
-}
-
-function copyToClip(str) {
-    function listener(e) {
-        e.clipboardData.setData("text/html", str);
-        e.clipboardData.setData("text/plain", str);
-        e.preventDefault();
-    }
-    document.addEventListener("copy", listener);
-    document.execCommand("copy");
-    document.removeEventListener("copy", listener);
-}
-
-
-
-document.getElementById('copyButton5').addEventListener('click', function () {
-    solicitarEdad2();
-});
-
-function solicitarEdad2() {
-    // Obtener la hora actual del sistema
-    const horaActual = new Date().getHours();
-
-    // Definir la variable de saludo
-    let saludo;
-
-    // Determinar si es por la mañana (antes de las 13:00) o por la tarde
-    if (horaActual < 13) {
-        saludo = 'Buen día';
-    } else {
-        saludo = 'Buenas tardes';
-    }
-
-    // Solicitar la edad al usuario
-    var edad = prompt(`ingresa la edad del solicitante:`);
-
-    // Verificar si se proporcionó una edad válida
-    if (edad !== null && !isNaN(edad) && edad.trim() !== '') {
-        // Convertir la edad a número entero
-        edad = parseInt(edad);
-
-        // Si es menor de edad, solicitar la fecha y hora del turno
-		{
-            var fechaTurno = prompt("Ingresa la fecha y hora del turno (Ejemplo: 07/03/2024 a las 11:00hs)");
-        }
-
-        // Solicitar el nombre de la junta
-        var nombreJunta = prompt("Ingresa el nombre y numero de la junta (Ejemplo: MEDICA N°3R)");
-
-        // Generar el mensaje según la edad
-        var mensaje;
-        if (edad >= 18) {
-            // Mensaje para mayores de edad
-            mensaje = `${saludo}, mi nombre es ${nombre};<br>
-<br>
-Me comunico con usted acerca de su trámite de solicitud del Certificado Único de Discapacidad (CUD).<br><br>
-De acuerdo a su solicitud, el turno asignado se ha reprogramado para el día <b>${fechaTurno}, con la Junta Evaluadora ${nombreJunta}</b>.<br>
-La Junta Evaluadora se encuentra ubicada en la calle Piedras 1281, CABA.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;*Recuerde que la persona a evaluar debe asistir el día del turno, en lo posible concurrir 15 minutos antes.<br>
-<br>
-Deberá presentar en un sobre de papel madera:
-    <ul>
-        <li>Fotocopia del DNI de ambos lados (original por fuera del sobre)</li>
-        <li>Fotocopia del Carnet de la Obra Social o Prepaga (si corresponde)</li>
-        <li>Constancia de CUIL</li>
-        <li>La Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL)</li>
-        <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
-        <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
-        <li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
-		<li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;*Si tiene imágenes debe llevarlas a parte.<br></li>
-    </ul>
-* En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
-<span style="color:#0033ff"><u>https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf</u></span><br>
-<br>
-<b>En el mencionado sobre deberá escribir: nombre y apellido de la persona a evaluar, número de teléfono de contacto y dirección de mail.</b><br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b><i><span style="color:#fa5a50">*Le solicito por favor confirmar asistencia al turno.</span></i></b>
-<br><br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -`;
-        } else {
-            // Mensaje para menores de edad
-            mensaje = `${saludo}, mi nombre es ${nombre};<br>
-<br>
-Me comunico con usted acerca de su trámite de solicitud del Certificado Único de Discapacidad (CUD).<br><br>
-De acuerdo a su solicitud, el turno asignado se ha reprogramado para el día <b>${fechaTurno}, con la Junta Evaluadora ${nombreJunta}</b>.<br>
-La Junta Evaluadora se encuentra ubicada en la calle Piedras 1281, CABA.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;*Recuerde que la persona a evaluar debe asistir el día del turno, en lo posible concurrir 15 minutos antes.<br>
-<br>
-Deberá presentar en un sobre de papel madera:
-    <ul>
-        <li>Fotocopia del DNI de ambos lados tanto de la persona a evaluar como del padre/la madre, o tutor/a legal (original por fuera del sobre)</li>
-        <li>Fotocopia de la Partida de Nacimiento (original por fuera del sobre)</li>
-        <li>Fotocopia del Carnet de la Obra Social o Prepaga (si corresponde)</li>
-        <li>La Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL)</li>
-        <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
-        <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
-		<li>En caso de contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora.</li>
-		<li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;*Si tiene imágenes debe llevarlas a parte.<br></li>
-    </ul>
-* En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
-<span style="color:#0033ff"><u>https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf</u></span><br>
-<br>
-<b>En el mencionado sobre deberá escribir: nombre y apellido de la persona a evaluar, número de teléfono de contacto y dirección de mail.</b><br>
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b><i><span style="color:#fa5a50">*Le solicito por favor confirmar asistencia al turno.</span></i></b>
-<br><br>
-De igual manera, quedo atenta ante cualquier consulta que desee realizarnos.<br>
-Saludos cordiales. -
-`;
-        }
-
-        // Copiar el mensaje al portapapeles
-        copyToClip(mensaje);
-
-    } else {
-        // Si no se proporcionó una edad válida
-        alert('La edad ingresada es invalida.');
-    }
-}
-
-function copyToClip(str) {
-    function listener(e) {
-        e.clipboardData.setData("text/html", str);
-        e.clipboardData.setData("text/plain", str);
-        e.preventDefault();
-    }
-    document.addEventListener("copy", listener);
-    document.execCommand("copy");
-    document.removeEventListener("copy", listener);
-}
-
-		
-        document.getElementById('copyButton3').addEventListener('click', function () {
-            const ahora = new Date();
-            const hora = ahora.getHours();
-            let text;
-            if (hora < 13) {
-                text = `Buenos días, mi nombre es ${nombre};\n¿En qué puedo ayudarte?`;
-            } else {
-                text = `Buenas tardes, mi nombre es ${nombre};\n¿En qué puedo ayudarte?`;
-            }
-            copyToClipboard(text);
-        });
-
-        document.getElementById('copyButton4').addEventListener('click', function () {
-            const text = `Quedamos a su disposición ante las consultas que desee realizarnos. Saludos 😊`;
-            copyToClipboard(text);
-        });
-		
-        // Actualizamos el contenido del span con el nombre ingresado por el usuario
-        document.querySelectorAll('#namePlaceholder').forEach(function(element) {
-            element.textContent = nombre;
-        });
-
-        // Mostramos el mensaje de bienvenida con el nombre del usuario
-        document.getElementById('welcomeMessage').textContent = `¡Bienvenido, ${nombre}!`;
-    } else {
-        // Si el usuario no ingresa un nombre, mostramos un mensaje de advertencia
-        alert("Debes ingresar un nombre para poder utilizar la extensión.");
-    }
-});
-
-function copyToClipboard(text) {
-    navigator.clipboard.writeText(text).then(function() {
-        console.log('Texto copiado al portapapeles: ' + text);
-    }, function(err) {
-        console.error('No se pudo copiar el texto: ', err);
-    });
-	
-}
- // Función para abrir el popup
-        function openPopup() {
-            // Abre un popup con la URL especificada
-            window.open('chat.html', 'Popup', 'width=300,height=300');
-        }
-</script></body>
+</body>
 </html>
