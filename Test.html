@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generar y Copiar Mensaje HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: calc(100% - 130px); /* Calculating width to fit in line with label */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        #mensaje {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="dataForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" value="Matías" name="nombre" required>
+        
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        
+        <label for="fechaTurno">Fecha y hora del turno:
+		</label>
+        <input type="text" id="fechaTurno" value="07/03/2024 a las 11:00hs" name="fechaTurno" required>
+        
+        <label for="nombreJunta">Nombre y número de la junta:</label>
+        <input type="text" id="nombreJunta" value="MEDICA N°3R" name="nombreJunta" required>
+        
+        <input type="submit" value="Generar y Copiar Mensaje">
+    </form>
+
+    <div id="mensaje"></div>
+
+    <script>
+        function copyToClip(str) {
+            function listener(e) {
+                e.clipboardData.setData("text/html", str);
+                e.clipboardData.setData("text/plain", str);
+                e.preventDefault();
+            }
+            document.addEventListener("copy", listener);
+            document.execCommand("copy");
+            document.removeEventListener("copy", listener);
+        }
+
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+
+            // Obtener los valores de los campos
+            const nombre = document.getElementById('nombre').value.trim();
+            const edad = document.getElementById('edad').value.trim();
+            const fechaTurno = document.getElementById('fechaTurno').value.trim();
+            const nombreJunta = document.getElementById('nombreJunta').value.trim();
+
+            // Validar que todos los campos estén completos
+            if (nombre === '' || edad === '' || fechaTurno === '' || nombreJunta === '') {
+                alert('Por favor complete todos los campos.');
+                return;
+            }
+
+            // Determinar si es mayor o menor de edad
+            let MayorMenor;
+            if (parseInt(edad) >= 18) {
+                MayorMenor = `<li>Fotocopia del DNI de ambos lados (original por fuera del sobre)</li>
+                              <li>Constancia de CUIL</li>`;
+            } else {
+                MayorMenor = `<li>Fotocopia del DNI de ambos lados tanto de la persona a evaluar como del padre/la madre, o tutor/a legal (original por fuera del sobre)</li>
+                              <li>Fotocopia de la Partida de Nacimiento (original por fuera del sobre)</li>`;
+            }
+
+            // Obtener la hora actual del sistema
+            const horaActual = new Date().getHours();
+
+            // Definir el saludo
+            let saludo;
+            if (horaActual < 13) {
+                saludo = 'Buen día';
+            } else {
+                saludo = 'Buenas tardes';
+            }
+
+            // Generar el mensaje HTML según la edad
+            let mensaje;
+             {
+                mensaje = `${saludo}, mi nombre es ${nombre};<br><br>
+                Me comunico con usted acerca de su trámite de solicitud del Certificado Único de Discapacidad (CUD).<br><br>
+                El turno asignado corresponde al día <b>${fechaTurno}, con la Junta Evaluadora ${nombreJunta}</b>.<br>
+                La Junta Evaluadora se encuentra ubicada en la calle Piedras 1281, CABA.<br>
+                *Recuerde que la persona a evaluar debe asistir el día del turno, en lo posible concurrir 15 minutos antes.<br><br>
+                Deberá presentar en un sobre de papel madera:<br>
+                <ul>
+                    ${MayorMenor}
+                    <li>La Planilla Solicitud de CUD con lugar, fecha, firma y aclaración (ORIGINAL)</li>
+                    <li>El o los Certificados Médicos según correspondan a la patología, con fecha, firma y sello del/la médico/a especialista (ORIGINAL)</li>
+                    <li>El o los Formularios P correspondientes a la patología (solo si esta lo requiere), las cuales deben estar completas en su totalidad con fecha, firma y sello del/la Médico/a especialista (ORIGINAL)</li>
+                    <li>En caso de contar con su CUD anterior de manera física, deberá presentarlo el día de la Junta Evaluadora.</li>
+                    <li>Informes de los estudios complementarios (ORIGINAL Y COPIA)<br>
+                    *Si tiene imágenes debe llevarlas a parte.</li>
+                </ul>
+				<b>En el mencionado sobre deberá escribir: nombre y apellido de la persona a evaluar, número de teléfono de contacto y dirección de mail.</b><br><br>
+                * En caso de que no cuente con la planilla de Solicitud de CUD, puede descargarla y completarla haciendo clic en el siguiente link:<br>
+                <a href="https://buenosaires.gob.ar/sites/default/files/2023-08/Solicitud%20CUD.pdf" style="color:#0033ff; text-decoration: underline;">Solicitud CUD</a><br><br>
+                <b>A TENER EN CUENTA:</b><br>
+                En caso de que la persona a evaluar no pueda asistir el día del turno con la Junta Evaluadora, puede presentarse un familiar o responsable llevando un Certificado Médico expedido por el médico de cabecera, donde conste el estado actual de la persona titular del CUD, con hasta 48 horas de anticipación al turno con la Junta Médica.<br><br>
+                En caso de renovación y contar con su CUD anterior de manera fìsica, deberà presentarlo el día de la Junta Evaluadora. 
+
+                <br><i><span style="color:#fa5a50">*Le solicito por favor confirmar asistencia al turno.</span></i><br><br>
+                De igual manera, quedo atento ante cualquier consulta que desee realizarnos.<br>
+                Saludos cordiales. -`;
+            }
+
+            // Mostrar el mensaje generado en el área de mensaje
+            const mensajeDiv = document.getElementById('mensaje');
+            mensajeDiv.innerHTML = `<h3>Mensaje generado:</h3>${mensaje}`;
+
+            // Copiar el mensaje al portapapeles
+            copyToClip(mensaje);
+        });
+
+        function copyToClip(str) {
+            function listener(e) {
+                e.clipboardData.setData("text/html", str);
+                e.clipboardData.setData("text/plain", str);
+                e.preventDefault();
+            }
+            document.addEventListener("copy", listener);
+            document.execCommand("copy");
+            document.removeEventListener("copy", listener);
+        }
+    </script>
+</body>
+</html>
