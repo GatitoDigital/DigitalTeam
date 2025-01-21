@@ -179,6 +179,13 @@ A continuación, le adjunto un link que permite unificar las imágenes en un arc
     <button type="button" class="block animado" onclick="copyToClipboard17()" id="adulterado" value="Debe rehacer el recibo, ya que los recibos no deben estar modificados, tachados, borrados, ni presentar irregularidades."><b><span style="color:#fcff45">RECIBO ADULTERADO</span></b><br>Debe rehacer el recibo, ya que los recibos no deben estar modificados, tachados, borrados, ni presentar irregularidades.</button>
     <!-- Recibo adulterado (fin) -->
 
+    <!-- Recibo adulterado2 (inicio) -->
+    <button type="button" class="block animado" onclick="copyToClipboard32()" id="adulterado2">
+    <b><span style="color:#fcff45">RECIBO ADULTERADO</span></b><br>
+    Debe adjuntar una factura válida, correspondiente al mes de xxxxx, que no presente irregularidades.
+    </button>
+    <!-- Recibo adulterado2 (fin) -->
+
     <!-- confeccionado con lapiz (inicio) --> 
     <button type="button" class="block animado" onclick="copyToClipboard22()" id="con_lapiz" value="Los recibos no pueden confeccionarse con lápiz, los mismos deben realizarse con tinta."><b><span style="color:#69e0e0">RECIBO CONFECCIONADO CON LAPIZ</span></b><br>Los recibos no pueden confeccionarse con lápiz, los mismos deben realizarse con tinta.</button>
     <!-- confeccionado con lapiz (fin) --> 
@@ -480,6 +487,53 @@ Si es amparo: https://formulario-sigeci.buenosaires.gob.ar/InicioTramiteComun?id
     navigator.clipboard.writeText(copyText31).then(() => {
     });
     }
+</script>
+
+<script>
+// Función para obtener el nombre del mes actual
+function getMonthName() {
+    const months = [
+        "enero", "febrero", "marzo", "abril", "mayo", "junio",
+        "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+    ];
+    const currentMonthIndex = new Date().getMonth();
+    return months[currentMonthIndex];
+}
+
+// Actualiza el texto y el valor del botón con el mes actual
+function updateButtonText32() {
+    const month = getMonthName();
+    const button = document.getElementById("adulterado2");
+
+    if (button) {
+        const message = `Debe adjuntar una factura válida, correspondiente al mes de ${month}, que no presente irregularidades.`;
+
+        button.innerHTML = `<b><span style="color:#fcff45">RECIBO ADULTERADO</span></b><br>${message}`;
+        button.value = message;
+
+        console.log("Botón actualizado con el mes actual:", message);
+    } else {
+        console.error("No se encontró el botón con ID adulterado2");
+    }
+}
+
+// Función para copiar el texto del botón al portapapeles
+function copyToClipboard32() {
+    const button = document.getElementById("adulterado2");
+
+    if (button && button.value) {
+        navigator.clipboard.writeText(button.value).then(() => {
+            console.log("Texto copiado al portapapeles:", button.value);
+        }).catch(err => {
+            console.error("Error al copiar el texto:", err);
+        });
+    } else {
+        console.error("No se encontró el texto para copiar");
+    }
+}
+
+// Llama a la función para actualizar el botón al cargar la página
+document.addEventListener("DOMContentLoaded", updateButtonText32);
 </script>
 
 <!-- SCROLL ANIMADO (inicio)-->
