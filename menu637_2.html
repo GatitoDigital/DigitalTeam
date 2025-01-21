@@ -181,7 +181,7 @@ A continuación, le adjunto un link que permite unificar las imágenes en un arc
 
     <!-- Recibo adulterado2 (inicio) -->
     <button type="button" class="block animado" onclick="copyToClipboard32()" id="adulterado2">
-    <b><span style="color:#fcff45">RECIBO ADULTERADO</span></b><br>
+    <b><span style="color:#fcff45">RECIBO ADULTERADO2</span></b><br>
     Debe adjuntar una factura válida, correspondiente al mes de xxxxx, que no presente irregularidades.
     </button>
     <!-- Recibo adulterado2 (fin) -->
@@ -508,7 +508,7 @@ function updateButtonText32() {
     if (button) {
         const message = `Debe adjuntar una factura válida, correspondiente al mes de ${month}, que no presente irregularidades.`;
 
-        button.innerHTML = `<b><span style="color:#fcff45">RECIBO ADULTERADO</span></b><br>${message}`;
+        button.innerHTML = `<b><span style="color:#fcff45">Factura Adulterada</span></b><br>${message}`;
         button.value = message;
 
         console.log("Botón actualizado con el mes actual:", message);
